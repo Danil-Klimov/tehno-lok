@@ -1,0 +1,35 @@
+.button {
+  font-family: $font-second;
+  font-size: 13px;
+  line-height: 1.2;
+  font-weight: 700;
+  min-width: 165px;
+  padding: 14px 15px;
+
+  &_fill {
+    color: #fff;
+    border-width: 3px 0 0 0;
+    border-top-color: #36A4DD;
+    background: linear-gradient(
+        to right,
+        #2695C8 0%,
+        #2695C8 10%,
+        #1855A4 100%
+    );
+
+    img {
+      margin-right: 10px;
+    }
+  }
+
+  &_empty {
+    color: #2389b7;
+  }
+
+  &_w-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 15px;
+  }
+}

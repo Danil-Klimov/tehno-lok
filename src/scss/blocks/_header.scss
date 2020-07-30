@@ -1,0 +1,47 @@
+.header {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 5;
+
+  &__logo {
+    @include col();
+    @include size(2.54);
+    display: block;
+    background-color: #14469C;
+    padding: 43px 23px 23px;
+    text-decoration: none;
+  }
+
+  &__menu {
+    @include col();
+    font-family: $font-second;
+    font-size: 15px;
+    line-height: 1.2;
+    font-weight: 700;
+    color: #fff;
+    flex-grow: 1;
+
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 100%;
+    }
+
+    a {
+      text-decoration: none;
+    }
+  }
+
+  &__call {
+    @include col();
+    @include size(2);
+    display: flex;
+    align-items: center;
+  }
+}
