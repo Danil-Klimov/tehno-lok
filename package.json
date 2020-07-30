@@ -1,0 +1,39 @@
+{
+  "name": "template",
+  "version": "3.0.0",
+  "description": "Template web site",
+  "scripts": {},
+  "author": "Danil Klimov <doink3690@gmail.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^9.6.1",
+    "browser-sync": "^2.26.7",
+    "cssnano": "^4.1.10",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^6.1.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-cssnano": "^2.1.3",
+    "gulp-debug": "^4.0.0",
+    "gulp-group-css-media-queries": "^1.2.2",
+    "gulp-if": "^3.0.0",
+    "gulp-imagemin": "^6.0.0",
+    "gulp-load-plugins": "^2.0.2",
+    "gulp-newer": "^1.4.0",
+    "gulp-pug": "^4.0.1",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-uglify-es": "^1.0.4",
+    "gulp.spritesmith": "^6.10.1",
+    "imagemin-mozjpeg": "^8.0.0",
+    "merge-stream": "^2.0.0",
+    "smart-grid": "^2.1.2",
+    "vinyl-buffer": "^1.0.1"
+  },
+  "dependencies": {
+    "@fancyapps/fancybox": "^3.5.7",
+    "jquery": "^3.4.1",
+    "normalize.css": "^8.0.1",
+    "slick-carousel": "^1.8.1",
+    "svg4everybody": "^2.1.9"
+  }
+}

@@ -1,0 +1,35 @@
+block variables
+doctype html
+html(lang="ru")
+	head
+		//- Set character encoding for the document
+		meta(charset="utf-8")
+		//- Meta Description
+		meta(name="description" content= config.description || 'Site description')
+		//- Instruct Internet Explorer to use its latest rendering engine
+		meta(http-equiv="X-UA-Compatible" content="IE=edge")
+		//- Viewport for responsive web design
+		meta(name="viewport" content="width=device-width, initial-scale=1.0")
+		//- Facebook Open Graph
+		if config.og_title
+			meta(property="og:title" content= config.og_title)
+		if config.og_type
+			meta(property="og:type" content= config.og_type)
+		if config.og_url
+			meta(property="og:url" content= config.og_url)
+		if config.og_img
+			meta(property="og:image" content= config.og_img)
+		//- Favicon: standard - 32x32; apple - 144x144
+		link(rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon-180x180.png")
+		link(rel="icon" type="image/png" href="favicon-32x32.png")
+		meta(name="theme-color" content="#fff")
+		link(href="css/jquery.fancybox.min.css" rel="stylesheet")
+		link(href="css/style.css" rel="stylesheet")
+		title= config.title || 'Site title'
+	body
+		block body_start
+		block content
+		script(src='js/jquery.min.js')
+		script(src='js/libs.min.js')
+		script(src='js/main.js')
+		block body_end

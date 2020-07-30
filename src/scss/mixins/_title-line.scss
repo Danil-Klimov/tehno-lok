@@ -1,0 +1,25 @@
+@mixin title-line($side) {
+  &:#{$side} {
+    content: '';
+    display: block;
+    width: 148px;
+    height: 31px;
+    background-image: url(../img/title-line.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    flex-shrink: 0;
+    @if $side == 'before'{
+      margin-right: 10px;
+    }
+    @else if $side == 'after' {
+      margin-left: 10px;
+      transform: rotateY(180deg);
+    }
+    @include md-block() {
+      width: 105px;
+    }
+    @include sm-block() {
+      display: none;
+    }
+  }
+}

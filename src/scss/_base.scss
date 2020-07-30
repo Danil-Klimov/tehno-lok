@@ -1,0 +1,41 @@
+*:focus {
+  outline: none;
+}
+
+html {
+  min-width: 320px;
+}
+
+body {
+  font-family: $font-main;
+  color: $color-main;
+}
+
+a {
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+}
+
+button {
+  cursor: pointer;
+  font-family: $font-main;
+}
+
+.container {
+  @include container();
+  @include xs(max-width, 100%);
+  @include sm(max-width, 540px);
+  @include md(max-width, 720px);
+  @include lg(max-width, 960px);
+}
+
+.container-fluid {
+  @include container-full();
+}
+
+.row {
+  @include row-flex();
+}

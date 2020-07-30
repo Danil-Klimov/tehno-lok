@@ -1,0 +1,17 @@
+extends ../layouts/_default
+block variables
+	-
+		const config = {
+			title: "",
+			description: "",
+			og_title: "",
+			og_type: "",
+			og_url: "",
+			og_img: ""
+		}
+block body_start
+block content
+	main
+		include ../includes/_header
+		include ../includes/_footer
+block body_end
