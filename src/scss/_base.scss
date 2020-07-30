@@ -24,6 +24,15 @@ button {
   font-family: $font-main;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-second;
+  margin-top: 0;
+}
+
+p {
+  margin-top: 0;
+}
+
 .container {
   @include container();
   @include xs(max-width, 100%);

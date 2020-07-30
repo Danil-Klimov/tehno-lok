@@ -1,0 +1,23 @@
+.arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+  background: radial-gradient(
+      ellipse at 30%,
+      #2694C7 0%,
+      #1858A6 100%
+  );
+
+  &_sm {
+    width: 20px;
+    height: 20px;
+    color: #fff;
+    box-shadow: 0 5px 5px 0 rgba(#0098ce, 0.4), 0 0 0 7px rgba(#0097cf, 0.15);
+
+    svg {
+      width: 5px;
+      margin-left: 1px;
+    }
+  }
+}

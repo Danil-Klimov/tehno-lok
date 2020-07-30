@@ -1,5 +1,112 @@
 .hero {
   background-repeat: no-repeat;
   background-position: center top;
-  height: 500px;
+  padding-top: 270px;
+
+  &__offer {
+    @include col();
+    @include size(7.5);
+    display: grid;
+    grid-template-columns: 75px auto;
+    color: #fff;
+    background-color: rgba(#14459c, 0.7);
+    position: relative;
+
+    &::before {
+      content: '';
+      display: block;
+      width: 170px;
+      height: 100%;
+      position: absolute;
+      right: 100%;
+      background-color: rgba(#052e69, 0.9);
+    }
+  }
+
+  &__vertical {
+    font-family: $font-second;
+    font-size: 15px;
+    line-height: 1.2;
+    font-weight: 700;
+    writing-mode: tb-rl;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: rotate(180deg);
+  }
+
+  &__content {
+    grid-column: 2/2;
+    padding: 40px 35px 30px;
+
+    h1, h2, h3, h4, h5, h6 {
+      line-height: 1.4;
+      margin-bottom: 8px;
+    }
+  }
+
+  &__cats {
+    @include col();
+    @include size(7.5);
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 155px) 70px 146px;
+    grid-gap: 5px;
+    background-color: #fff;
+    margin-top: 203px;
+    position: relative;
+
+    &::before {
+      content: '';
+      display: block;
+      width: 120px;
+      height: 100%;
+      position: absolute;
+      right: 100%;
+      background-color: #DCE4F0;
+    }
+  }
+
+  &__cats-item {
+    font-family: $font-second;
+    font-size: 15px;
+    line-height: 1.2;
+    font-weight: 700;
+    color: #054c7a;
+    text-align: center;
+    padding: 15px 0;
+    text-decoration: none;
+
+    img {
+      height: 86px;
+    }
+  }
+
+  &__cats-button {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+  }
+
+  &__order {
+    padding: 0;
+    border-width: 3px 0 0 0;
+    border-top-color: #36A4DD;
+    background: linear-gradient(
+        to right,
+        #2695C8 0%,
+        #2695C8 10%,
+        #1855A4 100%
+    );
+    font-family: $font-second;
+    font-size: 14px;
+    line-height: 1.2;
+    font-weight: 700;
+    color: #fff;
+    box-shadow: -5px 5px 15px 0 rgba(#009bcf, 0.4);
+
+    img {
+      display: block;
+      margin: 0 auto 20px;
+    }
+  }
 }
