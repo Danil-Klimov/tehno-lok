@@ -27,5 +27,19 @@ $(document).ready(function () {
     slidesToScroll: 1,
     infinite: false,
   });
+
+// reviews slider
+  $('.reviews__slider').slick({
+    slidesToShow: 5,
+    slidesToScroll: 1,
+    infinite: false,
+    nextArrow: '<button class="arrow arrow_md arrow_dark arrow_next" type="button">' +
+      '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 11" fill="currentColor">' +
+      '<polygon points="9 5.5 0 0 0 11 9 5.5"/></svg></button>',
+    prevArrow: '<button class="arrow arrow_md arrow_dark arrow_prev" type="button">' +
+      '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 11" fill="currentColor">' +
+      '<polygon points="0 5.5 9 0 9 11 0 5.5"/></svg></button>',
+  });
+
   svg4everybody();
 });

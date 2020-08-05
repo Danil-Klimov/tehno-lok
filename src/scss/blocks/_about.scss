@@ -13,6 +13,7 @@
   &__header {
     @include col();
     @include size(6.9);
+    color: #054c7a;
     display: grid;
     grid-template-columns: 11px 1fr;
 
@@ -26,13 +27,11 @@
   }
 
   .vertical-text {
-    color: #14469c;
     margin-top: 15px;
   }
 
   &__title {
     font-size: 38px;
-    color: #054c7a;
     grid-column: 2/2;
     margin: 0 0 0 180px;
   }

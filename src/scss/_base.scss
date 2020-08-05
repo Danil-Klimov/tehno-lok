@@ -82,3 +82,10 @@ ul {
 .row {
   @include row-flex();
 }
+
+.arrow {
+  &.slick-disabled {
+    visibility: hidden;
+    opacity: 0;
+  }
+}
