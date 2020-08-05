@@ -1,10 +1,13 @@
 .button {
+  display: inline-block;
   font-family: $font-second;
   font-size: 13px;
   line-height: 1.2;
   font-weight: 700;
   min-width: 165px;
   padding: 14px 15px;
+  text-decoration: none;
+  text-align: center;
 
   &_fill {
     color: #fff;
@@ -24,6 +27,25 @@
 
   &_empty {
     color: #2389b7;
+    background-color: #fff;
+    position: relative;
+
+    &::after {
+      content: '';
+      display: block;
+      width: calc(100% + 4px);
+      height: calc(100% + 4px);
+      border-radius: 3px;
+      position: absolute;
+      top: -2px;
+      left: -2px;
+      z-index: -1;
+      background: linear-gradient(
+          to right,
+          #00B8FF 0%,
+          #054C7A 100%
+      );
+    }
   }
 
   &_w-icon {
