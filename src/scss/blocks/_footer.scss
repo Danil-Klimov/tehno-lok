@@ -1,0 +1,53 @@
+.footer {
+  border-bottom: 4px solid #14469C;
+
+  &__container {
+    align-items: center;
+  }
+
+  &__copyright {
+    @include col();
+    @include size(2.2);
+    font-size: 13px;
+    line-height: 1.5;
+  }
+
+  &__contacts {
+    @include col();
+    @include size(1.8);
+    @include shift-left(1.4);
+  }
+
+  &__tel {
+    display: block;
+    font-family: $font-second;
+    font-size: 20px;
+    font-weight: 700;
+    color: #1864b0;
+    text-decoration: none;
+    margin-bottom: 10px;
+  }
+
+  &__mail {
+    display: inline-block;
+    font-size: 13px;
+    text-decoration: none;
+    border-bottom: 2px solid #009BD1;
+  }
+
+  &__button {
+    @include col();
+    @include size(2);
+    @include shift-left(0.8);
+  }
+
+  &__logo {
+    @include col();
+    @include size(2.3);
+    display: block;
+    background-color: #14469C;
+    padding: 53px 23px 51px;
+    text-decoration: none;
+    margin-left: auto;
+  }
+}
