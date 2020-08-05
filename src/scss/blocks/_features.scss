@@ -9,10 +9,15 @@
     text-align: center;
     display: grid;
     grid-template-columns: 11px 1fr;
+
+    .vertical-text {
+      margin-top: -10px;
+    }
   }
 
   &__title {
     grid-column: 2/2;
+
     .title {
       margin-bottom: 5px;
     }
@@ -25,7 +30,7 @@
   }
 
   &__container {
-    margin-top: 15px;
+    margin-top: 25px;
   }
 
   &__item {
