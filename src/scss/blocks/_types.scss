@@ -31,7 +31,6 @@
 
   &__item {
     @include col();
-    @include size(4);
     position: relative;
     margin-top: 30px;
 

@@ -52,5 +52,18 @@ $(document).ready(function () {
     centerMode: true
   });
 
+// posts slider
+  $('.posts__slider').slick({
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    infinite: false,
+    nextArrow: '<button class="arrow arrow_sm arrow_light arrow_next" type="button">' +
+      '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 11" fill="currentColor">' +
+      '<polygon points="9 5.5 0 0 0 11 9 5.5"/></svg></button>',
+    prevArrow: '<button class="arrow arrow_sm arrow_light arrow_prev" type="button">' +
+      '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 11" fill="currentColor">' +
+      '<polygon points="0 5.5 9 0 9 11 0 5.5"/></svg></button>',
+  });
+
   svg4everybody();
 });
