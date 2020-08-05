@@ -1,0 +1,45 @@
+.request {
+  padding: 60px 0;
+  background: url("../img/request-bg.jpg") no-repeat center top;
+
+  &__header {
+    @include col();
+    @include size(12);
+    display: grid;
+    grid-template-columns: 11px 1fr;
+    text-align: center;
+    color: #054c7a;
+
+    .vertical-text {
+      grid-row: 1/4;
+    }
+  }
+
+  &__title {
+    grid-column: 2/2;
+    margin-bottom: 10px;
+  }
+
+  &__subtitle {
+    font-size: 13px;
+  }
+
+  &__form {
+    @include col();
+    @include size(8);
+    @include shift-left(2);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 35px;
+    grid-column-gap: 30px;
+
+    textarea {
+      height: calc(100% - 15px);
+    }
+
+    .button {
+      width: fit-content;
+      margin-left: auto;
+    }
+  }
+}
