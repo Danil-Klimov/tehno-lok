@@ -41,5 +41,16 @@ $(document).ready(function () {
       '<polygon points="0 5.5 9 0 9 11 0 5.5"/></svg></button>',
   });
 
+// gallery slider
+  $('.gallery').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    infinite: true,
+    arrows: false,
+    variableWidth: true,
+    autoplay: true,
+    centerMode: true
+  });
+
   svg4everybody();
 });
