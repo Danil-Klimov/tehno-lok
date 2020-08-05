@@ -9,6 +9,7 @@ html {
 body {
   font-family: $font-main;
   color: $color-main;
+  font-size: 16px;
 }
 
 a {
@@ -31,6 +32,39 @@ h1, h2, h3, h4, h5, h6 {
 
 p {
   margin-top: 0;
+  line-height: 1.4;
+}
+
+ul, ol {
+  margin-top: 0;
+}
+
+ul {
+  list-style-type: none;
+  line-height: 1.4;
+  padding-left: 35px;
+
+  li {
+    margin-bottom: 20px;
+    position: relative;
+
+    &::before {
+      content: '';
+      display: block;
+      width: 7px;
+      height: 7px;
+      position: absolute;
+      top: 0.4rem;
+      left: -2rem;
+      background: linear-gradient(
+          to right,
+          #2695C8 0%,
+          #2695C8 10%,
+          #1855A4 100%
+      );
+      box-shadow: 0 0 5px 1px rgba(#2695C8, 0.3);
+    }
+  }
 }
 
 .container {

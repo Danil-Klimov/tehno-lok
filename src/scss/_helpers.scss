@@ -2,18 +2,6 @@
 	display: none !important;
 }
 
-//.for-desktop {
-//	@include mobile {
-//		display: none !important;
-//	}
-//}
-//
-//.for-mobile {
-//	@include desktop {
-//		display: none !important;
-//	}
-//}
-
 .clearfix {
 	overflow: auto;
 	&::after {
@@ -21,4 +9,23 @@
 		display: table;
 		clear: both;
 	}
+}
+
+.vertical-text {
+	font-family: $font-second;
+	font-size: 15px;
+	line-height: 1.2;
+	font-weight: 700;
+	writing-mode: tb-rl;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	transform: rotate(180deg);
+}
+
+.title {
+	font-family: $font-second;
+	font-size: 38px;
+	line-height: 1.2;
+	font-weight: 700;
 }

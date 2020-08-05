@@ -26,11 +26,18 @@
     ul {
       margin: 0;
       padding: 0;
-      list-style-type: none;
       display: flex;
       align-items: center;
       justify-content: space-between;
       height: 100%;
+    }
+
+    li {
+      margin: 0;
+
+      &::before {
+        display: none;
+      }
     }
 
     a {

@@ -23,16 +23,8 @@
     }
   }
 
-  &__vertical {
-    font-family: $font-second;
-    font-size: 15px;
-    line-height: 1.2;
-    font-weight: 700;
-    writing-mode: tb-rl;
-    display: flex;
-    align-items: center;
+  .vertical-text {
     justify-content: center;
-    transform: rotate(180deg);
   }
 
   &__content {
@@ -43,6 +35,10 @@
       line-height: 1.4;
       margin-bottom: 8px;
     }
+
+    p {
+      line-height: 1.2;
+    }
   }
 
   &__cats {
@@ -52,7 +48,7 @@
     grid-template-columns: repeat(auto-fill, 155px) 70px 146px;
     grid-gap: 5px;
     background-color: #fff;
-    margin-top: 203px;
+    margin-top: 200px;
     position: relative;
 
     &::before {

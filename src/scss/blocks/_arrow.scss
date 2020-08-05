@@ -3,21 +3,44 @@
   align-items: center;
   justify-content: center;
   border-radius: 100%;
-  background: radial-gradient(
-      ellipse at 30%,
-      #2694C7 0%,
-      #1858A6 100%
-  );
 
   &_sm {
     width: 20px;
     height: 20px;
-    color: #fff;
-    box-shadow: 0 5px 5px 0 rgba(#0098ce, 0.4), 0 0 0 7px rgba(#0097cf, 0.15);
 
     svg {
       width: 5px;
       margin-left: 1px;
+    }
+  }
+
+  &_dark {
+    background: radial-gradient(
+        ellipse at 30%,
+        #2694C7 0%,
+        #1858A6 100%
+    );
+    color: #fff;
+    box-shadow: 0 5px 5px 0 rgba(#0098ce, 0.4), 0 0 0 7px rgba(#0097cf, 0.15);
+  }
+
+  &_light {
+    background-color: #fff;
+    color: #054C7A;
+    box-shadow: 0 0 0 7px rgba(#fff, 0.15);
+    position: relative;
+
+    &::after {
+      content: '';
+      display: block;
+      width: 165%;
+      height: 165%;
+      border-radius: inherit;
+      border: 1px solid rgba(#fff, 0.3);
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate3d(-50%, -50%, 0);
     }
   }
 }
