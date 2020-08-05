@@ -31,6 +31,7 @@
   }
 
   &__title {
+    font-size: 38px;
     color: #054c7a;
     grid-column: 2/2;
     margin: 0 0 0 180px;
@@ -70,11 +71,6 @@
 
     &:nth-child(odd) {
       margin-top: 55px;
-      background: linear-gradient(
-          to bottom,
-          #1762af 0%,
-          transparent 175px
-      );
       align-items: flex-start;
     }
 
