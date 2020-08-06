@@ -1,0 +1,43 @@
+.numbers {
+  padding: 50px 0 70px;
+  background: url("../img/numbers-bg.jpg") no-repeat center top;
+
+  &__header {
+    @include col();
+    @include size(12);
+    text-align: center;
+    color: #fff;
+
+    .title {
+      margin-bottom: 5px;
+    }
+  }
+
+  &__subtitle {
+    font-size: 15px;
+  }
+
+  &__slider {
+    margin-top: 15px;
+    counter-reset: numbers;
+  }
+
+  &__item {
+    font-family: $font-second;
+    font-size: 17px;
+    font-weight: 700;
+    text-align: center;
+    line-height: 1.4;
+    color: #054c7a;
+    counter-increment: numbers;
+
+    &::before {
+      content: counter(numbers);
+      font-size: 95px;
+      line-height: 1.1;
+      color: #2483B8;
+      display: block;
+      margin-bottom: 9px;
+    }
+  }
+}
