@@ -4,6 +4,27 @@
   right: 0;
   top: 0;
   z-index: 5;
+  border-bottom: 3px solid transparent;
+  transition: all 0.3s;
+  
+  &.scroll {
+    background-color: #fff;
+    border-color: #14469C;
+
+    .header__logo {
+      padding: 23px;
+    }
+
+    .header__menu {
+      color: #1864b0;
+    }
+
+    .burger {
+      span {
+        background-color: #1864b0;
+      }
+    }
+  }
 
   &__logo {
     @include col();
@@ -12,6 +33,7 @@
     background-color: #14469C;
     padding: 43px 23px 23px;
     text-decoration: none;
+    transition: all 0.3s;
   }
 
   &__menu {
@@ -22,6 +44,7 @@
     font-weight: 700;
     color: #fff;
     flex-grow: 1;
+    transition: all 0.3s;
 
     ul {
       margin: 0;
@@ -48,6 +71,12 @@
   &__call {
     @include col();
     @include size(2);
+    display: flex;
+    align-items: center;
+  }
+
+  &__button {
+    @include col();
     display: flex;
     align-items: center;
   }

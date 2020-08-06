@@ -3,6 +3,16 @@
 let $ = jQuery.noConflict();
 
 $(document).ready(function () {
+// scroll
+  $(window).scroll(function () {
+    const scroll = $(window).scrollTop();
+    if (scroll >= 50) {
+      $(".header").addClass("scroll");
+    } else {
+      $(".header").removeClass("scroll");
+    }
+  });
+
 // features slider
   $('.features__container').slick({
     slidesToShow: 5,

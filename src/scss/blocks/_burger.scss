@@ -1,0 +1,21 @@
+.burger {
+  width: 17px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 3px;
+  border: none;
+  padding: 0;
+  background: none;
+
+  span {
+    display: block;
+    height: 3px;
+    background-color: #fff;
+    width: 100%;
+    transition: all 0.3s;
+
+    &:first-child, &:last-child {
+      grid-column: 1/3;
+    }
+  }
+}
