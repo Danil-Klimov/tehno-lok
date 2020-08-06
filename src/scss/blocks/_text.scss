@@ -1,0 +1,8 @@
+.text {
+  padding: 30px 0;
+
+  &__content {
+    @include col();
+    @include size(12);
+  }
+}

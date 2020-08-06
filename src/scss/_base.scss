@@ -89,3 +89,28 @@ ul {
     opacity: 0;
   }
 }
+
+img.aligncenter {
+  display: block;
+  margin: 0 auto;
+}
+.alignright {
+  float: right;
+  margin-left: 15px;
+  margin-bottom: 10px;
+  @include sm-block() {
+    float: none;
+    display: block;
+    margin: 15px auto;
+  }
+}
+.alignleft {
+  float: left;
+  margin-right: 15px;
+  margin-bottom: 10px;
+  @include sm-block() {
+    float: none;
+    display: block;
+    margin: 15px auto;
+  }
+}
