@@ -66,6 +66,7 @@ $(document).ready(function () {
   $('.gallery').slick({
     slidesToShow: 1,
     slidesToScroll: 1,
+    initialSlide: 2,
     infinite: true,
     arrows: false,
     variableWidth: true,
