@@ -3,6 +3,17 @@
 let $ = jQuery.noConflict();
 
 $(document).ready(function () {
+// burger menu
+  $('.burger__button').on('click', function () {
+    $('.burger__menu').fadeToggle().toggleClass('active');
+  });
+  $('.burger__menu').on('mouseup', function (e) {
+    const menu = $(".burger__nav");
+    if (!menu.is(e.target) && menu.has(e.target).length === 0) {
+      $(this).fadeToggle().toggleClass('active');
+    }
+  });
+
 // scroll
   $(window).scroll(function () {
     const scroll = $(window).scrollTop();
