@@ -33,6 +33,15 @@
     @include col();
     position: relative;
     margin-top: 30px;
+    text-decoration: none;
+
+    &:hover {
+      &::after {
+        top: 0;
+        left: 0;
+        right: 0;
+      }
+    }
 
     &::after {
       content: '';
@@ -45,6 +54,7 @@
       left: 13px;
       right: 13px;
       pointer-events: none;
+      transition: all 0.3s;
     }
 
     &:nth-child(3n + 1) {

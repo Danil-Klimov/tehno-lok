@@ -19,7 +19,14 @@
         #2695C8 10%,
         #1855A4 100%
     );
+    background-size: 100%;
     box-shadow: 0 5px 10px 3px rgba(#009bd1, 0.3);
+    transition: all 0.3s;
+
+    &:hover {
+      background-size: 300%;
+      box-shadow: 0 5px 10px 0 rgba(#000, 0.2);
+    }
 
     img {
       margin-right: 10px;
@@ -30,6 +37,13 @@
     color: #2389b7;
     background-color: #fff;
     position: relative;
+
+    &:hover {
+      &::after {
+        background-size: 400%;
+        box-shadow: 0 5px 10px 0 rgba(#000, 0.2);
+      }
+    }
 
     &::after {
       content: '';
@@ -46,6 +60,8 @@
           #00B8FF 0%,
           #054C7A 100%
       );
+      background-size: 100%;
+      transition: all 0.3s;
     }
   }
 

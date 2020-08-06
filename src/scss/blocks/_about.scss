@@ -67,6 +67,19 @@
     font-weight: 700;
     color: #fff;
     padding: 30px 40px;
+    overflow: hidden;
+
+    &:hover {
+      .arrow {
+        box-shadow: 0 0 0 400px rgba(#054C7A, 0.4);
+
+        &::after {
+          border-width: 2px;
+          width: 820px;
+          height: 820px;
+        }
+      }
+    }
 
     &:nth-child(odd) {
       margin-top: 55px;
@@ -87,6 +100,8 @@
 
   &__project-title {
     max-width: 230px;
+    position: relative;
+    z-index: 1;
   }
 
   &__project-arrow {
