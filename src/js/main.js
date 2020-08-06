@@ -65,5 +65,13 @@ $(document).ready(function () {
       '<polygon points="0 5.5 9 0 9 11 0 5.5"/></svg></button>',
   });
 
+// input tel mask
+  $('input[type="tel"]').on('focus', function () {
+    $(this).mask("+7(000)000-00-00");
+    if ($(this).val().length === 0) {
+      $(this).val('+7(');
+    }
+  });
+
   svg4everybody();
 });
