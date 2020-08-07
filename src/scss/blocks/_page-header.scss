@@ -1,0 +1,13 @@
+.page-header {
+  padding: 0 0 25px;
+
+  &__content {
+    @include col();
+    @include size(12);
+  }
+
+  &__title {
+    font-size: 38px;
+    color: #054c7a;
+  }
+}

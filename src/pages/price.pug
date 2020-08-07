@@ -15,7 +15,15 @@ block content
 	include ../includes/_header
 	main.main.main_page
 		include ../includes/_breadcrumbs
-		include ../includes/_text
+		section.page-header
+			.container
+				.row
+					.page-header__content
+						h1.page-header__title ЦЕНЫ НА ПРОИЗВОДСТВО
+						p
+							img.alignright(src='img/text-img.jpg')
+							| Стоимость каждого проекта расчитывается индивидуально, так как цена зависит от ряда факторов, фундамента, места строительства, условий, транспортной развязки, температуры и региона, цена может меняться.
+						p Примерную стоимость вашего проекта вы можете прикинуть на примере наших уже готовых проектов, чтобы получить коммерческое предложение, звоните.
 		include ../includes/_numbers
 		include ../includes/_our-projects-price
 		include ../includes/_request
