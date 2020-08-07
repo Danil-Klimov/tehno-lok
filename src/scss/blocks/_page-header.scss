@@ -1,6 +1,4 @@
 .page-header {
-  padding: 0 0 25px;
-
   &__content {
     @include col();
     @include size(12);

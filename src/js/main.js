@@ -167,5 +167,31 @@ $(document).ready(function () {
     $(this).removeClass('active');
   });
 
+// TODO разобраться со слайдером
+// projects menu slider
+  const dataInit = $('.projects-menu__slider').data('init');
+  $('.projects-menu__slider').slick({
+    slidesToShow: 6,
+    slidesToScroll: 1,
+    infinite: false,
+    variableWidth: true,
+    // draggable: false,
+    // initialSlide: dataInit,
+    nextArrow: '<button class="arrow arrow_md arrow_dark arrow_next" type="button">' +
+      '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 11" fill="currentColor">' +
+      '<polygon points="9 5.5 0 0 0 11 9 5.5"/></svg></button>',
+    prevArrow: '<button class="arrow arrow_md arrow_dark arrow_prev" type="button">' +
+      '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 11" fill="currentColor">' +
+      '<polygon points="0 5.5 9 0 9 11 0 5.5"/></svg></button>',
+  });
+
+
+  $('.projects-menu__slider').slick('slickGoTo', parseInt(dataInit));
+  $('.projects-menu__slider .slick-slide').each(function () {
+    if(+$(this).attr('data-slick-index') === dataInit) {
+      $(this).addClass('active slick-current');
+    }
+  });
+
   svg4everybody();
 });

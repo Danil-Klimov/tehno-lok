@@ -1,0 +1,115 @@
+extends ../layouts/_default
+block variables
+	-
+		const config = {
+			title: "Наши проекты - ТехноЛОК",
+			description: "",
+			og_title: "",
+			og_type: "",
+			og_url: "",
+			og_img: "",
+			order_bt: true
+		}
+block body_start
+block content
+	include ../includes/_header
+	main.main.main_page
+		include ../includes/_breadcrumbs
+		section.page-header
+			.container
+				.row
+					.page-header__content
+						h1.page-header__title СПОРТИВНЫЙ КОМПЛЕКС “СПОРТ ТАЙМ”
+		include ../includes/_projects-menu
+		section.our-projects.our-projects_clean
+			.our-projects__wrapper
+				.container
+					.row
+						.our-projects__body.big-square
+							.our-projects__inner
+								.our-projects__img
+									.our-projects__img-slider-w-nav
+										.our-projects__slide
+											a(href='img/our-projects-img.jpg' data-fancybox)
+												img(src='img/our-projects-img.jpg' alt='')
+											.our-projects__img-footer
+												.our-projects__img-caption Название фотографии, на которой подробности
+												.our-projects__controls
+													button.arrow.arrow_sm.arrow_light.arrow_prev(type='button')
+														svg(xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 11" fill='currentColor')
+															polygon(points="0 5.5 9 0 9 11 0 5.5")
+													button.arrow.arrow_sm.arrow_light.arrow_next(type='button')
+														svg(xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 11" fill='currentColor')
+															polygon(points="9 5.5 0 0 0 11 9 5.5")
+										.our-projects__slide
+											img(src='img/our-projects-img.jpg' alt='')
+											.our-projects__img-footer
+												.our-projects__img-caption Фотография №2
+												.our-projects__controls
+													button.arrow.arrow_sm.arrow_light.arrow_prev(type='button')
+														svg(xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 11" fill='currentColor')
+															polygon(points="0 5.5 9 0 9 11 0 5.5")
+													button.arrow.arrow_sm.arrow_light.arrow_next(type='button')
+														svg(xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 11" fill='currentColor')
+															polygon(points="9 5.5 0 0 0 11 9 5.5")
+										.our-projects__slide
+											img(src='img/our-projects-img.jpg' alt='')
+											.our-projects__img-footer
+												.our-projects__img-caption Фотография №3
+												.our-projects__controls
+													button.arrow.arrow_sm.arrow_light.arrow_prev(type='button')
+														svg(xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 11" fill='currentColor')
+															polygon(points="0 5.5 9 0 9 11 0 5.5")
+													button.arrow.arrow_sm.arrow_light.arrow_next(type='button')
+														svg(xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 11" fill='currentColor')
+															polygon(points="9 5.5 0 0 0 11 9 5.5")
+										.our-projects__slide
+											img(src='img/our-projects-img.jpg' alt='')
+											.our-projects__img-footer
+												.our-projects__img-caption Фотография №4
+												.our-projects__controls
+													button.arrow.arrow_sm.arrow_light.arrow_prev(type='button')
+														svg(xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 11" fill='currentColor')
+															polygon(points="0 5.5 9 0 9 11 0 5.5")
+													button.arrow.arrow_sm.arrow_light.arrow_next(type='button')
+														svg(xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 11" fill='currentColor')
+															polygon(points="9 5.5 0 0 0 11 9 5.5")
+										.our-projects__slide
+											img(src='img/our-projects-img.jpg' alt='')
+											.our-projects__img-footer
+												.our-projects__img-caption Фотография №4
+												.our-projects__controls
+													button.arrow.arrow_sm.arrow_light.arrow_prev(type='button')
+														svg(xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 11" fill='currentColor')
+															polygon(points="0 5.5 9 0 9 11 0 5.5")
+													button.arrow.arrow_sm.arrow_light.arrow_next(type='button')
+														svg(xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 11" fill='currentColor')
+															polygon(points="9 5.5 0 0 0 11 9 5.5")
+									.our-projects__img-nav
+										img(src='img/our-projects-img-nav.jpg' alt='')
+										img(src='img/our-projects-img-nav.jpg' alt='')
+										img(src='img/our-projects-img-nav.jpg' alt='')
+										img(src='img/our-projects-img-nav.jpg' alt='')
+										img(src='img/our-projects-img-nav.jpg' alt='')
+								.our-projects__content
+									.our-projects__title Спортивный комплекс Спорт Тайм — ледовые катки и теннисные корты
+									.our-projects__text
+										p #[span(style='font-weight: 700; color: #054c7a') Назначение:] Укрытия ледовых полей и теннисных кортов
+										p Утепленное каркасно-мембранное укрытие двух хоккейных полей и четырех теннисных кортов с пристройкой для размещения раздевалок, кафе, спортивного зала и др. помещений.
+										p #[span(style='font-weight: 700; color: #054c7a') Размеры] 40 х 144 х 5,1м/14,4м(по стене/ в коньке), пристройка 15 х 68 х 5м (по стене)
+										p Ворота подъемные для въезда ледоуборочных машин  4 шт
+										p #[span(style='font-weight: 700; color: #054c7a') Место расположения:] г. Москва.
+										p #[span(style='font-weight: 700; color: #054c7a') Год постройки:] 2018
+										p #[span(style='font-weight: 700; color: #054c7a') Срок монтажа:] 60 рабочих дней
+									.our-projects__content-footer
+										a.button.button_fill(href='#') СМОТРЕТЬ ПРОЕКТ
+							.vertical-text ПРОЕКТЫ
+				.our-projects__bg-element.our-projects__bg-element_left(style='background-image: url(img/our-projects-left-bg.jpg)')
+				.our-projects__bg-element.our-projects__bg-element_right(style='background-image: url(img/our-projects-right-bg.jpg)')
+		include ../includes/_video
+		include ../includes/_gallery
+		include ../includes/_posts
+		include ../includes/_request
+	include ../includes/_footer
+	include ../includes/_modal
+block body_end
