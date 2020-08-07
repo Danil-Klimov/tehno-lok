@@ -29,11 +29,13 @@
 
   &__container {
     margin-top: 25px;
+    @include col();
+    @include size(12);
   }
 
   &__item {
-    @include col();
-    @include size(2.4);
+    box-sizing: border-box;
+    padding: 0 15px;
     text-align: center;
 
     &:nth-child(odd) {
@@ -69,10 +71,6 @@
       height: 50px;
       position: absolute;
       z-index: -1;
-    }
-
-    img {
-      margin: 0 auto;
     }
   }
 

@@ -25,10 +25,10 @@ $(document).ready(function () {
   });
 
 // features slider
-  $('.features__container').slick({
-    slidesToShow: 5,
-    slidesToScroll: 1,
-    infinite: false
+  const featuresSlider = new Swiper('.features__slider', {
+    direction: 'horizontal',
+    loop: false,
+    slidesPerView: 5,
   });
 
 // our projects slider
@@ -169,7 +169,7 @@ $(document).ready(function () {
 
 // projects menu slider
   const dataInit = $('.projects-menu__slider').data('init');
-  let projectMenuSlider = new Swiper('.projects-menu__slider', {
+  const projectMenuSlider = new Swiper('.projects-menu__slider', {
     direction: 'horizontal',
     loop: false,
     slidesPerView: 6,
@@ -178,8 +178,11 @@ $(document).ready(function () {
       prevEl: '.projects-menu__prev',
     },
   });
-  projectMenuSlider.slideTo(dataInit);
-  projectMenuSlider.slides[dataInit].classList.add('active');
+
+  if(projectMenuSlider.initialized) {
+    projectMenuSlider.slideTo(dataInit);
+    projectMenuSlider.slides[dataInit].classList.add('active');
+  }
 
   svg4everybody();
 });
