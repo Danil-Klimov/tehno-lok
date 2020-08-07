@@ -82,3 +82,15 @@
     color: inherit;
   }
 }
+
+.select {
+  appearance: none;
+  background-image: url('data:image/svg+xml; utf8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 11" width="8" height="11" style="color: rgba(5,76,122)"><polygon fill="currentColor" points="9 5.5 0 0 0 11 9 5.5"/></svg>');
+  background-repeat: no-repeat;
+  background-position: calc(100% - 15px) center;
+  transition: all 0.1s;
+
+  &.active {
+    background-image: url('data:image/svg+xml; utf8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 11 9" width="10" height="11" style="color: rgba(5,76,122)"><polygon fill="currentColor" points="5.5 9 11 0 0 0 5.5 9"/></svg>');
+  }
+}

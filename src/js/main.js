@@ -46,11 +46,8 @@ $(document).ready(function () {
       '<polygon points="0 5.5 9 0 9 11 0 5.5"/></svg></button>',
   });
 
-  function our_projects_img_slider () {
-    let slideCount = 0;
-
+  function our_project_img_slider() {
     $('.our-projects__img-slider').each(function () {
-      slideCount++;
       $(this).slick({
         slidesToShow: 1,
         slidesToScroll: 1,
@@ -60,11 +57,42 @@ $(document).ready(function () {
         prevArrow: $(this).find('.arrow_prev'),
       });
     });
-
-    slideCount = 0;
   }
 
-  our_projects_img_slider();
+  our_project_img_slider();
+
+  function our_projects_img_slider_w_nav () {
+    let slideCount = 0;
+
+    $('.our-projects__img-slider-w-nav').each(function () {
+      slideCount++;
+      $(this).addClass( 'slider-' + slideCount ).slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        infinite: false,
+        fade: true,
+        nextArrow: $(this).find('.arrow_next'),
+        prevArrow: $(this).find('.arrow_prev'),
+        asNavFor: '.our-projects__img-nav.slider-' + slideCount
+      });
+    });
+
+    slideCount = 0;
+
+    $('.our-projects__img-nav').each(function () {
+      slideCount++;
+      $(this).addClass( 'slider-' + slideCount ).slick({
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        asNavFor: '.our-projects__img-slider-w-nav.slider-' + slideCount,
+        infinite: false,
+        focusOnSelect: true,
+        arrows: false,
+      });
+    });
+  }
+
+  our_projects_img_slider_w_nav();
 
 // types slider
   $('.types__slider').slick({
@@ -130,6 +158,13 @@ $(document).ready(function () {
     prevArrow: '<button class="arrow arrow_sm arrow_light arrow_prev" type="button">' +
       '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 11" fill="currentColor">' +
       '<polygon points="0 5.5 9 0 9 11 0 5.5"/></svg></button>',
+  });
+
+// select
+  $('.select').on('click', function () {
+    $(this).toggleClass('active');
+  }).on('blur', function () {
+    $(this).removeClass('active');
   });
 
   svg4everybody();

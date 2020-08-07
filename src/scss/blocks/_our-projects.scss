@@ -18,7 +18,6 @@
       &_left {
         right: 0;
         left: auto;
-        background-position: left top;
       }
 
       &_right {
@@ -26,6 +25,12 @@
         right: auto;
         background-position: right bottom;
       }
+    }
+  }
+
+  &__w-filter {
+    .our-projects__wrapper {
+      padding-top: 70px;
     }
   }
 
@@ -163,6 +168,15 @@
     }
   }
 
+  &__img-nav {
+    margin: 5px -2px 0;
+
+    img {
+      margin: 0 2px;
+      cursor: pointer;
+    }
+  }
+
   &__content {
     box-sizing: border-box;
     flex-basis: 50%;
@@ -207,12 +221,28 @@
 
     &_left {
       left: 0;
-      background-position: right top;
+      background-size: cover;
     }
 
     &_right {
       right: 0;
       background-position: left bottom;
+    }
+  }
+
+  &__filter {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    font-size: 13px;
+    color: #4c4c4c;
+    padding-left: 15px;
+    display: flex;
+    align-items: center;
+
+    .input {
+      margin: 0 0 0 20px;
+      width: 360px;
     }
   }
 }

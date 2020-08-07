@@ -2,7 +2,7 @@ extends ../layouts/_default
 block variables
 	-
 		const config = {
-			title: "Цены - ТехноЛОК",
+			title: "Наши проекты - ТехноЛОК",
 			description: "",
 			og_title: "",
 			og_type: "",
@@ -15,9 +15,12 @@ block content
 	include ../includes/_header
 	main.main.main_page
 		include ../includes/_breadcrumbs
-		include ../includes/_text
-		include ../includes/_numbers
-		include ../includes/_our-projects-price
+		section.text
+			.container
+				.row
+					.text__content
+						h1(style='font-size: 38px; color: #054c7a;') НАШИ ПРОЕКТЫ
+		include ../includes/_our-projects-projects
 		include ../includes/_request
 	include ../includes/_footer
 	include ../includes/_modal
