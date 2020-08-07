@@ -32,15 +32,39 @@ $(document).ready(function () {
   });
 
 // our projects slider
-  $('.our-projects__body').slick({
+  $('.our-projects__slider').slick({
     slidesToShow: 1,
     slidesToScroll: 1,
     infinite: false,
     fade: true,
     slide: '.our-projects__inner',
-    nextArrow: $(this).find('.arrow_next'),
-    prevArrow: $(this).find('.arrow_prev'),
+    nextArrow: '<button class="arrow arrow_md arrow_dark arrow_next" type="button">' +
+      '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 11" fill="currentColor">' +
+      '<polygon points="9 5.5 0 0 0 11 9 5.5"/></svg></button>',
+    prevArrow: '<button class="arrow arrow_md arrow_dark arrow_prev" type="button">' +
+      '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 11" fill="currentColor">' +
+      '<polygon points="0 5.5 9 0 9 11 0 5.5"/></svg></button>',
   });
+
+  function our_projects_img_slider () {
+    let slideCount = 0;
+
+    $('.our-projects__img-slider').each(function () {
+      slideCount++;
+      $(this).slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        infinite: false,
+        fade: true,
+        nextArrow: $(this).find('.arrow_next'),
+        prevArrow: $(this).find('.arrow_prev'),
+      });
+    });
+
+    slideCount = 0;
+  }
+
+  our_projects_img_slider();
 
 // types slider
   $('.types__slider').slick({

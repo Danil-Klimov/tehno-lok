@@ -1,7 +1,39 @@
 .our-projects {
-  padding: 40px 0 20px;
-  position: relative;
-  z-index: 1;
+  &_clean {
+    .our-projects__wrapper {
+      padding-bottom: 50px;
+    }
+
+    .our-projects__buttons {
+      @include size(12);
+      @include shift-left(0);
+      padding: 50px 0 60px;
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  &_backwards {
+    .our-projects__bg-element {
+      &_left {
+        right: 0;
+        left: auto;
+        background-position: left top;
+      }
+
+      &_right {
+        left: 0;
+        right: auto;
+        background-position: right bottom;
+      }
+    }
+  }
+
+  &__wrapper {
+    padding: 40px 0 20px;
+    position: relative;
+    z-index: 1;
+  }
   
   .container {
     position: relative;
@@ -65,6 +97,23 @@
     }
   }
 
+  &__slider {
+    .arrow {
+      position: absolute;
+      top: 50%;
+      transform: translate3d(0, -50%, 0);
+      z-index: 1;
+
+      &_next {
+        right: -18px;
+      }
+
+      &_prev {
+        left: -18px;
+      }
+    }
+  }
+
   &__inner {
     display: flex !important;
   }
@@ -72,6 +121,7 @@
   &__img {
     box-sizing: border-box;
     flex-basis: 440px;
+    width: 440px;
     position: relative;
     
     img {
@@ -116,7 +166,7 @@
   &__content {
     box-sizing: border-box;
     flex-basis: 50%;
-    padding: 17px 35px 17px 28px;
+    padding: 5px 35px 17px 28px;
     margin-left: auto;
   }
 
@@ -162,7 +212,7 @@
 
     &_right {
       right: 0;
-      background-position: 82px 92%;
+      background-position: left bottom;
     }
   }
 }
