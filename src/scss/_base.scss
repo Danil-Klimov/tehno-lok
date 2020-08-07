@@ -84,7 +84,7 @@ ul {
 }
 
 .arrow {
-  &.slick-disabled {
+  &.slick-disabled, &.swiper-button-disabled {
     visibility: hidden;
     opacity: 0;
     z-index: -999;

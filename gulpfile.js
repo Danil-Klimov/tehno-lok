@@ -23,6 +23,7 @@ global.$ = {
 			'node_modules/slick-carousel/slick/slick.min.js',
 			'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.js',
 			'node_modules/jquery-mask-plugin/dist/jquery.mask.min.js',
+			'node_modules/swiper/swiper-bundle.min.js'
 		],
 		server: {
 			proxy: 'adem/tehnolok.wp/build'

@@ -13,10 +13,28 @@
     color: #054c7a;
   }
 
-  &__slider {
+  &__wrapper {
     @include col();
     @include size(10.46);
-    
+    position: relative;
+
+    .arrow {
+      position: absolute;
+      top: 50%;
+      z-index: 1;
+      transform: translate3d(0, -50%, 0);
+
+      &_next {
+        right: -17px;
+      }
+
+      &_prev {
+        left: -17px;
+      }
+    }
+  }
+
+  &__slider {
     a {
       position: relative;
       padding: 12px 0;
@@ -52,22 +70,8 @@
     }
 
     img {
+      display: block;
       transition: all 0.3s;
-    }
-
-    .arrow {
-      position: absolute;
-      top: 50%;
-      z-index: 1;
-      transform: translate3d(0, -50%, 0);
-
-      &_next {
-        right: -17px;
-      }
-
-      &_prev {
-        left: -17px;
-      }
     }
   }
 
