@@ -38,6 +38,15 @@
       color: #2483B8;
       display: block;
       margin-bottom: 9px;
+      background: linear-gradient(
+          45deg,
+          #054c7a 0%,
+          #054c7a 30%,
+          #2ca0d9 70%,
+          #2ca0d9 100%
+      );
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
   }
 }
