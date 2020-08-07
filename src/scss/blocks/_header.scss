@@ -24,6 +24,10 @@
         background-color: #1864b0;
       }
     }
+
+    .header__order {
+      top: 80px;
+    }
   }
 
   &__logo {
@@ -98,5 +102,17 @@
     @include col();
     display: flex;
     align-items: center;
+  }
+
+  &__order {
+    position: absolute;
+    top: 120px;
+    right: 0;
+    padding: 25px 22px 18px;
+    line-height: 1.4;
+
+    img {
+      margin-bottom: 7px;
+    }
   }
 }

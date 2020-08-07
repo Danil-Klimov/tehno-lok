@@ -33,3 +33,7 @@ header.header
 					span
 					span
 	include _burger-menu
+	if config.order_bt
+		button.order__request.header__order(type='button' data-src='#modal-request' data-fancybox)
+			img(src='img/calculation-icon.png')
+			span ЗАКАЗАТЬ #[br] РАСЧЕТ
