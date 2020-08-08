@@ -7,30 +7,24 @@ section.our-projects.our-projects_clean
 					h2.title ПРОЕКТЫ
 				.our-projects__body.big-square
 					.our-projects__inner
-						.our-projects__img.our-projects__img-slider
-							.our-projects__slide
-								a(href='img/our-projects-img.jpg' data-fancybox)
+						.our-projects__img.our-projects__img-slider.swiper-container
+							.swiper-wrapper
+								.swiper-slide
+									a(href='img/our-projects-img.jpg' data-fancybox)
+										img(src='img/our-projects-img.jpg' alt='')
+									.our-projects__img-footer
+										.our-projects__img-caption Название фотографии, на которой подробности
+								.swiper-slide
 									img(src='img/our-projects-img.jpg' alt='')
-								.our-projects__img-footer
-									.our-projects__img-caption Название фотографии, на которой подробности
-									.our-projects__controls
-										button.arrow.arrow_sm.arrow_light.arrow_prev(type='button')
-											svg(xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 11" fill='currentColor')
-												polygon(points="0 5.5 9 0 9 11 0 5.5")
-										button.arrow.arrow_sm.arrow_light.arrow_next(type='button')
-											svg(xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 11" fill='currentColor')
-												polygon(points="9 5.5 0 0 0 11 9 5.5")
-							.our-projects__slide
-								img(src='img/our-projects-img.jpg' alt='')
-								.our-projects__img-footer
-									.our-projects__img-caption Фотография №2
-									.our-projects__controls
-										button.arrow.arrow_sm.arrow_light.arrow_prev(type='button')
-											svg(xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 11" fill='currentColor')
-												polygon(points="0 5.5 9 0 9 11 0 5.5")
-										button.arrow.arrow_sm.arrow_light.arrow_next(type='button')
-											svg(xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 11" fill='currentColor')
-												polygon(points="9 5.5 0 0 0 11 9 5.5")
+									.our-projects__img-footer
+										.our-projects__img-caption Фотография №2
+							.our-projects__controls
+								button.arrow.arrow_sm.arrow_light.arrow_prev(type='button')
+									svg(xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 11" fill='currentColor')
+										polygon(points="0 5.5 9 0 9 11 0 5.5")
+								button.arrow.arrow_sm.arrow_light.arrow_next(type='button')
+									svg(xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 11" fill='currentColor')
+										polygon(points="9 5.5 0 0 0 11 9 5.5")
 						.our-projects__content
 							.our-projects__title Спортивный комплекс Спорт Тайм — ледовые катки и теннисные корты
 							.our-projects__text
@@ -61,29 +55,23 @@ section.our-projects.our-projects_clean.our-projects_backwards
 								p #[span(style='font-weight: 700; color: #054c7a') Место расположения:] г. Москва.
 								p #[span(style='font-weight: 700; color: #054c7a') Год постройки:] 2018
 								p #[span(style='font-weight: 700; color: #054c7a') Срок монтажа:] 60 рабочих дней
-						.our-projects__img.our-projects__img-slider
-							.our-projects__slide
-								img(src='img/our-projects-img.jpg' alt='')
-								.our-projects__img-footer
-									.our-projects__img-caption Название фотографии, на которой подробности
-									.our-projects__controls
-										button.arrow.arrow_sm.arrow_light.arrow_prev(type='button')
-											svg(xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 11" fill='currentColor')
-												polygon(points="0 5.5 9 0 9 11 0 5.5")
-										button.arrow.arrow_sm.arrow_light.arrow_next(type='button')
-											svg(xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 11" fill='currentColor')
-												polygon(points="9 5.5 0 0 0 11 9 5.5")
-							.our-projects__slide
-								img(src='img/our-projects-img.jpg' alt='')
-								.our-projects__img-footer
-									.our-projects__img-caption Фотография №2
-									.our-projects__controls
-										button.arrow.arrow_sm.arrow_light.arrow_prev(type='button')
-											svg(xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 11" fill='currentColor')
-												polygon(points="0 5.5 9 0 9 11 0 5.5")
-										button.arrow.arrow_sm.arrow_light.arrow_next(type='button')
-											svg(xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 11" fill='currentColor')
-												polygon(points="9 5.5 0 0 0 11 9 5.5")
+						.our-projects__img.our-projects__img-slider.swiper-container
+							.swiper-wrapper
+								.swiper-slide
+									img(src='img/our-projects-img.jpg' alt='')
+									.our-projects__img-footer
+										.our-projects__img-caption Название фотографии, на которой подробности
+								.swiper-slide
+									img(src='img/our-projects-img.jpg' alt='')
+									.our-projects__img-footer
+										.our-projects__img-caption Фотография №2
+							.our-projects__controls
+								button.arrow.arrow_sm.arrow_light.arrow_prev(type='button')
+									svg(xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 11" fill='currentColor')
+										polygon(points="0 5.5 9 0 9 11 0 5.5")
+								button.arrow.arrow_sm.arrow_light.arrow_next(type='button')
+									svg(xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 11" fill='currentColor')
+										polygon(points="9 5.5 0 0 0 11 9 5.5")
 		.our-projects__bg-element.our-projects__bg-element_left(style='background-image: url(img/our-projects-left-bg.jpg)')
 		.our-projects__bg-element.our-projects__bg-element_right(style='background-image: url(img/our-projects-right-bg.jpg)')
 
@@ -93,29 +81,23 @@ section.our-projects.our-projects_clean
 			.row
 				.our-projects__body.big-square
 					.our-projects__inner
-						.our-projects__img.our-projects__img-slider
-							.our-projects__slide
-								img(src='img/our-projects-img.jpg' alt='')
-								.our-projects__img-footer
-									.our-projects__img-caption Название фотографии, на которой подробности
-									.our-projects__controls
-										button.arrow.arrow_sm.arrow_light.arrow_prev(type='button')
-											svg(xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 11" fill='currentColor')
-												polygon(points="0 5.5 9 0 9 11 0 5.5")
-										button.arrow.arrow_sm.arrow_light.arrow_next(type='button')
-											svg(xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 11" fill='currentColor')
-												polygon(points="9 5.5 0 0 0 11 9 5.5")
-							.our-projects__slide
-								img(src='img/our-projects-img.jpg' alt='')
-								.our-projects__img-footer
-									.our-projects__img-caption Фотография №2
-									.our-projects__controls
-										button.arrow.arrow_sm.arrow_light.arrow_prev(type='button')
-											svg(xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 11" fill='currentColor')
-												polygon(points="0 5.5 9 0 9 11 0 5.5")
-										button.arrow.arrow_sm.arrow_light.arrow_next(type='button')
-											svg(xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 11" fill='currentColor')
-												polygon(points="9 5.5 0 0 0 11 9 5.5")
+						.our-projects__img.our-projects__img-slider.swiper-container
+							.swiper-wrapper
+								.swiper-slide
+									img(src='img/our-projects-img.jpg' alt='')
+									.our-projects__img-footer
+										.our-projects__img-caption Название фотографии, на которой подробности
+								.swiper-slide
+									img(src='img/our-projects-img.jpg' alt='')
+									.our-projects__img-footer
+										.our-projects__img-caption Фотография №2
+							.our-projects__controls
+								button.arrow.arrow_sm.arrow_light.arrow_prev(type='button')
+									svg(xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 11" fill='currentColor')
+										polygon(points="0 5.5 9 0 9 11 0 5.5")
+								button.arrow.arrow_sm.arrow_light.arrow_next(type='button')
+									svg(xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 11" fill='currentColor')
+										polygon(points="9 5.5 0 0 0 11 9 5.5")
 						.our-projects__content
 							.our-projects__title Спортивный комплекс Спорт Тайм — ледовые катки и теннисные корты
 							.our-projects__text

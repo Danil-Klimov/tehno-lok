@@ -100,10 +100,8 @@
       top: 0;
       left: -100px;
     }
-  }
 
-  &__slider {
-    .arrow {
+    >.arrow {
       position: absolute;
       top: 50%;
       transform: translate3d(0, -50%, 0);
@@ -120,7 +118,7 @@
   }
 
   &__inner {
-    display: flex !important;
+    display: flex;
   }
 
   &__img {
@@ -141,7 +139,7 @@
     bottom: 0;
     left: 0;
     right: 0;
-    padding: 16px 30px 16px 22px;
+    padding: 16px 110px 16px 22px;
     display: flex;
     min-height: 70px;
   }
@@ -160,6 +158,10 @@
     align-items: center;
     flex-shrink: 0;
     margin-left: auto;
+    position: absolute;
+    bottom: 25px;
+    right: 30px;
+    z-index: 1;
 
     .arrow {
       + .arrow {
@@ -169,10 +171,9 @@
   }
 
   &__img-nav {
-    margin: 5px -2px 0;
+    margin: 5px 0 0;
 
     img {
-      margin: 0 2px;
       cursor: pointer;
     }
   }

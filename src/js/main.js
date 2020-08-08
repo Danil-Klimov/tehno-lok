@@ -32,62 +32,65 @@ $(document).ready(function () {
   });
 
 // our projects slider
-  $('.our-projects__slider').slick({
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    infinite: false,
-    fade: true,
-    slide: '.our-projects__inner',
-    nextArrow: '<button class="arrow arrow_md arrow_dark arrow_next" type="button">' +
-      '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 11" fill="currentColor">' +
-      '<polygon points="9 5.5 0 0 0 11 9 5.5"/></svg></button>',
-    prevArrow: '<button class="arrow arrow_md arrow_dark arrow_prev" type="button">' +
-      '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 11" fill="currentColor">' +
-      '<polygon points="0 5.5 9 0 9 11 0 5.5"/></svg></button>',
+  const ourProjectsSlider = new Swiper('.our-projects__slider', {
+    direction: 'horizontal',
+    loop: false,
+    slidesPerView: 1,
+    effect: 'fade',
+    fadeEffect: {
+      crossFade: true
+    },
+    navigation: {
+      nextEl: this.querySelector('.arrow_next'),
+      prevEl: this.querySelector('.arrow_prev'),
+    },
   });
 
   function our_project_img_slider() {
-    $('.our-projects__img-slider').each(function () {
-      $(this).slick({
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        infinite: false,
-        fade: true,
-        nextArrow: $(this).find('.arrow_next'),
-        prevArrow: $(this).find('.arrow_prev'),
+      $('.our-projects__img-slider').each(function () {
+        let ourProjectsImgSlider = new Swiper(this, {
+          direction: 'horizontal',
+          loop: false,
+          slidesPerView: 1,
+          effect: 'fade',
+          fadeEffect: {
+            crossFade: true
+          },
+          navigation: {
+            nextEl: this.querySelector('.arrow_next'),
+            prevEl: this.querySelector('.arrow_prev'),
+          },
+        });
       });
-    });
-  }
+    }
 
   our_project_img_slider();
 
   function our_projects_img_slider_w_nav () {
-    let slideCount = 0;
-
-    $('.our-projects__img-slider-w-nav').each(function () {
-      slideCount++;
-      $(this).addClass( 'slider-' + slideCount ).slick({
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        infinite: false,
-        fade: true,
-        nextArrow: $(this).find('.arrow_next'),
-        prevArrow: $(this).find('.arrow_prev'),
-        asNavFor: '.our-projects__img-nav.slider-' + slideCount
+    $('.our-projects__img').each(function () {
+      let ourProjectsImgSliderNav = new Swiper(this.querySelector('.our-projects__img-nav'), {
+        direction: 'horizontal',
+        loop: false,
+        slidesPerView: 4,
+        watchSlidesProgress: true,
+        spaceBetween: 5
       });
-    });
 
-    slideCount = 0;
-
-    $('.our-projects__img-nav').each(function () {
-      slideCount++;
-      $(this).addClass( 'slider-' + slideCount ).slick({
-        slidesToShow: 4,
-        slidesToScroll: 1,
-        asNavFor: '.our-projects__img-slider-w-nav.slider-' + slideCount,
-        infinite: false,
-        focusOnSelect: true,
-        arrows: false,
+      let ourProjectsImgSliderWNav = new Swiper(this.querySelector('.our-projects__img-slider-w-nav'), {
+        direction: 'horizontal',
+        loop: false,
+        slidesPerView: 1,
+        effect: 'fade',
+        fadeEffect: {
+          crossFade: true
+        },
+        navigation: {
+          nextEl: this.querySelector('.arrow_next'),
+          prevEl: this.querySelector('.arrow_prev'),
+        },
+        thumbs: {
+          swiper: ourProjectsImgSliderNav
+        }
       });
     });
   }
