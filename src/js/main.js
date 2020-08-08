@@ -116,28 +116,16 @@ $(document).ready(function () {
       prevEl: '.reviews__prev',
     },
   });
-//   $('.reviews__slider').slick({
-//     slidesToShow: 5,
-//     slidesToScroll: 1,
-//     infinite: false,
-//     nextArrow: '<button class="arrow arrow_md arrow_dark arrow_next" type="button">' +
-//       '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 11" fill="currentColor">' +
-//       '<polygon points="9 5.5 0 0 0 11 9 5.5"/></svg></button>',
-//     prevArrow: '<button class="arrow arrow_md arrow_dark arrow_prev" type="button">' +
-//       '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 11" fill="currentColor">' +
-//       '<polygon points="0 5.5 9 0 9 11 0 5.5"/></svg></button>',
-//   });
 
 // gallery slider
-  $('.gallery').slick({
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    initialSlide: 2,
-    infinite: true,
-    arrows: false,
-    variableWidth: true,
+  const gallerySlider = new Swiper('.gallery', {
+    loop: true,
+    slidesPerView: 'auto',
+    centerInsufficientSlides: true,
+    watchOverflow: true,
     autoplay: true,
-    centerMode: true
+    centeredSlides: true,
+    freeMode: true
   });
 
 // posts slider

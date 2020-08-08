@@ -1,3 +1,11 @@
 .gallery {
   border-top: 4px solid #054C7A;
+
+  a {
+    width: auto;
+  }
+  
+  img {
+    display: block;
+  }
 }
