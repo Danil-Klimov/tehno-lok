@@ -6,19 +6,27 @@ section.reviews
 				h2.title.reviews__title ОТЗЫВЫ О НАШЕЙ РАБОТЕ
 				.reviews__link
 					a(href='#') Смотреть все
-			.reviews__slider
-				a.reviews__item.zoom(href='#rev_942' data-fancybox)
-					img(src='img/reviews-img-1.jpg' alt='')
-				a.reviews__item.zoom(href='#rev_942' data-fancybox)
-					img(src='img/reviews-img-2.jpg' alt='')
-				a.reviews__item.zoom(href='#rev_942' data-fancybox)
-					img(src='img/reviews-img-1.jpg' alt='')
-				a.reviews__item.zoom(href='#rev_942' data-fancybox)
-					img(src='img/reviews-img-2.jpg' alt='')
-				a.reviews__item.zoom(href='#rev_942' data-fancybox)
-					img(src='img/reviews-img-1.jpg' alt='')
-				a.reviews__item.zoom(href='#rev_942' data-fancybox)
-					img(src='img/reviews-img-2.jpg' alt='')
+			.reviews__container
+				.reviews__slider.swiper-container
+					.swiper-wrapper
+						a.reviews__item.zoom.swiper-slide(href='#rev_942' data-fancybox)
+							img(src='img/reviews-img-1.jpg' alt='')
+						a.reviews__item.zoom.swiper-slide(href='#rev_942' data-fancybox)
+							img(src='img/reviews-img-2.jpg' alt='')
+						a.reviews__item.zoom.swiper-slide(href='#rev_942' data-fancybox)
+							img(src='img/reviews-img-1.jpg' alt='')
+						a.reviews__item.zoom.swiper-slide(href='#rev_942' data-fancybox)
+							img(src='img/reviews-img-2.jpg' alt='')
+						a.reviews__item.zoom.swiper-slide(href='#rev_942' data-fancybox)
+							img(src='img/reviews-img-1.jpg' alt='')
+						a.reviews__item.zoom.swiper-slide(href='#rev_942' data-fancybox)
+							img(src='img/reviews-img-2.jpg' alt='')
+				button.arrow.arrow_md.arrow_dark.arrow_next.reviews__next(type="button")
+					svg(xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 11" fill="currentColor")
+						polygon(points="9 5.5 0 0 0 11 9 5.5")
+				button.arrow.arrow_md.arrow_dark.arrow_prev.reviews__prev(type="button")
+					svg(xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 11" fill="currentColor")
+						polygon(points="0 5.5 9 0 9 11 0 5.5")
 	#rev_942.reviews__modal
 		.reviews__modal-inner
 			.reviews__modal-img
