@@ -25,11 +25,12 @@
     font-size: 13px;
   }
 
-  &__slider {
+  &__container {
     @include col();
-    @include size(11);
-    @include shift-left(0.5);
+    @include size(10);
+    @include shift-left(1);
     margin-top: 20px;
+    position: relative;
 
     .arrow {
       position: absolute;
@@ -38,20 +39,21 @@
       z-index: 1;
 
       &_next {
-        right: -7px;
+        right: -55px;
       }
 
       &_prev {
-        left: -7px;
+        left: -55px;
       }
     }
   }
 
-  &__inner {
+  &__slide {
     display: block;
     max-width: 260px;
-    margin: 15px auto 0;
+    margin: 15px 0 0;
     position: relative;
+
 
     &:hover {
       &::after {
@@ -68,7 +70,7 @@
       border-radius: 2px;
       position: absolute;
       top: -15px;
-      bottom: 0;
+      bottom: 15px;
       left: 18px;
       right: 18px;
       pointer-events: none;

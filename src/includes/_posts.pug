@@ -5,28 +5,32 @@ section.posts
 				.vertical-text СТАТЬИ
 				h2.title.posts__title ВАМ МОЖЕТ БЫТЬ ИНТЕРЕСНО
 				.posts__subtitle Полезная информация
-			.posts__slider
-				.posts__item
-					a.posts__inner(href='#')
-						img(src='img/posts-img-1.jpg')
-						.posts__text
-							.posts__item-title Заголовок статьи может быть длинным
-							.posts__excerpt Это небольшой анонс статьи, создан для примера текста...
-				.posts__item
-					a.posts__inner(href='#')
-						img(src='img/posts-img-2.jpg')
-						.posts__text
-							.posts__item-title Заголовок статьи может быть длинным
-							.posts__excerpt Это небольшой анонс статьи, создан для примера текста...
-				.posts__item
-					a.posts__inner(href='#')
-						img(src='img/posts-img-3.jpg')
-						.posts__text
-							.posts__item-title Заголовок статьи может быть длинным
-							.posts__excerpt Это небольшой анонс статьи, создан для примера текста...
-				.posts__item
-					a.posts__inner(href='#')
-						img(src='img/posts-img-3.jpg')
-						.posts__text
-							.posts__item-title Заголовок статьи может быть длинным
-							.posts__excerpt Это небольшой анонс статьи, создан для примера текста...
+			.posts__container
+				.posts__slider.swiper-container
+					.swiper-wrapper
+						a.posts__slide.swiper-slide(href='#')
+							img(src='img/posts-img-1.jpg')
+							.posts__text
+								.posts__item-title Заголовок статьи может быть длинным
+								.posts__excerpt Это небольшой анонс статьи, создан для примера текста...
+						a.posts__slide.swiper-slide(href='#')
+							img(src='img/posts-img-2.jpg')
+							.posts__text
+								.posts__item-title Заголовок статьи может быть длинным
+								.posts__excerpt Это небольшой анонс статьи, создан для примера текста...
+						a.posts__slide.swiper-slide(href='#')
+							img(src='img/posts-img-3.jpg')
+							.posts__text
+								.posts__item-title Заголовок статьи может быть длинным
+								.posts__excerpt Это небольшой анонс статьи, создан для примера текста...
+						a.posts__slide.swiper-slide(href='#')
+							img(src='img/posts-img-3.jpg')
+							.posts__text
+								.posts__item-title Заголовок статьи может быть длинным
+								.posts__excerpt Это небольшой анонс статьи, создан для примера текста...
+				button.arrow.arrow_sm.arrow_light.arrow_prev.posts__prev(type='button')
+					svg(xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 11" fill='currentColor')
+						polygon(points="0 5.5 9 0 9 11 0 5.5")
+				button.arrow.arrow_sm.arrow_light.arrow_next.posts__next(type='button')
+					svg(xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 11" fill='currentColor')
+						polygon(points="9 5.5 0 0 0 11 9 5.5")
