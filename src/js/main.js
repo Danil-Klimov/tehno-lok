@@ -182,5 +182,58 @@ $(document).ready(function () {
     projectMenuSlider.slides[dataInit].classList.add('active');
   }
 
+// video
+  function findVideos() {
+    const videos = document.querySelectorAll('.video');
+
+    for (let i = 0; i < videos.length; i++) {
+      setupVideo(videos[i]);
+    }
+  }
+
+  function setupVideo(video) {
+    const link = video.querySelector('.video__link');
+    const button = video.querySelector('.video__button');
+    const id = parseLinkURL(link);
+
+    video.addEventListener('click', () => {
+      const iframe = createIframe(id);
+
+      link.remove();
+      button.remove();
+      video.appendChild(iframe);
+    });
+
+    link.removeAttribute('href');
+    video.classList.add('video_enabled');
+  }
+
+  function parseLinkURL(link) {
+    const regexp = /[a-zA-Z0-9_-]+$/;
+    const url = link.href;
+    const match = url.match(regexp);
+
+    return match[0];
+  }
+
+  function createIframe(id) {
+    const iframe = document.createElement('iframe');
+
+    iframe.setAttribute('allowfullscreen', '');
+    iframe.setAttribute('allow', 'accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture');
+    iframe.setAttribute('src', generateURL(id));
+    iframe.classList.add('video__media');
+
+    return iframe;
+  }
+
+  function generateURL(id) {
+    const query = '?rel=0&showinfo=0&autoplay=1';
+
+    return 'https://www.youtube.com/embed/' + id + query;
+  }
+
+  findVideos();
+
   svg4everybody();
 });

@@ -1,77 +1,59 @@
 .video {
-  padding: 75px 0 0;
-  background-repeat: no-repeat;
-  background-position: center top;
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%;
 
-  &__header {
-    @include col();
-    @include size(12);
-    display: grid;
-    grid-template-columns: 11px 1fr;
-    margin-bottom: 75px;
-    text-align: center;
-    color: #fff;
-
-    .vertical-text {
-      margin-top: 18px;
-      grid-row: 1/3;
+  &:hover {
+    .video__button-shape {
+      fill: #ff0000;
+      fill-opacity: 1;
     }
   }
 
-  &__title {
-    grid-column: 2/2;
-    margin-bottom: 5px;
-  }
+  &_enabled {
+    cursor: pointer;
 
-  &__container {
-    @include col();
-    @include size(7);
-    border: 12px solid #fff;
-    box-shadow: 0 0 15px 0 rgba(#00437a, 0.2);
-    align-self: flex-start;
-    position: relative;
-    right: -100px;
-    z-index: 1;
-    
-    &::before {
-      content: '';
+    .video__button {
       display: block;
-      width: 110px;
-      height: 105px;
-      background-color: #00285B;
-      position: absolute;
-      top: -27px;
-      left: -30px;
-      z-index: -1;
-    }
-
-    iframe {
-      display: block;
-      width: 100%;
-    }
-
-    video {
-      display: block;
-      width: 100%;
     }
   }
 
-  &__text {
-    @include col();
-    @include size(4.75);
-    @include shift-right(0.25);
-    margin-left: auto;
-    background-color: #fff;
-    padding: 30px 53px 45px 107px;
-    font-size: 13px;
-    margin-top: 35px;
+  &__media {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
 
-    p {
-      line-height: 1.6;
-    }
+  &__button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 68px;
+    height: 48px;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    transform: translate3d(-50%, -50%, 0);
+    display: none;
 
-    .button {
-      margin-top: 32px;
+    &:focus {
+      .video__button-shape {
+        fill: #ff0000;
+        fill-opacity: 1;
+      }
     }
+  }
+
+  &__button-shape {
+    fill: #212121;
+    fill-opacity: 0.8;
+  }
+
+  &__button-icon {
+    fill: #fff;
   }
 }
