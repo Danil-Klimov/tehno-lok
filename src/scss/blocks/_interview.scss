@@ -1,0 +1,71 @@
+.interview {
+  padding: 55px 0 30px;
+  background: url("../img/types-bg.jpg") no-repeat calc(50% + 715px) bottom;
+  
+  &__header {
+    @include col();
+    @include size(12);
+    text-align: center;
+    color: #054c7a;
+  }
+
+  &__container {
+    position: relative;
+    //z-index: 1;
+
+    .arrow {
+      top: 50%;
+      transform: translate3d(0, -50%, 0);
+      position: absolute;
+      z-index: 1;
+
+      &_next {
+        right: 45px;
+      }
+
+      &_prev {
+        left: 45px;
+      }
+    }
+  }
+
+  &__slider {
+    @include col();
+    @include size(11);
+    @include shift-left(0.55);
+  }
+
+  &__slide {
+    box-sizing: border-box;
+    display: flex;
+    padding: 15px 0 0 19px;
+  }
+
+  &__video {
+    width: 61%;
+    flex-shrink: 0;
+  }
+
+  &__text {
+    font-size: 13px;
+    margin: 3px 0 0 35px;
+    padding-right: 40px;
+
+    p {
+      line-height: 1.7;
+    }
+
+    .button {
+      margin-top: 15px;
+    }
+  }
+
+  &__footer {
+    @include col();
+    @include size(12);
+    margin-top: 30px;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+  }
+}

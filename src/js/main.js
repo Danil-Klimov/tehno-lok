@@ -235,5 +235,20 @@ $(document).ready(function () {
 
   findVideos();
 
+// interview slider
+  const interviewSlider = new Swiper('.interview__slider', {
+    loop: false,
+    slidesPerView: 1,
+    // effect: 'fade',
+    // fadeEffect: {
+    //   crossFade: true
+    // },
+    // spaceBetween: 70,
+    navigation: {
+      nextEl: '.interview__next',
+      prevEl: '.interview__prev',
+    },
+  });
+
   svg4everybody();
 });
