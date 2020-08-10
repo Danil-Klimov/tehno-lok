@@ -95,13 +95,17 @@ $(document).ready(function () {
 
   our_projects_img_slider_w_nav();
 
-// types slider
-  const typesSlider = new Swiper('.types__slider', {
+// news slider
+  const newsSlider = new Swiper('.news__slider', {
     loop: false,
     slidesPerView: 3,
     spaceBetween: 30,
     centerInsufficientSlides: true,
-    watchOverflow: true
+    watchOverflow: true,
+    navigation: {
+      nextEl: '.news__next',
+      prevEl: '.news__prev',
+    },
   });
 
 // reviews slider
@@ -239,11 +243,6 @@ $(document).ready(function () {
   const interviewSlider = new Swiper('.interview__slider', {
     loop: false,
     slidesPerView: 1,
-    // effect: 'fade',
-    // fadeEffect: {
-    //   crossFade: true
-    // },
-    // spaceBetween: 70,
     navigation: {
       nextEl: '.interview__next',
       prevEl: '.interview__prev',
