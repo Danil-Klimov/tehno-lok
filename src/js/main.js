@@ -249,5 +249,15 @@ $(document).ready(function () {
     },
   });
 
+// faq
+  $('.faq__answer').mCustomScrollbar();
+
+  $('.faq__question').on('click', function () {
+    const currentItem = $(this).siblings('.faq__answer');
+    $('.faq__answer').not(currentItem).fadeOut();
+
+    currentItem.fadeIn();
+  });
+
   svg4everybody();
 });
