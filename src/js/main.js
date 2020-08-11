@@ -331,5 +331,19 @@ $(document).ready(function () {
   }
 
   team_slider();
+
+// office slider
+  const officeSlider = new Swiper('.office__slider', {
+    loop: false,
+    slidesPerView: 1,
+    centerInsufficientSlides: true,
+    watchOverflow: true,
+    freeMode: true,
+    autoplay: {
+      delay: 4000
+    },
+    speed: 1000
+  });
+
   svg4everybody();
 });
