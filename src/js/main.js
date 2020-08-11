@@ -259,5 +259,77 @@ $(document).ready(function () {
     currentItem.fadeIn();
   });
 
+// team tabs
+  // tabs
+  let Tabs = {
+
+    init: function() {
+      this.bindUIfunctions();
+      this.pageLoadCorrectTab();
+    },
+
+    bindUIfunctions: function() {
+
+      // Delegation
+      $(document)
+        .on("click", ".team__tab:not('.active')", function(event) {
+          Tabs.changeTab(this.hash);
+          event.preventDefault();
+        })
+        .on("click", ".team__tab.active", function(event) {
+          Tabs.toggleMobileMenu(event, this);
+          event.preventDefault();
+        });
+    },
+
+    changeTab: function(hash) {
+      let tab = $("[href='" + hash + "']");
+      let tabContent = $(hash);
+
+      // activate correct anchor (visually)
+      tab.addClass("active").siblings().removeClass("active");
+
+      // activate correct div (visually)
+      tabContent.addClass("active").siblings('.team__container').removeClass("active");
+      team_slider();
+
+      // update URL, no history addition
+      window.history.replaceState("", "", hash);
+
+      // Close menu, in case mobile
+      tab.closest("ul").removeClass("open");
+
+    },
+
+    // If the page has a hash on load, go to that tab
+    pageLoadCorrectTab: function() {
+      this.changeTab(document.location.hash);
+    },
+
+    toggleMobileMenu: function(event, el) {
+      $(el).closest(".team__tabs").toggleClass("open");
+    }
+
+  };
+
+  Tabs.init();
+
+// team slider
+  function team_slider() {
+    $('.team__slider').each(function () {
+      let teamSlider = new Swiper(this, {
+        loop: false,
+        slidesPerView: 4,
+        centerInsufficientSlides: true,
+        watchOverflow: true,
+        navigation: {
+          nextEl: this.parentElement.querySelector('.arrow_next'),
+          prevEl: this.parentElement.querySelector('.arrow_prev'),
+        },
+      });
+    });
+  }
+
+  team_slider();
   svg4everybody();
 });

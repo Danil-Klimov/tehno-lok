@@ -1,0 +1,128 @@
+.team {
+  padding: 30px 0;
+
+  &__header {
+    @include col();
+    @include size(12);
+    text-align: center;
+    color: #054c7a;
+  }
+
+  &__tabs {
+    @include col();
+    @include size(12);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    color: #054c7a;
+    margin-top: 5px;
+  }
+
+  &__tab {
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    padding-bottom: 8px;
+    cursor: pointer;
+    position: relative;
+
+    + .team__tab {
+      margin-left: 100px;
+    }
+
+    &:not(.active) {
+      &:hover {
+        &::after {
+          width: 100%;
+          left: 0;
+        }
+      }
+
+      &::after {
+        content: "";
+        width: 0;
+        height: 2px;
+        position: absolute;
+        bottom: -2px;
+        left: 50%;
+        background: #054C7A;
+        transition: all 0.3s;
+      }
+    }
+
+    &.active {
+      border-bottom-color: #054C7A;
+
+      &::after {
+        content: '';
+        display: block;
+        width: 0;
+        height: 0;
+        position: absolute;
+        bottom: -11px;
+        left: 50%;
+        transform: translateX(-50%);
+        border-width: 5px;
+        border-style: solid;
+        border-color: #054C7A transparent transparent transparent;
+      }
+    }
+  }
+
+  &__container {
+    @include col();
+    @include size(10.5);
+    @include shift-left(0.75);
+    position: relative;
+    display: none;
+
+    &.active {
+      display: block;
+    }
+
+    .arrow {
+      top: 50%;
+      transform: translate3d(0, -50%, 0);
+      position: absolute;
+      z-index: 1;
+
+      &_next {
+        right: -45px;
+      }
+
+      &_prev {
+        left: -45px;
+      }
+    }
+  }
+
+  &__slider {
+    margin-top: 35px;
+    padding-bottom: 20px;
+  }
+
+  &__item {
+    max-width: 210px;
+    margin: 0 auto;
+    img {
+      display: block;
+    }
+  }
+
+  &__item-footer {
+    box-sizing: border-box;
+    font-family: $font-second;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.4;
+    text-align: center;
+    color: #fff;
+    background: linear-gradient(
+        to right,
+        #2591C5 0%,
+        #195BA7 100%
+    );
+    box-shadow: 0 5px 10px 0 rgba(#009bcf, 0.5);
+    padding: 20px 15px;
+  }
+}
