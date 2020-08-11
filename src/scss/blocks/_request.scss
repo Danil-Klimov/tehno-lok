@@ -2,21 +2,63 @@
   padding: 60px 0;
   background: url("../img/request-bg.jpg") no-repeat center top;
 
-  &__header {
+  &__container {
     @include col();
     @include size(12);
-    display: grid;
-    grid-template-columns: 11px 1fr;
+
+    &_right {
+      @include size(4.7);
+      margin-left: auto;
+
+      .request__form {
+        width: 85%;
+        grid-template-columns: 1fr;
+        margin: 40px 0 0 auto;
+
+        textarea {
+          height: 115px;
+        }
+
+        .button {
+          margin: 0 auto;
+        }
+
+        .checkbox {
+          padding: 0 20px;
+          margin-bottom: 10px;
+        }
+      }
+
+      .request__header {
+        padding-left: 65px;
+      }
+    }
+
+    &_left {
+      @include size(7);
+
+      .request__header {
+        text-align: left;
+        padding-left: 65px;
+      }
+    }
+  }
+
+  &__header {
+    padding-left: 20px;
     text-align: center;
     color: #054c7a;
+    position: relative;
 
     .vertical-text {
-      grid-row: 1/4;
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: max-content;
     }
   }
 
   &__title {
-    grid-column: 2/2;
     margin-bottom: 10px;
   }
 
@@ -25,12 +67,10 @@
   }
 
   &__form {
-    @include col();
-    @include size(8);
-    @include shift-left(2);
+    width: 65%;
+    margin: 35px auto 0;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    margin-top: 35px;
     grid-column-gap: 30px;
 
     textarea {
@@ -41,5 +81,45 @@
       width: fit-content;
       margin-left: auto;
     }
+  }
+
+  &__contacts {
+    margin: 15px 0 0 65px;
+  }
+
+  &__phones {
+    display: flex;
+  }
+
+  &__phones-item {
+    font-size: 13px;
+    flex-grow: 1;
+
+    a {
+      text-decoration: none;
+      font-family: $font-second;
+      font-size: 20px;
+      font-weight: 700;
+      color: #1864b0;
+      margin-right: 10px;
+    }
+  }
+
+  &__mail {
+    display: inline-block;
+    font-size: 13px;
+    text-decoration: none;
+    border-bottom: 2px solid #009bd1;
+    margin-top: 10px;
+  }
+
+  &__text {
+    font-size: 13px;
+    margin-top: 20px;
+  }
+
+  &__map {
+    height: 245px;
+    margin-top: 20px;
   }
 }

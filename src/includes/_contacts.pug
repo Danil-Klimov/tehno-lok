@@ -1,0 +1,39 @@
+section.request
+	.container
+		.row
+			.request__container.request__container_left
+				.request__header
+					.vertical-text КОНТАКТЫ
+					h2.title.request__title КОНТАКТЫ
+					.request__subtitle Завод компании «ТехноЛОК» находится по адресу: Московская область, Клинский район, дер. Слобода, д.200/
+				.request__contacts
+					.request__phones
+						.request__phones-item
+							a(href='#') +7 123 456 78 90
+							span Офис в Москве
+						.request__phones-item
+							a(href='#') +7 123 456 78 90
+							span Офис в Воронеже
+					a(href='#').request__mail info@tehno-lok.ru
+					.request__text #[span(style="font-size: 20px; color: #1864b0; font-weight: 700;") Как к нам проехать?] Завод компании «ТехноЛОК» находится по адресу:
+						br
+						| Московская область,  Клинский район, дер. Слобода, д.200/
+					#map.request__map
+						img(src='https://place-hold.it/580x245?text=Map')
+			.request__container.request__container_right
+				.request__header
+					.vertical-text ОБРАТНАЯ СВЯЗЬ
+					h2.title.request__title ОСТАЛИСЬ ВОПРОСЫ
+					.request__subtitle Заполните небольшую форму и мы ответим вам
+				form.request__form
+					.request__group
+						input.input(type="text" name="client_name" placeholder="Ваше имя" required)
+						input.input(type="tel" name="client_tel" placeholder="Ваш телефон" pattern="[+]7\\([0-9]{3}\\)[0-9]{3}-[0-9]{2}-[0-9]{2}" required)
+					.request__group
+						.textarea
+							textarea.input(placeholder='Сообщение')
+					label.checkbox
+						input(type="checkbox" required)
+						div
+						p Вы соглашаетесь с #[a(href="#" target="_blank") политикой персональных данных], нажимая кнопку
+					button.button.button_fill(type='submit') ОТПРАВИТЬ
