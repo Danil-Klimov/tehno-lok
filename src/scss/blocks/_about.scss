@@ -1,5 +1,5 @@
 .about {
-  padding: 80px 0 20px;
+  padding: 5px 0 20px;
   background: radial-gradient(
       800px 600px at calc(50% - 500px) 600px,
       rgba(#009bd2, 0.3) 0%,
@@ -8,6 +8,7 @@
 
   &_w-projects {
     margin-bottom: -255px;
+    padding-top: 80px;
   }
 
   &__header {
