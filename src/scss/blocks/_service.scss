@@ -1,0 +1,112 @@
+.service {
+  &__container {
+    background: radial-gradient(
+        300px 300px at 50% 50%,
+        rgba(#009bd2, 0.2) 0%,
+        transparent
+    );
+  }
+
+  &__img {
+    @include col-padding();
+    @include size(6);
+    background-size: cover;
+  }
+
+  &__text {
+    @include col();
+    font-size: 15px;
+    width: 555px;
+    padding: 35px 0 35px 30px;
+
+    &_left {
+      order: -1;
+      margin-left: calc(50% - 570px);
+      padding-left: 0;
+      padding-right: 35px;
+    }
+  }
+
+  &__footer {
+    background: url("../img/service_bg.jpg");
+    background-size: cover;
+  }
+
+  &__footer-item {
+    @include col-padding();
+    display: flex;
+    align-items: center;
+    padding: 20px 15px;
+
+    &:first-child {
+      @include size(4);
+    }
+    
+    &:nth-child(2) {
+      @include size(4.5);
+      background-color: #7CA9D4;
+
+      .service__footer-text {
+        margin-left: 40px;
+
+        h3 {
+          color: #054c7a;
+        }
+      }
+    }
+
+    &:last-child {
+      @include size(3);
+
+      .service__footer-text {
+        margin-left: 50px;
+
+        h3 {
+          margin: 0;
+        }
+      }
+    }
+  }
+
+  &__footer-img {
+    margin: 0 30px 0 auto;
+    position: relative;
+    z-index: 1;
+    
+    &::before {
+      content: '';
+      display: block;
+      width: 45px;
+      height: 45px;
+      position: absolute;
+      top: -10px;
+      right: -10px;
+      z-index: -1;
+      background-color: #00285B;
+    }
+
+    img {
+      display: block;
+    }
+  }
+
+  &__footer-text {
+    color: #fff;
+
+    h3 {
+      font-size: 21px;
+      margin-bottom: 10px;
+    }
+
+    p {
+      margin: 0;
+    }
+  }
+
+  &__footer-number {
+    font-family: $font-second;
+    font-size: 56px;
+    color: #fff;
+    margin-left: 50px;
+  }
+}
