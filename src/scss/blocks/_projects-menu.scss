@@ -1,5 +1,8 @@
 .projects-menu {
   padding-bottom: 45px;
+  @include xs-block() {
+    padding-bottom: 20px;
+  }
 
   &__container {
     align-items: center;
@@ -11,9 +14,13 @@
     @include size-lg(1.5);
     @include size-md(2);
     @include size-sm(2.6);
+    @include size-xs(12);
     font-weight: 700;
     line-height: 1.4;
     color: #054c7a;
+    @include xs-block() {
+      margin-bottom: 10px;
+    }
   }
 
   &__wrapper {
@@ -21,6 +28,7 @@
     @include size(10.46);
     @include size-md(10);
     @include size-sm(9.4);
+    @include size-xs(12);
     position: relative;
 
     .arrow {

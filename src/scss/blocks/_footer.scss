@@ -14,8 +14,12 @@
     @include size-lg(2.6);
     @include size-md(3.3);
     @include size-sm(6);
+    @include size-xs(12);
     font-size: 13px;
     line-height: 1.5;
+    @include xs-block() {
+      order: 3;
+    }
   }
 
   &__contacts {
@@ -24,9 +28,13 @@
     @include size-lg(2);
     @include size-md(2.6);
     @include size-sm(6);
+    @include size-xs(12);
     @include shift-left(1.4);
     @include shift-lg-left(1);
     @include shift-md(0);
+    @include xs-block() {
+      order: 1;
+    }
   }
 
   &__tel {
@@ -51,8 +59,13 @@
     @include size(2);
     @include size-md(3);
     @include size-sm(6);
+    @include size-xs(12);
     @include shift-left(0.8);
     @include shift-md(0);
+    @include xs-block() {
+      order: 2;
+      margin: 15px;
+    }
   }
 
   &__logo {
@@ -61,6 +74,7 @@
     @include size-lg(2.7);
     @include size-md(3.3);
     @include size-sm(6);
+    @include size-xs(12);
     display: block;
     background-color: #14469C;
     padding: 53px 23px 51px;
@@ -72,6 +86,9 @@
     @include sm-block() {
       padding: 20px;
       margin-top: 20px;
+    }
+    @include xs-block() {
+      order: 4;
     }
   }
 }

@@ -17,6 +17,9 @@
       @include md-block() {
         margin-top: 30px;
       }
+      @include xs-block() {
+        margin-top: 15px;
+      }
 
       .request__form {
         width: 85%;
@@ -24,6 +27,9 @@
         margin: 40px 0 0 auto;
         @include md-block() {
           margin: 20px auto 0;
+        }
+        @include xs-block() {
+          width: 100%;
         }
 
         textarea {
@@ -46,6 +52,9 @@
           text-align: left;
           padding-left: 52px;
         }
+        @include xs-block() {
+          padding-left: 0;
+        }
       }
     }
 
@@ -59,6 +68,9 @@
         @include md-block() {
           padding-left: 52px;
         }
+        @include xs-block() {
+          padding: 0;
+        }
       }
     }
   }
@@ -68,12 +80,18 @@
     text-align: center;
     color: #054c7a;
     position: relative;
+    @include xs-block() {
+      padding: 0;
+    }
 
     .vertical-text {
       position: absolute;
       top: 0;
       left: 0;
       height: max-content;
+      @include xs-block() {
+        display: none;
+      }
     }
   }
 
@@ -97,6 +115,9 @@
     @include sm-block() {
       width: 100%;
     }
+    @include xs-block() {
+      grid-template-columns: 1fr;
+    }
 
     textarea {
       height: calc(100% - 15px);
@@ -105,6 +126,9 @@
     .button {
       width: fit-content;
       margin-left: auto;
+      @include xs-block() {
+        margin: 20px auto 0;
+      }
     }
   }
 
@@ -113,10 +137,16 @@
     @include md-block() {
       margin-left: 52px;
     }
+    @include xs-block() {
+      margin-left: 0;
+    }
   }
 
   &__phones {
     display: flex;
+    @include xs-block() {
+      display: block;
+    }
   }
 
   &__phones-item {

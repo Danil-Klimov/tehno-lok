@@ -20,10 +20,16 @@
 
       &_next {
         right: 45px;
+        @include xs-block() {
+          right: 0;
+        }
       }
 
       &_prev {
         left: 45px;
+        @include xs-block() {
+          left: 0;
+        }
       }
     }
   }
@@ -31,7 +37,9 @@
   &__slider {
     @include col();
     @include size(11);
+    @include size-xs(12);
     @include shift-left(0.55);
+    @include shift-xs-left(0);
   }
 
   &__slide {
@@ -61,6 +69,10 @@
     @include lg-block() {
       margin-top: 15px;
     }
+    @include xs-block() {
+      padding: 0;
+      margin-left: 0;
+    }
 
     p {
       line-height: 1.7;
@@ -68,6 +80,10 @@
 
     .button {
       margin-top: 15px;
+      @include sm-block() {
+        display: table;
+        margin: 15px auto 0;
+      }
     }
   }
 

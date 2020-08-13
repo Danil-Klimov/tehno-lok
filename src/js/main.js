@@ -27,7 +27,6 @@ $(document).ready(function () {
 // features slider
   const featuresSlider = new Swiper('.features__slider', {
     loop: false,
-    slidesPerView: 3,
     centerInsufficientSlides: true,
     watchOverflow: true,
     navigation: {
@@ -35,6 +34,9 @@ $(document).ready(function () {
       prevEl: '.features__prev',
     },
     breakpoints: {
+      575: {
+        slidesPerView: 3,
+      },
       768: {
         slidesPerView: 4,
       },
@@ -110,7 +112,6 @@ $(document).ready(function () {
 // news slider
   const newsSlider = new Swiper('.news__slider', {
     loop: false,
-    slidesPerView: 2,
     spaceBetween: 30,
     centerInsufficientSlides: true,
     watchOverflow: true,
@@ -119,6 +120,9 @@ $(document).ready(function () {
       prevEl: '.news__prev',
     },
     breakpoints: {
+      575: {
+        slidesPerView: 2,
+      },
       992: {
         slidesPerView: 3,
       }
@@ -128,7 +132,6 @@ $(document).ready(function () {
 // reviews slider
   const reviewsSlider = new Swiper('.reviews__slider', {
     loop: false,
-    slidesPerView: 2,
     spaceBetween: 0,
     centerInsufficientSlides: true,
     watchOverflow: true,
@@ -137,6 +140,9 @@ $(document).ready(function () {
       prevEl: '.reviews__prev',
     },
     breakpoints: {
+      575: {
+        slidesPerView: 2,
+      },
       769: {
         slidesPerView: 'auto',
         spaceBetween: 34,
@@ -395,7 +401,6 @@ $(document).ready(function () {
     $('.team__slider').each(function () {
       let teamSlider = new Swiper(this, {
         loop: false,
-        slidesPerView: 2,
         centerInsufficientSlides: true,
         watchOverflow: true,
         navigation: {
@@ -403,6 +408,9 @@ $(document).ready(function () {
           prevEl: this.parentElement.querySelector('.arrow_prev'),
         },
         breakpoints: {
+          575: {
+            slidesPerView: 2,
+          },
           768: {
             slidesPerView: 3,
           },

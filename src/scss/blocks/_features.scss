@@ -1,6 +1,9 @@
 .features {
   padding: 280px 0 80px;
   background: url("../img/features-bg.jpg") no-repeat center top;
+  @include xs-block() {
+    padding-bottom: 80px;
+  }
 
   &__header {
     @include col();
@@ -9,16 +12,25 @@
     text-align: center;
     display: grid;
     grid-template-columns: 11px 1fr;
+    @include xs-block() {
+      grid-template-columns: 1fr;
+    }
 
     .vertical-text {
       margin-top: -10px;
       grid-row: 1/4;
+      @include xs-block() {
+        display: none;
+      }
     }
   }
 
   &__title {
     grid-column: 2/2;
     margin-bottom: 5px;
+    @include xs-block() {
+      grid-column: 1;
+    }
   }
 
   &__subtitle {

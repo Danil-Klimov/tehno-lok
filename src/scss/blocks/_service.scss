@@ -29,6 +29,9 @@
     @include md-block() {
       width: 100%;
     }
+    @include xs-block() {
+      padding-left: 0;
+    }
 
     &_left {
       order: -1;
@@ -41,6 +44,9 @@
       @include md-block() {
         margin-left: 15px;
         padding: 35px 0 35px 30px;
+      }
+      @include xs-block() {
+        padding-left: 0;
       }
     }
   }
@@ -59,11 +65,13 @@
     &:first-child {
       @include size(4);
       @include size-md(6);
+      @include size-xs(12);
     }
     
     &:nth-child(2) {
       @include size(4.5);
       @include size-md(6);
+      @include size-xs(12);
       background-color: #7CA9D4;
 
       .service__footer-text {

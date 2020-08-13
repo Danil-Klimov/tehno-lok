@@ -13,6 +13,9 @@
 
     .header__logo {
       padding: 23px;
+      @include xs-block() {
+        padding: 17px 5px;
+      }
     }
 
     .header__menu {
@@ -50,6 +53,9 @@
     text-decoration: none;
     transition: all 0.3s;
     margin-right: 0;
+    @include xs-block() {
+      padding: 17px 5px;
+    }
   }
 
   &__menu {

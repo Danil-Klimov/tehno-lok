@@ -22,6 +22,9 @@
     color: #054c7a;
     display: grid;
     grid-template-columns: 11px 1fr;
+    @include xs-block() {
+      grid-template-columns: 1fr;
+    }
 
     img {
       grid-column: 1/3;
@@ -41,6 +44,9 @@
 
   .vertical-text {
     margin-top: 15px;
+    @include xs-block() {
+      display: none;
+    }
   }
 
   &__title {
@@ -49,6 +55,11 @@
     margin: 0 0 0 180px;
     @include lg-block() {
       margin-left: 35px;
+    }
+    @include xs-block() {
+      font-size: 30px;
+      margin: 0;
+      grid-column: 1;
     }
   }
 
@@ -93,6 +104,11 @@
     }
     @include md-block() {
       width: 50%;
+    }
+    @include xs-block() {
+      width: 100%;
+      height: 200px;
+      align-items: flex-start !important;
     }
 
     &:hover {

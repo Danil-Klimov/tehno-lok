@@ -50,6 +50,9 @@
     @include md-block() {
       background-color: #fff;
     }
+    @include xs-block() {
+      padding: 0;
+    }
   }
 
   &__tab {
@@ -80,6 +83,9 @@
       width: 100%;
       border: none;
     }
+    @include xs-block() {
+      padding: 10px 10px 10px 20px;
+    }
 
     &::before {
       content: '';
@@ -96,6 +102,10 @@
           #1855A4 100%
       );
       box-shadow: 0 0 5px 1px rgba(#2695C8, 0.3);
+      @include xs-block() {
+        left: 5px;
+        top: 18px;
+      }
     }
     
     &.active {
@@ -120,8 +130,8 @@
       color: inherit;
       padding: 20px 15px 20px 45px;
     }
-    @include sm-block() {
-
+    @include xs-block() {
+      padding: 15px;
     }
 
     &.active {
@@ -153,5 +163,7 @@
     @include size(12);
     text-align: center;
     margin-top: 25px;
+    position: relative;
+    z-index: 1;
   }
 }

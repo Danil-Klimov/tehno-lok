@@ -1,6 +1,9 @@
 .reviews {
   padding: 60px 0 35px;
   background: url("../img/reviews-bg.jpg") repeat-x center bottom;
+  @include xs-block() {
+    padding-top: 30px;
+  }
 
   &__header {
     @include col();

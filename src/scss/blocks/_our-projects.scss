@@ -34,6 +34,9 @@
   &__w-filter {
     .our-projects__wrapper {
       padding-top: 70px;
+      @include xs-block() {
+        padding-top: 30px;
+      }
     }
   }
 
@@ -61,6 +64,9 @@
         text-align: right;
         padding-right: 5px;
         color: #fff;
+        @include xs-block() {
+          color: #054c7a;
+        }
       }
 
       &:last-child {
@@ -74,8 +80,10 @@
     @include col();
     @include size(10);
     @include size-lg(11);
+    @include size-xs(12);
     @include shift-left(1);
     @include shift-lg-left(0.5);
+    @include shift-xs-left(0);
     background-color: #fff;
     box-shadow: 0 0 20px 0 rgba(#004073, 0.2);
     padding: 20px;
@@ -230,6 +238,10 @@
     font-size: 14px;
     padding-left: 30px;
     border-left: 1px solid #EEE;
+    @include xs-block() {
+      border: none;
+      padding-left: 0;
+    }
   }
 
   &__buttons {
@@ -244,11 +256,19 @@
       justify-content: center;
       padding-left: 30px;
     }
+    @include xs-block() {
+      padding-left: 0;
+      flex-direction: column;
+      padding-top: 20px;
+    }
 
     .button {
      @include sm-block() {
        margin: 0 10px;
      }
+      @include xs-block() {
+        margin: 20px 0 0 0;
+      }
     }
   }
 
@@ -271,6 +291,9 @@
     bottom: 0;
     z-index: -10;
     background-repeat: no-repeat;
+    @include xs-block() {
+      display: none;
+    }
 
     &_left {
       left: 0;
@@ -286,6 +309,7 @@
   &__filter {
     @include col();
     @include size(6);
+    @include size-xs(12);
     position: absolute;
     top: 0;
     left: 50%;
@@ -297,6 +321,9 @@
       flex-direction: column;
       align-items: flex-start;
     }
+    @include xs-block() {
+      position: static;
+    }
 
     .input {
       margin: 0 0 0 20px;
@@ -307,6 +334,9 @@
       @include sm-block() {
         margin: 10px 0 0 0;
         width: 233px;
+      }
+      @include xs-block() {
+        width: 100%;
       }
     }
   }

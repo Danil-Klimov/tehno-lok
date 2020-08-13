@@ -51,6 +51,9 @@
     @include sm-block() {
       font-size: 62px;
     }
+    @include xs-block() {
+      font-size: 50px;
+    }
   }
 
   &__subtitle {
