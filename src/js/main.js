@@ -29,7 +29,11 @@ $(document).ready(function () {
     loop: false,
     slidesPerView: 5,
     centerInsufficientSlides: true,
-    watchOverflow: true
+    watchOverflow: true,
+    navigation: {
+      nextEl: '.features__next',
+      prevEl: '.features__prev',
+    },
   });
 
 // our projects slider
