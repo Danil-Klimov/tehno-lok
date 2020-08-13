@@ -30,12 +30,16 @@
       @include lg-block() {
         top: 74px;
       }
+      @include md-block() {
+        top: 71px;
+      }
     }
   }
 
   &__logo {
     @include col();
     @include size(2.54);
+    @include size-md(3);
     display: block;
     background-color: #14469C;
     padding: 43px 23px 23px;
@@ -53,6 +57,9 @@
     color: #fff;
     flex-grow: 1;
     transition: all 0.3s;
+    @include md-block() {
+      display: none;
+    }
 
     ul {
       margin: 0;
@@ -100,6 +107,9 @@
     margin-left: 0;
     @include lg-block() {
       margin: 0;
+    }
+    @include md-block() {
+      margin-left: auto;
     }
   }
 

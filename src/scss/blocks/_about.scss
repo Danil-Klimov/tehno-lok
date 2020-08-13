@@ -15,6 +15,7 @@
     @include col();
     @include size(6.9);
     @include size-lg(5);
+    @include size-md(12);
     color: #054c7a;
     display: grid;
     grid-template-columns: 11px 1fr;
@@ -27,6 +28,10 @@
       top: 20px;
       @include lg-block() {
         left: -460px;
+      }
+      @include md-block() {
+        position: static;
+        max-width: 100%;
       }
     }
   }
@@ -48,6 +53,7 @@
     @include col();
     @include size(5.1);
     @include size-lg(7);
+    @include size-md(12);
   }
 
   &__projects {
@@ -82,6 +88,9 @@
       height: 400px;
       padding: 25px;
     }
+    @include md-block() {
+      width: 50%;
+    }
 
     &:hover {
       background-size: 105%;
@@ -99,6 +108,9 @@
     &:nth-child(odd) {
       margin-top: 55px;
       align-items: flex-start;
+      @include md-block() {
+        margin: 0;
+      }
     }
 
     &:nth-child(even) {

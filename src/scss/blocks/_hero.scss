@@ -7,6 +7,7 @@
     @include col();
     @include size(7.5);
     @include size-lg(9);
+    @include size-md(11);
     display: grid;
     grid-template-columns: 75px auto;
     color: #fff;
@@ -46,6 +47,7 @@
     @include col();
     @include size(7.5);
     @include size-lg(9);
+    @include size-md(11);
     display: grid;
     grid-template-columns: repeat(auto-fill, 155px) 70px 146px;
     grid-gap: 5px;
@@ -54,6 +56,9 @@
     position: relative;
     @include lg-block() {
       grid-template-columns: repeat(auto-fill, 155px) 70px 157px;
+    }
+    @include md-block() {
+      grid-template-columns: repeat(auto-fill, 150px) 70px 134px;
     }
 
     &::before {

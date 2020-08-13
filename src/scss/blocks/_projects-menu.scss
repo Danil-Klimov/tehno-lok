@@ -9,6 +9,7 @@
     @include col();
     @include size(1.33);
     @include size-lg(1.5);
+    @include size-md(2);
     font-weight: 700;
     line-height: 1.4;
     color: #054c7a;
@@ -17,6 +18,7 @@
   &__wrapper {
     @include col();
     @include size(10.46);
+    @include size-md(10);
     position: relative;
 
     .arrow {

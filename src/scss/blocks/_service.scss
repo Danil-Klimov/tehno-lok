@@ -10,7 +10,12 @@
   &__img {
     @include col-padding();
     @include size(6);
+    @include size-md(12);
     background-size: cover;
+    @include md-block() {
+      height: 300px;
+      order: 10;
+    }
   }
 
   &__text {
@@ -21,6 +26,9 @@
     @include lg-block() {
       width: 465px;
     }
+    @include md-block() {
+      width: 100%;
+    }
 
     &_left {
       order: -1;
@@ -29,6 +37,10 @@
       padding-right: 35px;
       @include lg-block() {
         margin-left: calc(50% - 480px);
+      }
+      @include md-block() {
+        margin-left: 15px;
+        padding: 35px 0 35px 30px;
       }
     }
   }
@@ -46,10 +58,12 @@
 
     &:first-child {
       @include size(4);
+      @include size-md(6);
     }
     
     &:nth-child(2) {
       @include size(4.5);
+      @include size-md(6);
       background-color: #7CA9D4;
 
       .service__footer-text {
@@ -66,6 +80,10 @@
 
     &:last-child {
       @include size(3);
+      @include size-md(12);
+      @include md-block() {
+        justify-content: center;
+      }
 
       .service__footer-text {
         margin-left: 50px;

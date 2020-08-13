@@ -47,6 +47,9 @@
     @include lg-block() {
       grid-template-columns: 630px 1fr;
     }
+    @include md-block() {
+      grid-template-columns: 50% 1fr;
+    }
 
     a {
       &:first-child {

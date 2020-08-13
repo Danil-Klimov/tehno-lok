@@ -72,7 +72,9 @@
   &__container {
     @include col();
     @include size(10.5);
+    @include size-md(11);
     @include shift-left(0.75);
+    @include shift-md-left(0.5);
     position: relative;
     display: none;
 
@@ -88,10 +90,16 @@
 
       &_next {
         right: -45px;
+        @include md-block() {
+          right: -30px;
+        }
       }
 
       &_prev {
         left: -45px;
+        @include md-block() {
+          left: -30px;
+        }
       }
     }
   }

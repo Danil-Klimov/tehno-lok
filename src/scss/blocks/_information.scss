@@ -9,6 +9,7 @@
     @include col();
     @include size(2.5);
     @include size-lg(3);
+    @include size-md(4);
     font-family: $font-second;
     font-size: 15px;
     font-weight: 700;
@@ -63,6 +64,7 @@
   &__text {
     @include col();
     @include size(4.8);
+    @include size-md(8);
   }
 
   &__img {
@@ -71,5 +73,8 @@
     margin-left: auto;
     position: relative;
     top: -40px;
+    @include md-block() {
+      display: none;
+    }
   }
 }

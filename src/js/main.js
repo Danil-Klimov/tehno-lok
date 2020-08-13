@@ -34,6 +34,14 @@ $(document).ready(function () {
       nextEl: '.features__next',
       prevEl: '.features__prev',
     },
+    breakpoints: {
+      768: {
+        slidesPerView: 4,
+      },
+      992: {
+        slidesPerView: 5,
+      }
+    }
   });
 
 // our projects slider
@@ -110,6 +118,14 @@ $(document).ready(function () {
       nextEl: '.news__next',
       prevEl: '.news__prev',
     },
+    breakpoints: {
+      768: {
+        slidesPerView: 2,
+      },
+      992: {
+        slidesPerView: 3,
+      }
+    }
   });
 
 // reviews slider
@@ -123,6 +139,9 @@ $(document).ready(function () {
       prevEl: '.reviews__prev',
     },
     breakpoints: {
+      768: {
+        spaceBetween: 45,
+      },
       992: {
         spaceBetween: 34,
       },
@@ -153,6 +172,9 @@ $(document).ready(function () {
       prevEl: '.posts__prev',
     },
     breakpoints: {
+      768: {
+        slidesPerView: 2,
+      },
       992: {
         slidesPerView: 3,
         spaceBetween: 90,
@@ -174,10 +196,21 @@ $(document).ready(function () {
 // numbers slider
   const numbersSlider = new Swiper('.numbers__slider', {
     loop: false,
-    slidesPerView: 6,
-    spaceBetween: 30,
     centerInsufficientSlides: true,
     watchOverflow: true,
+    navigation: {
+      nextEl: '.numbers__next',
+      prevEl: '.numbers__prev',
+    },
+    breakpoints: {
+      768: {
+       slidesPerView: 5,
+      },
+      992: {
+        slidesPerView: 6,
+        spaceBetween: 30,
+      }
+    }
   });
 
 // select
@@ -192,11 +225,19 @@ $(document).ready(function () {
   const projectMenuSlider = new Swiper('.projects-menu__slider', {
     direction: 'horizontal',
     loop: false,
-    slidesPerView: 6,
+
     navigation: {
       nextEl: '.projects-menu__next',
       prevEl: '.projects-menu__prev',
     },
+    breakpoints: {
+      768: {
+        slidesPerView: 4,
+      },
+      992: {
+        slidesPerView: 6,
+      }
+    }
   });
 
   if(projectMenuSlider.initialized) {
@@ -268,17 +309,27 @@ $(document).ready(function () {
   });
 
 // faq
-  $('.faq__answer').mCustomScrollbar();
+  $(window).on('init resize', function () {
+    if($(window).width() > 992) {
+      $('.faq__answer').mCustomScrollbar();
+    } else {
+      $('.faq__answer').mCustomScrollbar('destroy');
+    }
+  })
 
   $('.faq__question').on('click', function () {
     const currentItem = $(this).siblings('.faq__answer');
-    $('.faq__answer').not(currentItem).fadeOut();
+    if($(window).width() > 992) {
+      $('.faq__answer').not(currentItem).fadeOut();
+      currentItem.fadeIn();
+    } else {
+      $('.faq__answer').not(currentItem).slideUp();
+      currentItem.slideDown();
+    }
 
-    currentItem.fadeIn();
   });
 
 // team tabs
-  // tabs
   let Tabs = {
 
     init: function() {
@@ -344,7 +395,7 @@ $(document).ready(function () {
           prevEl: this.parentElement.querySelector('.arrow_prev'),
         },
         breakpoints: {
-          992: {
+          768: {
             slidesPerView: 3,
           },
           1200: {

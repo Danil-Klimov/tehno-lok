@@ -28,9 +28,9 @@
   &__container {
     @include col();
     @include size(10);
-    @include size-lg(12);
+    @include size-lg(11);
     @include shift-left(1);
-    @include shift-lg-left(0);
+    @include shift-lg-left(0.5);
     margin-top: 20px;
     position: relative;
 
@@ -43,14 +43,14 @@
       &_next {
         right: -55px;
         @include lg-block() {
-          right: 0;
+          right: -10px;
         }
       }
 
       &_prev {
         left: -55px;
         @include lg-block() {
-          left: 0;
+          left: -10px;
         }
       }
     }
@@ -61,6 +61,9 @@
     max-width: 260px;
     margin: 15px 0 0;
     position: relative;
+    @include md-block() {
+      margin: 15px 39px 0;
+    }
 
 
     &:hover {

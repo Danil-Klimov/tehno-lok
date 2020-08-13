@@ -20,6 +20,26 @@
   &__slider {
     margin-top: 15px;
     counter-reset: numbers;
+    position: relative;
+    padding: 0 15px;
+    @include lg-block() {
+      padding: 0 15px;
+    }
+
+    .arrow {
+      position: absolute;
+      top: 50%;
+      transform: translate3d(0, -50%, 0);
+      z-index: 1;
+
+      &_next {
+        right: 7px;
+      }
+
+      &_prev {
+        left: 7px;
+      }
+    }
   }
 
   &__item {

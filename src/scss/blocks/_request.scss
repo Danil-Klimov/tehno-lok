@@ -1,6 +1,9 @@
 .request {
   padding: 60px 0;
   background: url("../img/request-bg.jpg") no-repeat center top;
+  @include md-block() {
+    background-size: cover;
+  }
 
   &__container {
     @include col();
@@ -9,12 +12,19 @@
     &_right {
       @include size(4.7);
       @include size-lg(5);
+      @include size-md(12);
       margin-left: auto;
+      @include md-block() {
+        margin-top: 30px;
+      }
 
       .request__form {
         width: 85%;
         grid-template-columns: 1fr;
         margin: 40px 0 0 auto;
+        @include md-block() {
+          margin: 20px auto 0;
+        }
 
         textarea {
           height: 115px;
@@ -32,11 +42,15 @@
 
       .request__header {
         padding-left: 65px;
+        @include md-block() {
+          text-align: left;
+        }
       }
     }
 
     &_left {
       @include size(7);
+      @include size-md(12);
 
       .request__header {
         text-align: left;
@@ -73,6 +87,9 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-column-gap: 30px;
+    @include md-block() {
+      width: 85%;
+    }
 
     textarea {
       height: calc(100% - 15px);

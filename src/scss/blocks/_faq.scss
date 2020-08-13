@@ -47,6 +47,9 @@
     box-sizing: border-box;
     width: 100%;
     padding: 20px 20px 20px 0;
+    @include md-block() {
+      background-color: #fff;
+    }
   }
 
   &__tab {
@@ -73,6 +76,10 @@
     line-height: 1.4;
     cursor: pointer;
     position: relative;
+    @include md-block() {
+      width: 100%;
+      border: none;
+    }
 
     &::before {
       content: '';
@@ -102,6 +109,12 @@
     width: 425px;
     height: calc(100% - 40px);
     color: #fff;
+    @include md-block() {
+      position: static;
+      width: 100%;
+      height: auto;
+      color: inherit;
+    }
 
     &.active {
       display: block;
@@ -114,6 +127,9 @@
     left: 0;
     z-index: -1;
     background-color: rgba(#14469b, 0.4);
+    @include md-block() {
+      display: none;
+    }
   }
 
   &__mask-rect {
