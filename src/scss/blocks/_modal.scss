@@ -48,11 +48,13 @@
   &__call-title {
     font-size: 64px;
     margin-bottom: 0;
+    @include sm-block() {
+      font-size: 62px;
+    }
   }
 
   &__subtitle {
     font-size: 13px;
-    //color: #054c7a;
   }
 
   &__form {
@@ -64,31 +66,11 @@
     }
   }
 
-  //&__group {
-  //  display: flex;
-  //  justify-content: space-between;
-  //
-  //  .input {
-  //    flex-basis: 49%;
-  //  }
-  //}
-
-  //.button {
-  //  padding: 14px 25px;
-  //  //min-width: 230px;
-  //}
-
   &__policy {
     max-width: 320px;
     margin: 0 auto 20px;
     text-align: left;
   }
-
-  //&__footer {
-  //  display: flex;
-  //  align-items: center;
-  //  justify-content: center;
-  //}
 
   .fancybox-button {
     width: 17px;

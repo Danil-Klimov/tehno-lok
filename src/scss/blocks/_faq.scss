@@ -97,6 +97,10 @@
       );
       box-shadow: 0 0 5px 1px rgba(#2695C8, 0.3);
     }
+    
+    &.active {
+      background-color: rgba(#2695C8, 0.5);
+    }
   }
 
   &__answer {
@@ -114,6 +118,10 @@
       width: 100%;
       height: auto;
       color: inherit;
+      padding: 20px 15px 20px 45px;
+    }
+    @include sm-block() {
+
     }
 
     &.active {

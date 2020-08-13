@@ -9,6 +9,9 @@
   &_w-projects {
     margin-bottom: -255px;
     padding-top: 80px;
+    @include sm-block() {
+      padding-top: 50px;
+    }
   }
 
   &__header {

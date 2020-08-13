@@ -10,6 +10,7 @@
     @include size(2.5);
     @include size-lg(3);
     @include size-md(4);
+    @include size-sm(12);
     font-family: $font-second;
     font-size: 15px;
     font-weight: 700;
@@ -65,6 +66,7 @@
     @include col();
     @include size(4.8);
     @include size-md(8);
+    @include size-sm(12);
   }
 
   &__img {

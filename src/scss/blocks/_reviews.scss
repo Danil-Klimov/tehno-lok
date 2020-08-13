@@ -67,14 +67,34 @@
 
   &__slider {
     padding: 10px;
+    @include sm-block() {
+      padding: 0;
+    }
   }
 
   &__item {
     box-shadow: 0 0 10px 0 rgba(#00496d, 0.2);
     width: auto;
+    @include md-block() {
+      box-shadow: none;
+    }
+    @include sm-block() {
+      padding: 10px 0;
+    }
+
+    &::before, &::after {
+      @include sm-block() {
+        display: none;
+      }
+    }
 
     img {
       display: block;
+
+      @include md-block() {
+        margin: 0 auto;
+        box-shadow: 0 0 10px 0 rgba(#00496d, 0.2);
+      }
     }
   }
 

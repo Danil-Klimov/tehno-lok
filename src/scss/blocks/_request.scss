@@ -44,6 +44,7 @@
         padding-left: 65px;
         @include md-block() {
           text-align: left;
+          padding-left: 52px;
         }
       }
     }
@@ -55,6 +56,9 @@
       .request__header {
         text-align: left;
         padding-left: 65px;
+        @include md-block() {
+          padding-left: 52px;
+        }
       }
     }
   }
@@ -90,6 +94,9 @@
     @include md-block() {
       width: 85%;
     }
+    @include sm-block() {
+      width: 100%;
+    }
 
     textarea {
       height: calc(100% - 15px);
@@ -103,6 +110,9 @@
 
   &__contacts {
     margin: 15px 0 0 65px;
+    @include md-block() {
+      margin-left: 52px;
+    }
   }
 
   &__phones {

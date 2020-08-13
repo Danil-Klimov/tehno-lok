@@ -2,6 +2,9 @@
   background-repeat: no-repeat;
   background-position: center top;
   padding-top: 270px;
+  @include sm-block() {
+    padding-top: 165px;
+  }
 
   &__offer {
     @include col();
@@ -13,6 +16,9 @@
     color: #fff;
     background-color: rgba(#14459c, 0.7);
     position: relative;
+    @include sm-block() {
+      grid-template-columns: 40px auto;
+    }
 
     &::before {
       content: '';
@@ -32,6 +38,9 @@
   &__content {
     grid-column: 2/2;
     padding: 40px 35px 30px;
+    @include sm-block() {
+      padding: 30px;
+    }
 
     h1, h2, h3, h4, h5, h6 {
       line-height: 1.4;
@@ -58,7 +67,11 @@
       grid-template-columns: repeat(auto-fill, 155px) 70px 157px;
     }
     @include md-block() {
-      grid-template-columns: repeat(auto-fill, 150px) 70px 134px;
+      grid-template-columns: repeat(auto-fill, 150px) 70px 117px;
+    }
+    @include sm-block() {
+      margin-top: 60px;
+      grid-template-columns: repeat(auto-fill, 116px) 50px 74px;
     }
 
     &::before {

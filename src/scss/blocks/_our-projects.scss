@@ -208,6 +208,10 @@
       flex-basis: 100%;
       padding-top: 20px;
     }
+    @include sm-block() {
+      padding-left: 0;
+      padding-right: 0;
+    }
   }
 
   &__content-footer {
@@ -231,8 +235,21 @@
   &__buttons {
     @include col();
     @include size(6);
+    @include size-sm(12);
     @include shift-left(6);
+    @include shift-sm-left(0);
     padding: 40px 0 0 15px;
+    @include sm-block() {
+      display: flex;
+      justify-content: center;
+      padding-left: 30px;
+    }
+
+    .button {
+     @include sm-block() {
+       margin: 0 10px;
+     }
+    }
   }
 
   &__request-btn {
@@ -241,6 +258,9 @@
     right: 115px;
     @include md-block() {
       right: 15px;
+    }
+    @include sm-block() {
+      position: static;
     }
   }
 
@@ -264,20 +284,29 @@
   }
 
   &__filter {
+    @include col();
+    @include size(6);
     position: absolute;
     top: 0;
     left: 50%;
     font-size: 13px;
     color: #4c4c4c;
-    padding-left: 15px;
     display: flex;
     align-items: center;
+    @include sm-block() {
+      flex-direction: column;
+      align-items: flex-start;
+    }
 
     .input {
       margin: 0 0 0 20px;
       width: 360px;
       @include md-block() {
         width: 250px;
+      }
+      @include sm-block() {
+        margin: 10px 0 0 0;
+        width: 233px;
       }
     }
   }

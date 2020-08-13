@@ -27,7 +27,7 @@ $(document).ready(function () {
 // features slider
   const featuresSlider = new Swiper('.features__slider', {
     loop: false,
-    slidesPerView: 5,
+    slidesPerView: 3,
     centerInsufficientSlides: true,
     watchOverflow: true,
     navigation: {
@@ -110,7 +110,7 @@ $(document).ready(function () {
 // news slider
   const newsSlider = new Swiper('.news__slider', {
     loop: false,
-    slidesPerView: 3,
+    slidesPerView: 2,
     spaceBetween: 30,
     centerInsufficientSlides: true,
     watchOverflow: true,
@@ -119,9 +119,6 @@ $(document).ready(function () {
       prevEl: '.news__prev',
     },
     breakpoints: {
-      768: {
-        slidesPerView: 2,
-      },
       992: {
         slidesPerView: 3,
       }
@@ -131,7 +128,8 @@ $(document).ready(function () {
 // reviews slider
   const reviewsSlider = new Swiper('.reviews__slider', {
     loop: false,
-    slidesPerView: 'auto',
+    slidesPerView: 2,
+    spaceBetween: 0,
     centerInsufficientSlides: true,
     watchOverflow: true,
     navigation: {
@@ -139,13 +137,16 @@ $(document).ready(function () {
       prevEl: '.reviews__prev',
     },
     breakpoints: {
-      768: {
-        spaceBetween: 45,
+      769: {
+        slidesPerView: 'auto',
+        spaceBetween: 34,
       },
       992: {
+        slidesPerView: 'auto',
         spaceBetween: 34,
       },
       1200: {
+        slidesPerView: 'auto',
         spaceBetween: 19,
       }
     }
@@ -172,8 +173,9 @@ $(document).ready(function () {
       prevEl: '.posts__prev',
     },
     breakpoints: {
-      768: {
+      575: {
         slidesPerView: 2,
+        spaceBetween: 10,
       },
       992: {
         slidesPerView: 3,
@@ -203,6 +205,9 @@ $(document).ready(function () {
       prevEl: '.numbers__prev',
     },
     breakpoints: {
+      575: {
+        slidesPerView: 2,
+      },
       768: {
        slidesPerView: 5,
       },
@@ -225,7 +230,7 @@ $(document).ready(function () {
   const projectMenuSlider = new Swiper('.projects-menu__slider', {
     direction: 'horizontal',
     loop: false,
-
+    slidesPerView: 3,
     navigation: {
       nextEl: '.projects-menu__next',
       prevEl: '.projects-menu__prev',
@@ -309,7 +314,7 @@ $(document).ready(function () {
   });
 
 // faq
-  $(window).on('init resize', function () {
+  $(window).on('load resize', function () {
     if($(window).width() > 992) {
       $('.faq__answer').mCustomScrollbar();
     } else {
@@ -318,13 +323,15 @@ $(document).ready(function () {
   })
 
   $('.faq__question').on('click', function () {
-    const currentItem = $(this).siblings('.faq__answer');
+    const currentAnswer = $(this).siblings('.faq__answer');
+    $(this).addClass('active');
+    $('.faq__question').not(this).removeClass('active');
     if($(window).width() > 992) {
-      $('.faq__answer').not(currentItem).fadeOut();
-      currentItem.fadeIn();
+      $('.faq__answer').not(currentAnswer).fadeOut();
+      currentAnswer.fadeIn();
     } else {
-      $('.faq__answer').not(currentItem).slideUp();
-      currentItem.slideDown();
+      $('.faq__answer').not(currentAnswer).slideUp();
+      currentAnswer.slideDown();
     }
 
   });
@@ -366,7 +373,7 @@ $(document).ready(function () {
       window.history.replaceState("", "", hash);
 
       // Close menu, in case mobile
-      tab.closest("ul").removeClass("open");
+      tab.closest(".team__tabs").removeClass("open");
 
     },
 
@@ -388,6 +395,7 @@ $(document).ready(function () {
     $('.team__slider').each(function () {
       let teamSlider = new Swiper(this, {
         loop: false,
+        slidesPerView: 2,
         centerInsufficientSlides: true,
         watchOverflow: true,
         navigation: {
