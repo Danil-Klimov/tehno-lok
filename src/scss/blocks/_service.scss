@@ -18,12 +18,18 @@
     font-size: 15px;
     width: 555px;
     padding: 35px 0 35px 30px;
+    @include lg-block() {
+      width: 465px;
+    }
 
     &_left {
       order: -1;
       margin-left: calc(50% - 570px);
       padding-left: 0;
       padding-right: 35px;
+      @include lg-block() {
+        margin-left: calc(50% - 480px);
+      }
     }
   }
 
@@ -48,6 +54,9 @@
 
       .service__footer-text {
         margin-left: 40px;
+        @include lg-block() {
+          margin-left: 0;
+        }
 
         h3 {
           color: #054c7a;
@@ -60,6 +69,9 @@
 
       .service__footer-text {
         margin-left: 50px;
+        @include lg-block() {
+          margin-left: 0;
+        }
 
         h3 {
           margin: 0;
@@ -72,6 +84,9 @@
     margin: 0 30px 0 auto;
     position: relative;
     z-index: 1;
+    @include lg-block() {
+      margin: 0 0 0 auto;
+    }
     
     &::before {
       content: '';

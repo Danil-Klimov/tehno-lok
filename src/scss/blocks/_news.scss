@@ -36,10 +36,16 @@
 
       &_next {
         right: -40px;
+        @include lg-block() {
+          right: 0;
+        }
       }
 
       &_prev {
         left: -40px;
+        @include lg-block() {
+          left: 0;
+        }
       }
     }
   }

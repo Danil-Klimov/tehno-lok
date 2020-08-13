@@ -11,7 +11,6 @@
 
   &__container {
     position: relative;
-    //z-index: 1;
 
     .arrow {
       top: 50%;
@@ -39,17 +38,29 @@
     box-sizing: border-box;
     display: flex;
     padding: 15px 0 0 19px;
+    @include lg-block() {
+      flex-wrap: wrap;
+      padding: 15px 21px 0 15px;
+    }
   }
 
   &__video {
+    box-sizing: border-box;
     width: 61%;
     flex-shrink: 0;
+    @include lg-block() {
+      width: 100%;
+      max-width: 100%;
+    }
   }
 
   &__text {
     font-size: 13px;
     margin: 3px 0 0 35px;
     padding-right: 40px;
+    @include lg-block() {
+      margin-top: 15px;
+    }
 
     p {
       line-height: 1.7;

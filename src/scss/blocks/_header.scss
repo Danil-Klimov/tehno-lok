@@ -27,6 +27,9 @@
 
     .header__order {
       top: 80px;
+      @include lg-block() {
+        top: 74px;
+      }
     }
   }
 
@@ -92,10 +95,12 @@
 
   &__call {
     @include col();
-    @include size(2);
     display: flex;
     align-items: center;
     margin-left: 0;
+    @include lg-block() {
+      margin: 0;
+    }
   }
 
   &__button {

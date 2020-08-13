@@ -2,6 +2,9 @@
   padding: 75px 0 0;
   background-repeat: no-repeat;
   background-position: center top;
+  @include lg-block() {
+    background-size: cover;
+  }
 
   &__header {
     @include col();
@@ -11,6 +14,9 @@
     margin-bottom: 75px;
     text-align: center;
     color: #fff;
+    @include lg-block() {
+      margin-bottom: 30px;
+    }
 
     .vertical-text {
       margin-top: 18px;
@@ -26,18 +32,27 @@
   &__container {
     @include col();
     @include size(7);
+    @include size-lg(12);
     right: -100px;
+    @include lg-block() {
+      right: 0;
+    }
   }
 
   &__text {
     @include col();
     @include size(4.75);
+    @include size-lg(12);
     @include shift-right(0.25);
+    @include shift-lg-left(0);
     margin-left: auto;
     background-color: #fff;
     padding: 30px 53px 45px 107px;
     font-size: 13px;
     margin-top: 35px;
+    @include lg-block() {
+      padding: 30px;
+    }
 
     p {
       line-height: 1.6;

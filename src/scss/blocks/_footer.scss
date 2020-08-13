@@ -8,6 +8,7 @@
   &__copyright {
     @include col();
     @include size(2.2);
+    @include size-lg(2.6);
     font-size: 13px;
     line-height: 1.5;
   }
@@ -15,7 +16,9 @@
   &__contacts {
     @include col();
     @include size(1.8);
+    @include size-lg(2);
     @include shift-left(1.4);
+    @include shift-lg-left(1);
   }
 
   &__tel {
@@ -44,6 +47,7 @@
   &__logo {
     @include col();
     @include size(2.3);
+    @include size-lg(2.7);
     display: block;
     background-color: #14469C;
     padding: 53px 23px 51px;

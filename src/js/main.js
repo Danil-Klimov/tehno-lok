@@ -116,13 +116,20 @@ $(document).ready(function () {
   const reviewsSlider = new Swiper('.reviews__slider', {
     loop: false,
     slidesPerView: 'auto',
-    spaceBetween: 19,
     centerInsufficientSlides: true,
     watchOverflow: true,
     navigation: {
       nextEl: '.reviews__next',
       prevEl: '.reviews__prev',
     },
+    breakpoints: {
+      992: {
+        spaceBetween: 34,
+      },
+      1200: {
+        spaceBetween: 19,
+      }
+    }
   });
 
 // gallery slider
@@ -139,14 +146,21 @@ $(document).ready(function () {
 // posts slider
   const postsSlider = new Swiper('.posts__slider', {
     loop: false,
-    slidesPerView: 3,
-    spaceBetween: 80,
     centerInsufficientSlides: true,
     watchOverflow: true,
     navigation: {
       nextEl: '.posts__next',
       prevEl: '.posts__prev',
     },
+    breakpoints: {
+      992: {
+        slidesPerView: 3,
+        spaceBetween: 90,
+      },
+      1200: {
+        spaceBetween: 80,
+      }
+    }
   });
 
 // input tel mask
@@ -323,13 +337,20 @@ $(document).ready(function () {
     $('.team__slider').each(function () {
       let teamSlider = new Swiper(this, {
         loop: false,
-        slidesPerView: 4,
         centerInsufficientSlides: true,
         watchOverflow: true,
         navigation: {
           nextEl: this.parentElement.querySelector('.arrow_next'),
           prevEl: this.parentElement.querySelector('.arrow_prev'),
         },
+        breakpoints: {
+          992: {
+            slidesPerView: 3,
+          },
+          1200: {
+            slidesPerView: 4,
+          }
+        }
       });
     });
   }

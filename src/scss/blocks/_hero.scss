@@ -6,6 +6,7 @@
   &__offer {
     @include col();
     @include size(7.5);
+    @include size-lg(9);
     display: grid;
     grid-template-columns: 75px auto;
     color: #fff;
@@ -44,12 +45,16 @@
   &__cats {
     @include col();
     @include size(7.5);
+    @include size-lg(9);
     display: grid;
     grid-template-columns: repeat(auto-fill, 155px) 70px 146px;
     grid-gap: 5px;
     background-color: #fff;
     margin-top: 200px;
     position: relative;
+    @include lg-block() {
+      grid-template-columns: repeat(auto-fill, 155px) 70px 157px;
+    }
 
     &::before {
       content: '';

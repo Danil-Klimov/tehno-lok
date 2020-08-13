@@ -8,6 +8,7 @@
   &__menu {
     @include col();
     @include size(2.5);
+    @include size-lg(3);
     font-family: $font-second;
     font-size: 15px;
     font-weight: 700;

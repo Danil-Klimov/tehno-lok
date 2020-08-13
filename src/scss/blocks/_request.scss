@@ -8,6 +8,7 @@
 
     &_right {
       @include size(4.7);
+      @include size-lg(5);
       margin-left: auto;
 
       .request__form {
