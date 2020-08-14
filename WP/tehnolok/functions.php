@@ -110,8 +110,8 @@ function tehnolok_register_taxonomies() {
   ] );
 }
 
-//require 'includes/excerpt.php';
-//require 'includes/acf.php';
-//require 'includes/send-mail.php';
-//require 'includes/col-thumb.php';
+require 'includes/acf.php';
+require 'includes/col-thumb.php';
+require 'includes/excerpt.php';
+require 'includes/send-mail.php';
 //require 'includes/tmce-buttons.php';
