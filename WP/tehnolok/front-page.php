@@ -1,30 +1,7 @@
 <?php get_header(); ?>
 
-  <section class="hero" style="background-image: url(img/hero-bg.jpg)">
-    <div class="container">
-      <div class="row">
-        <div class="hero__offer">
-          <div class="vertical-text">РАЗНОЕ НАЗНАЧЕНИЕ</div>
-          <div class="hero__content">
-            <h1 style="font-size: 38px">ТЕХНОЛОГИИ ЛЕГКИХ ОГРАЖДАЮЩИХ КОНСТРУКЦИЙ</h1>
-            <p style="font-size: 19px">Возможность возведения здания любого размера</p>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="hero__cats"><a class="hero__cats-item" href="#"><img src="img/hero-cat-1.jpg">
-            <div>ДЛЯ СПОРТА</div></a><a class="hero__cats-item" href="#"><img src="img/hero-cat-2.jpg">
-            <div>ДЛЯ БИЗНЕСА</div></a><a class="hero__cats-item" href="#"><img src="img/hero-cat-3.jpg">
-            <div>ПРОМЫШЛЕННЫЕ</div></a>
-          <div class="hero__cats-button"><a class="arrow arrow_sm arrow_dark" href="#">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 11" fill="currentColor">
-                <polygon points="9 5.5 0 0 0 11 9 5.5"></polygon>
-              </svg></a></div>
-          <button class="order__request" type="button" data-src="#modal-request" data-fancybox><img src="img/calculation-icon.png"><span>ЗАКАЗАТЬ РАСЧЕТ</span></button>
-        </div>
-      </div>
-    </div>
-  </section>
+<?php get_template_part( 'blocks/hero' ); ?>
+
   <section class="about about_w-projects">
     <div class="container">
       <div class="row">
