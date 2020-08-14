@@ -155,8 +155,11 @@
     
     img {
       display: block;
+      height: 100%;
+      object-fit: cover;
       @include md-block() {
         margin: 0 auto;
+        height: auto;
       }
     }
   }
