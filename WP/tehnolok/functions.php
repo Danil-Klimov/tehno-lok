@@ -51,7 +51,7 @@ function js_variables() {
 // регистрация миниатюр
 add_action( 'after_setup_theme', 'tehnolok_register_images_thumbnails' );
 function tehnolok_register_images_thumbnails() {
-//  add_image_size( '45x45', 45, 45 );
+  add_image_size( '345x540', 345, 540 );
 }
 
 // Регистрация типов постов

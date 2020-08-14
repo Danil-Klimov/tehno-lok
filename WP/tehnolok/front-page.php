@@ -2,62 +2,9 @@
 
 <?php get_template_part( 'blocks/hero' ); ?>
 
-  <section class="about about_w-projects">
-    <div class="container">
-      <div class="row">
-        <div class="about__header">
-          <div class="vertical-text">О КОМПАНИИ</div>
-          <h2 class="title about__title">ПРЕИМУЩЕСТВА НАШЕЙ КОМПАНИИ</h2><img src="img/about-img.png" alt="">
-        </div>
-        <div class="about__content">
-          <p>В настоящий момент компания «ТехноЛОК» уже более 15 лет занимается проектированием и производством тентовых мобильных укрытий.</p>
-          <ul>
-            <li>Более 15 лет опыта проектирования и производства</li>
-            <li>Собственное полностью оборудованное производство</li>
-            <li>Самая широкая вариация размерных характеристик</li>
-            <li>Уникальные технологические разработки наших специалистов на основе опытно конструкторских работ, проведенных совместно с Министерством Обороны России</li>
-            <li>Производство утепленных тентовых покрытий, позволяющих получить реальную экономию порядка 1 млн. руб за отопительный период</li>
-            <li>Широкий спектр дополнительных услуг: монтаж, расчет и устройство оснований и инженерных систе</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-    <div class="about__projects">
-      <div class="about__projects-wrap"><a class="about__project" href="#" style="background-image: linear-gradient(to bottom, rgba(23, 98, 175, 0.6) 0%, transparent 175px), url(img/about-project-1.jpg)">
-          <div class="about__project-name">
-            <div class="about__project-title">Название проекта может быть длинным</div>
-            <div class="arrow arrow_sm arrow_light about__project-arrow">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 11" fill="currentColor">
-                <polygon points="9 5.5 0 0 0 11 9 5.5"></polygon>
-              </svg>
-            </div>
-          </div></a><a class="about__project" href="#" style="background-image: linear-gradient(to top, rgba(23, 98, 175, 0.6) 0%, transparent 175px), url(img/about-project-2.jpg)">
-          <div class="about__project-name">
-            <div class="about__project-title">Название проекта может быть длинным</div>
-            <div class="arrow arrow_sm arrow_light about__project-arrow">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 11" fill="currentColor">
-                <polygon points="9 5.5 0 0 0 11 9 5.5"></polygon>
-              </svg>
-            </div>
-          </div></a><a class="about__project" href="#" style="background-image: linear-gradient(to bottom, rgba(23, 98, 175, 0.6) 0%, transparent 175px), url(img/about-project-3.jpg)">
-          <div class="about__project-name">
-            <div class="about__project-title">Название проекта может быть длинным</div>
-            <div class="arrow arrow_sm arrow_light about__project-arrow">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 11" fill="currentColor">
-                <polygon points="9 5.5 0 0 0 11 9 5.5"></polygon>
-              </svg>
-            </div>
-          </div></a><a class="about__project" href="#" style="background-image: linear-gradient(to top, rgba(23, 98, 175, 0.6) 0%, transparent 175px), url(img/about-project-4.jpg)">
-          <div class="about__project-name">
-            <div class="about__project-title">Название проекта может быть длинным</div>
-            <div class="arrow arrow_sm arrow_light about__project-arrow">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 11" fill="currentColor">
-                <polygon points="9 5.5 0 0 0 11 9 5.5"></polygon>
-              </svg>
-            </div>
-          </div></a></div>
-    </div>
-  </section>
+<?php get_template_part( 'blocks/_blocks' ); ?>
+
+
   <section class="features">
     <div class="container">
       <div class="row">
@@ -379,7 +326,5 @@
       </div>
     </div>
   </section>
-
-<?php get_template_part( 'blocks/_blocks' ); ?>
 
 <?php get_footer(); ?>
