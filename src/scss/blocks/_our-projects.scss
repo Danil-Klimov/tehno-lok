@@ -141,6 +141,10 @@
     @include md-block() {
       flex-wrap: wrap;
     }
+
+    &:not(.swiper-slide-active) {
+      visibility: hidden;
+    }
   }
 
   &__img {
@@ -231,6 +235,8 @@
   }
 
   &__title {
+    display: block;
+    text-decoration: none;
     line-height: 1.4;
     font-weight: 700;
     color: #054c7a;

@@ -6,8 +6,8 @@
         <h2 class="title about__title"><?php the_sub_field( 'about_title' ); ?></h2>
         <?php $about_img = get_sub_field( 'about_img' ); ?>
         <?php if( $about_img ) : ?>
-          <img src="<?php echo esc_url( $about_img[ 'url' ] ); ?>"
-               alt="<?php echo esc_attr( $about_img[ 'alt' ] ); ?>"/>
+          <img src="<?= esc_url( $about_img[ 'url' ] ); ?>"
+               alt="<?= esc_attr( $about_img[ 'alt' ] ); ?>"/>
         <?php endif; ?>
       </div>
       <div class="about__content"><?php the_sub_field( 'about_content' ); ?></div>
