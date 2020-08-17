@@ -188,6 +188,7 @@ $(document).ready(function () {
         spaceBetween: 90,
       },
       1200: {
+        slidesPerView: 3,
         spaceBetween: 80,
       }
     }
