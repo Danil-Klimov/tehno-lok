@@ -11,9 +11,9 @@
     <?php elseif ( get_row_layout() == 'block_gallery' ) : get_template_part( 'blocks/gallery' ); ?>
     <?php elseif ( get_row_layout() == 'block_posts' ) : get_template_part( 'blocks/posts' ); ?>
     <?php elseif ( get_row_layout() == 'block_request' ) : get_template_part( 'blocks/request' ); ?>
+    <?php elseif ( get_row_layout() == 'block_promo' ) : get_template_part( 'blocks/promo' ); ?>
 <!--TODO не сделанные блоки-->
     <?php elseif ( get_row_layout() == 'block_news' ) : get_template_part( 'blocks/news' ); ?>
-    <?php elseif ( get_row_layout() == 'block_promo' ) : get_template_part( 'blocks/promo' ); ?>
     <?php elseif ( get_row_layout() == 'block_interview' ) : get_template_part( 'blocks/interview' ); ?>
     <?php elseif ( get_row_layout() == 'block_team' ) : get_template_part( 'blocks/team' ); ?>
     <?php elseif ( get_row_layout() == 'block_office' ) : get_template_part( 'blocks/office' ); ?>
