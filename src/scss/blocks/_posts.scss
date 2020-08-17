@@ -1,9 +1,7 @@
 .posts {
   padding: 45px 0 60px;
   background: url("../img/posts-bg.jpg") no-repeat center top;
-  @include xs-block() {
-    background-size: cover;
-  }
+  background-size: cover;
 
   &__header {
     @include col();
