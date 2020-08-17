@@ -2,13 +2,30 @@
   <div class="container">
     <div class="row">
       <div class="reviews__header">
-        <div class="vertical-text">ОТЗЫВЫ</div>
-        <h2 class="title reviews__title">ОТЗЫВЫ О НАШЕЙ РАБОТЕ</h2>
-        <div class="reviews__link"><a href="#">Смотреть все</a></div>
+        <div class="vertical-text"><?php the_sub_field( 'reviews_vertical-text' ); ?></div>
+        <h2 class="title reviews__title"><?php the_sub_field( 'reviews_title' ); ?></h2>
+        <?php $reviews_link = get_sub_field( 'reviews_link' ); ?>
+        <?php if( $reviews_link ) : ?>
+          <div class="reviews__link">
+            <a href="<?= esc_url( $reviews_link[ 'url' ] ); ?>"
+               target="<?= esc_attr( $reviews_link[ 'target' ] ); ?>"><?= esc_html( $reviews_link[ 'title' ] ); ?></a>
+          </div>
+        <?php endif; ?>
       </div>
       <div class="reviews__container">
         <div class="reviews__slider swiper-container">
-          <div class="swiper-wrapper"><a class="reviews__item zoom swiper-slide" href="#rev_942" data-fancybox><img src="img/reviews-img-1.jpg" alt=""></a><a class="reviews__item zoom swiper-slide" href="#rev_942" data-fancybox><img src="img/reviews-img-2.jpg" alt=""></a><a class="reviews__item zoom swiper-slide" href="#rev_942" data-fancybox><img src="img/reviews-img-1.jpg" alt=""></a><a class="reviews__item zoom swiper-slide" href="#rev_942" data-fancybox><img src="img/reviews-img-2.jpg" alt=""></a><a class="reviews__item zoom swiper-slide" href="#rev_942" data-fancybox><img src="img/reviews-img-1.jpg" alt=""></a><a class="reviews__item zoom swiper-slide" href="#rev_942" data-fancybox><img src="img/reviews-img-2.jpg" alt=""></a></div>
+          <div class="swiper-wrapper">
+            <?php $reviews_items = get_sub_field( 'reviews_items' ); ?>
+            <?php if( $reviews_items ) : ?>
+              <?php foreach( $reviews_items as $post ) : ?>
+                <?php setup_postdata( $post ); ?>
+                <a class="reviews__item zoom swiper-slide" href="#rev_<?= $post->ID ?>" data-fancybox>
+                  <?php the_post_thumbnail( '195x275' ); ?>
+                </a>
+              <?php endforeach; ?>
+              <?php wp_reset_postdata(); ?>
+            <?php endif; ?>
+          </div>
         </div>
         <button class="arrow arrow_md arrow_dark arrow_next reviews__next" type="button">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 11" fill="currentColor">
@@ -23,13 +40,23 @@
       </div>
     </div>
   </div>
-  <div class="reviews__modal" id="rev_942">
-    <div class="reviews__modal-inner">
-      <div class="reviews__modal-img"><img src="https://pavlintmn.ru/wp-content/uploads/2019/11/otzyv-9.jpg" alt=""></div>
-      <div class="reviews__modal-content">
-        <div class="reviews__name">Компания Интерком</div>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae, commodi deserunt dolorum eaque esse, fugiat ipsam labore neque nisi sapiente sit vel veniam veritatis voluptatem, voluptatum. Ab amet architecto assumenda atque commodi cupiditate dicta dolor dolores earum eius esse est exercitationem explicabo facere harum itaque labore maiores mollitia nam non nulla odit optio porro possimus quam quas quidem repudiandae soluta tempore ullam ut veritatis vero, voluptatem! Aperiam cumque delectus facere hic molestiae nesciunt, perspiciatis quae voluptatem. Alias blanditiis consequatur debitis doloremque ducimus, esse voluptate voluptatibus. Debitis dolorem explicabo magni nam nihil placeat qui, quisquam voluptatum. Aliquid aperiam non quod voluptate!</p>
+  <?php if( $reviews_items ) : ?>
+    <?php foreach( $reviews_items as $post ) : ?>
+      <?php setup_postdata( $post ); ?>
+      <div class="reviews__modal" id="rev_<?= $post->ID ?>">
+        <div class="reviews__modal-inner">
+          <?php $thumbnail_id = get_post_thumbnail_id( $post->ID );
+          $alt = get_post_meta( $thumbnail_id, '_wp_attachment_image_alt', true ); ?>
+          <div class="reviews__modal-img">
+            <img src="<?php the_post_thumbnail_url( 'full' ); ?>" alt="<?= $alt; ?>">
+          </div>
+          <div class="reviews__modal-content">
+            <div class="reviews__name"><?php the_title(); ?></div>
+            <?php the_content(); ?>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
+    <?php endforeach; ?>
+    <?php wp_reset_postdata(); ?>
+  <?php endif; ?>
 </section>
