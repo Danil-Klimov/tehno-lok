@@ -59,4 +59,4 @@
     </nav>
   </div>
 </header>
-<main class="main">
+<main class="main<?= !is_front_page() ? ' main_page' : '' ?>">
