@@ -8,9 +8,9 @@
     <?php elseif ( get_row_layout() == 'block_types' ) : get_template_part( 'blocks/types' ); ?>
     <?php elseif ( get_row_layout() == 'block_video-block' ) : get_template_part( 'blocks/video-block' ); ?>
     <?php elseif ( get_row_layout() == 'block_reviews' ) : get_template_part( 'blocks/reviews' ); ?>
+    <?php elseif ( get_row_layout() == 'block_gallery' ) : get_template_part( 'blocks/gallery' ); ?>
 <!--TODO не сделанные блоки-->
     <?php elseif ( get_row_layout() == 'block_news' ) : get_template_part( 'blocks/news' ); ?>
-    <?php elseif ( get_row_layout() == 'block_gallery' ) : get_template_part( 'blocks/gallery' ); ?>
     <?php elseif ( get_row_layout() == 'block_posts' ) : get_template_part( 'blocks/posts' ); ?>
     <?php elseif ( get_row_layout() == 'block_request' ) : get_template_part( 'blocks/request' ); ?>
     <?php elseif ( get_row_layout() == 'block_promo' ) : get_template_part( 'blocks/promo' ); ?>
