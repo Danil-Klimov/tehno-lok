@@ -326,39 +326,4 @@
       background-position: left bottom;
     }
   }
-
-  &__filter {
-    @include col();
-    @include size(6);
-    @include size-xs(12);
-    position: absolute;
-    top: 0;
-    left: 50%;
-    font-size: 13px;
-    color: #4c4c4c;
-    display: flex;
-    align-items: center;
-    @include sm-block() {
-      flex-direction: column;
-      align-items: flex-start;
-    }
-    @include xs-block() {
-      position: static;
-    }
-
-    .input {
-      margin: 0 0 0 20px;
-      width: 360px;
-      @include md-block() {
-        width: 250px;
-      }
-      @include sm-block() {
-        margin: 10px 0 0 0;
-        width: 233px;
-      }
-      @include xs-block() {
-        width: 100%;
-      }
-    }
-  }
 }

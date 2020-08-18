@@ -137,6 +137,13 @@ function tehnolok_register_taxonomies() {
   ] );
 }
 
+// привязка рубрик к страницам
+add_action( 'admin_init', 'true_apply_categories_for_pages' );
+function true_apply_categories_for_pages() {
+  add_meta_box( 'categorydiv', 'Категории', 'post_categories_meta_box', 'page', 'side', 'normal' ); // добавляем метабокс категорий для страниц
+  register_taxonomy_for_object_type( 'category', 'page' ); // регистрируем рубрики для страниц
+}
+
 require 'includes/acf.php';
 require 'includes/col-thumb.php';
 require 'includes/excerpt.php';
