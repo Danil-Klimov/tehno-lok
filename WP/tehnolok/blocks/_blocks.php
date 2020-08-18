@@ -3,7 +3,6 @@
     <?php if ( get_row_layout() == 'block_about' ) : get_template_part( 'blocks/about' ); ?>
     <?php elseif ( get_row_layout() == 'block_reasons' ) : get_template_part( 'blocks/reasons' ); ?>
     <?php elseif ( get_row_layout() == 'block_features' ) : get_template_part( 'blocks/features' ); ?>
-<!--TODO обратить внимание на этот блок, он сложный. Есть на разный страницах с разной галереей-->
     <?php elseif ( get_row_layout() == 'block_our-projects' ) : get_template_part( 'blocks/our-projects' ); ?>
     <?php elseif ( get_row_layout() == 'block_types' ) : get_template_part( 'blocks/types' ); ?>
     <?php elseif ( get_row_layout() == 'block_video-block' ) : get_template_part( 'blocks/video-block' ); ?>

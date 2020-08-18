@@ -29,19 +29,9 @@
                     </div>
                     <div class="our-projects__content">
                       <a class="our-projects__title" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-                      <!--                      TODO добавить описание при создании страницы проекта-->
-                      <div class="our-projects__text">
-                        <p><span style="font-weight: 700; color: #054c7a">Назначение:</span> Укрытия ледовых полей и
-                          теннисных кортов</p>
-                        <p>Утепленное каркасно-мембранное укрытие двух хоккейных полей и четырех теннисных кортов с
-                          пристройкой для размещения раздевалок, кафе, спортивного зала и др. помещений.</p>
-                        <p><span style="font-weight: 700; color: #054c7a">Размеры</span> 40 х 144 х 5,1м/14,4м(по стене/
-                          в
-                          коньке), пристройка 15 х 68 х 5м (по стене)</p>
-                        <p>Ворота подъемные для въезда ледоуборочных машин 4 шт</p>
-                        <p><span style="font-weight: 700; color: #054c7a">Место расположения:</span> г. Москва.</p>
-                        <p><span style="font-weight: 700; color: #054c7a">Год постройки:</span> 2018</p>
-                        <p><span style="font-weight: 700; color: #054c7a">Срок монтажа:</span> 60 рабочих дней</p>
+                      <div class="our-projects__text"><?php the_field( 'project-description' ); ?></div>
+                      <div class="our-projects__content-footer">
+                        <a class="button button_fill" href="<?php the_permalink(); ?>">СМОТРЕТЬ ПРОЕКТ</a>
                       </div>
                     </div>
                   </div>

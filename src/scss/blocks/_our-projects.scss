@@ -172,6 +172,14 @@
     }
   }
 
+  &__img-slider-w-nav {
+    .swiper-slide {
+      &:not(.swiper-slide-active) {
+        visibility: hidden;
+      }
+    }
+  }
+
   &__img-footer {
     box-sizing: border-box;
     background-color: rgba(#13469a, 0.5);
