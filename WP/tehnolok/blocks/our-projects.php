@@ -1,4 +1,4 @@
-<section class="our-projects">
+<section class="our-projects our-projects_main">
   <div class="our-projects__wrapper">
     <div class="container">
       <div class="row">

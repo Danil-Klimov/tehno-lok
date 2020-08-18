@@ -1,4 +1,12 @@
 .our-projects {
+  &_main {
+    .our-projects__inner {
+      &:not(.swiper-slide-active) {
+        visibility: hidden;
+      }
+    }
+  }
+
   &_clean {
     .our-projects__wrapper {
       padding-bottom: 50px;
@@ -140,10 +148,6 @@
     display: flex;
     @include md-block() {
       flex-wrap: wrap;
-    }
-
-    &:not(.swiper-slide-active) {
-      visibility: hidden;
     }
   }
 
