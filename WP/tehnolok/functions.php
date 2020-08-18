@@ -148,4 +148,6 @@ require 'includes/acf.php';
 require 'includes/col-thumb.php';
 require 'includes/excerpt.php';
 require 'includes/send-mail.php';
+require 'includes/filter.php';
+//require 'includes/load-more.php';
 //require 'includes/tmce-buttons.php';

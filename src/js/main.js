@@ -438,5 +438,59 @@ $(document).ready(function () {
     speed: 1000
   });
 
+// filter
+  $('#filter .select').on('change', function () {
+    const filter = $(this);
+    $.ajax({
+      type: 'POST',
+      data: filter.parent().serialize(),
+      dataType : 'json',
+      url: window.wp_data.ajax_url + '?action=ajax_filter',
+      beforeSend: function(xhr){
+        // filter.find('.button').text('Загружаю...');
+      },
+      success: function(data){
+        current_page = 1;
+        posts = data.posts;
+        max_pages = data.max_page;
+        // filter.find('.button').text('Применить');
+        $('#projects').html(data.content);
+        if ( data.max_page < 2 ) {
+          $('.posts__button').hide();
+        } else {
+          $('.posts__button').show();
+        }
+        our_projects_img_slider_w_nav();
+      }
+    });
+    return false;
+  });
+
+  // show more posts
+  $('.posts__button').click(function(){
+    $(this).text('Загружаю...');
+    let data = {
+      'action': 'loadmore',
+      'query': posts,
+      'page' : current_page,
+      'parent' : parent,
+    };
+    $.ajax({
+      url:ajaxurl,
+      data:data,
+      type:'POST',
+      success:function(data){
+        if( data ) {
+          $('.posts__button').text('ПОКАЗАТЬ ЕЩЕ');
+          $('#projects').append(data);
+          current_page++;
+          if (current_page == max_pages) $(".posts__button").remove();
+        } else {
+          $('.posts__button').remove();
+        }
+      }
+    });
+  });
+
   svg4everybody();
 });
