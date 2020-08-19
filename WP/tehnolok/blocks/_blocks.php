@@ -4,6 +4,7 @@
     <?php elseif ( get_row_layout() == 'block_reasons' ) : get_template_part( 'blocks/reasons' ); ?>
     <?php elseif ( get_row_layout() == 'block_features' ) : get_template_part( 'blocks/features' ); ?>
     <?php elseif ( get_row_layout() == 'block_our-projects' ) : get_template_part( 'blocks/our-projects' ); ?>
+    <?php elseif ( get_row_layout() == 'block_our-projects-for-prices' ) : get_template_part( 'blocks/our-projects-for-prices' ); ?>
     <?php elseif ( get_row_layout() == 'block_types' ) : get_template_part( 'blocks/types' ); ?>
     <?php elseif ( get_row_layout() == 'block_video-block' ) : get_template_part( 'blocks/video-block' ); ?>
     <?php elseif ( get_row_layout() == 'block_reviews' ) : get_template_part( 'blocks/reviews' ); ?>
