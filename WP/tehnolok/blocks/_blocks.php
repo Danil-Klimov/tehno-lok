@@ -18,8 +18,8 @@
     <?php elseif ( get_row_layout() == 'block_service' ) : get_template_part( 'blocks/service' ); ?>
     <?php elseif ( get_row_layout() == 'block_text' ) : get_template_part( 'blocks/text' ); ?>
     <?php elseif ( get_row_layout() == 'block_numbers' ) : get_template_part( 'blocks/numbers' ); ?>
-<!--TODO не сделанные блоки-->
     <?php elseif ( get_row_layout() == 'block_news' ) : get_template_part( 'blocks/news' ); ?>
+<!--TODO не сделанные блоки-->
     <?php elseif ( get_row_layout() == 'block_faq' ) : get_template_part( 'blocks/faq' ); ?>
     <?php endif; ?>
   <?php endwhile; ?>
