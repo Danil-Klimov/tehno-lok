@@ -64,7 +64,8 @@
           <h2 class="title request__title"><?php the_field( 'request_title', 'option' ); ?></h2>
           <div class="request__subtitle"><?php the_field( 'request_subtitle', 'option' ); ?></div>
         </div>
-        <form class="request__form">
+        <form class="request__form" data-name="Заявка с футера">
+          <input type="hidden" name="page_request" value="<?php the_title(); ?>">
           <div class="request__group">
             <input class="input" type="text" name="client_name" placeholder="Ваше имя" required>
             <input class="input" type="tel" name="client_tel" placeholder="Ваш телефон"
@@ -72,7 +73,7 @@
           </div>
           <div class="request__group">
             <div class="textarea">
-              <textarea class="input" placeholder="Сообщение"></textarea>
+              <textarea class="input" name="client_message" placeholder="Сообщение"></textarea>
             </div>
           </div>
           <label class="checkbox">

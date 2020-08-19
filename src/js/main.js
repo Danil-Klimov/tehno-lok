@@ -438,6 +438,47 @@ $(document).ready(function () {
     speed: 1000
   });
 
+  $('form[data-name]').on('submit', function (e) {
+    e.preventDefault();
+    const form = $(this);
+    const file = $('#file');
+    let formData = new FormData(form.get(0));
+
+    if (form.data('name')) {
+      formData.append('form_name', form.data('name'));
+    } else {
+      return;
+    }
+
+    if (file) {
+      formData.append('post_id', file);
+    }
+
+    $.ajax({
+      type: 'POST',
+      url: window.wp_data.ajax_url + '?action=send_mail',
+      data: formData,
+      cache: false,
+      processData: false,
+      contentType: false,
+      success: function () {
+        form.trigger("reset");
+        $('.file-name').html('');
+        $.fancybox.open({
+          src: '<div><p>Спасибо за заявку!</p><p>С Вами свяжутся в ближайшее время.</p></div>',
+          type: 'inline',
+          modal: true
+        });
+        setTimeout(function () {
+          $.fancybox.close(true);
+        }, 2000);
+      },
+      error: function (jqXHR, textStatus, errorThrown) {
+        console.log(jqXHR, textStatus, errorThrown);
+      }
+    });
+  });
+
 // filter
   $('#filter .select').on('change', function () {
     const filter = $(this);

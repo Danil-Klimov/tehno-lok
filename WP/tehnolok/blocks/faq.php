@@ -31,7 +31,7 @@
       <div class="faq__footer">
         <button class="button button_fill"
                 type="button"
-                data-src="#modal_request" data-fancybox>ЗАДАЙТЕ ВАШ ВОПРОС</button>
+                data-src="#modal_question" data-fancybox>ЗАДАЙТЕ ВАШ ВОПРОС</button>
       </div>
     </div>
   </div>
