@@ -58,5 +58,13 @@
       </button>
     </nav>
   </div>
+  <?php if( !is_front_page() && get_field( 'order_request', 'option' ) == 1 ) : ?>
+    <button class="order__request header__order"
+            type="button"
+            data-src="#modal-request" data-fancybox>
+      <img src="<?= get_template_directory_uri() ?>/img/calculation-icon.png" alt="">
+      <span>ЗАКАЗАТЬ <br> РАСЧЕТ</span>
+    </button>
+  <?php endif; ?>
 </header>
 <main class="main<?= !is_front_page() ? ' main_page' : '' ?>">
