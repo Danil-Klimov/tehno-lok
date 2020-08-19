@@ -38,7 +38,7 @@ function tehnolok_scripts() {
   wp_enqueue_style( 'main-style', get_template_directory_uri() . '/css/style.css' );
   wp_enqueue_script( 'libs', get_template_directory_uri() . '/js/libs.min.js', [ 'jquery' ], null, true );
   wp_enqueue_script( 'main-scripts', get_template_directory_uri() . '/js/main.js', [ 'jquery', 'libs' ], null, true );
-  wp_enqueue_script('yandex-map', '//api-maps.yandex.ru/2.1/?lang=ru_RU', [], null, false);
+  wp_enqueue_script( 'yandex-map', '//api-maps.yandex.ru/2.1/?lang=ru_RU', [], null, false );
 }
 
 // js переменные
@@ -77,9 +77,11 @@ function tehnolok_register_images_thumbnails() {
   add_image_size( '620x450', 620, 450, true );
   add_image_size( '630x355', 630, 355, true );
   add_image_size( '695x390', 690, 390, true );
+  add_image_size( '720x260', 720, 260, true );
   add_image_size( '750x500', 750, 500, true );
   add_image_size( '820x460', 820, 460, true );
   add_image_size( '935x525', 935, 525, true );
+  add_image_size( '1140x260', 1140, 260, true );
 }
 
 // Регистрация типов постов
@@ -143,6 +145,26 @@ add_action( 'admin_init', 'true_apply_categories_for_pages' );
 function true_apply_categories_for_pages() {
   add_meta_box( 'categorydiv', 'Категории', 'post_categories_meta_box', 'page', 'side', 'normal' ); // добавляем метабокс категорий для страниц
   register_taxonomy_for_object_type( 'category', 'page' ); // регистрируем рубрики для страниц
+}
+
+// префикс в хлебных крошках
+add_filter( 'wpseo_breadcrumb_links', 'custom_breadcrumbs' );
+function custom_breadcrumbs( $links ) {
+  global $post;
+  if( in_category( 'novosti' ) ) {
+    $breadcrumb[] = array(
+      'url' => site_url( '/novosti' ),
+      'text' => 'Новости',
+    );
+    array_splice( $links, 1, -2, $breadcrumb );
+  } elseif( in_category( 'stati' ) ) {
+    $breadcrumb[] = array(
+      'url' => site_url( '/stati' ),
+      'text' => 'Статьи',
+    );
+    array_splice( $links, 1, -2, $breadcrumb );
+  }
+  return $links;
 }
 
 require 'includes/acf.php';

@@ -2,14 +2,14 @@
   <div class="container">
     <div class="row">
       <div class="interview__header">
-        <h2 class="title interview__title"><?php the_sub_field( 'interview_title' ); ?></h2>
+        <h2 class="title interview__title"><?php the_field( 'interview_title', 'option' ); ?></h2>
       </div>
     </div>
     <div class="row interview__container">
       <div class="interview__slider swiper-container">
         <div class="swiper-wrapper">
-          <?php if ( have_rows( 'interview_items' ) ) : ?>
-            <?php while ( have_rows( 'interview_items' ) ) : the_row(); ?>
+          <?php if ( have_rows( 'interview_items', 'option' ) ) : ?>
+            <?php while ( have_rows( 'interview_items', 'option' ) ) : the_row(); ?>
               <div class="interview__slide swiper-slide">
                 <div class="interview__video video-border">
                   <?php if( get_sub_field( 'video-source' ) === 'youtube' ) : ?>
@@ -69,7 +69,7 @@
         </svg>
       </button>
     </div>
-    <?php $interview_button = get_sub_field( 'interview_button' ); ?>
+    <?php $interview_button = get_field( 'interview_button', 'option' ); ?>
     <?php if ( $interview_button ) : ?>
       <div class="row">
         <div class="interview__footer">
