@@ -106,6 +106,13 @@
         color: #00285b;
       }
     }
+
+    &_single {
+      @include col();
+      @include size(4);
+      margin-bottom: 30px;
+      align-self: flex-start;
+    }
   }
 
   &__item-body {
