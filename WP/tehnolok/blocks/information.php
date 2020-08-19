@@ -1,16 +1,20 @@
 <section class="information">
   <div class="container">
     <div class="row information__body">
-      <ul class="information__menu">
-        <li class="current-menu-item"><img src="img/menu-img-1.png" alt=""><a href="#">НОВОСТИ СТРОИТЕЛЬСТВА</a></li>
-        <li><img src="img/menu-img-2.png" alt=""><a href="#">ПОЛЕЗНЫЕ СТАТЬИ</a></li>
-        <li><img src="img/menu-img-3.png" alt=""><a href="#">ВАШИ ВОПРОСЫ</a></li>
-        <li><img src="img/menu-img-4.png" alt=""><a href="#">ИНТЕРВЬЮ</a></li>
-      </ul>
-      <div class="information__text">
-        <p>Наша компания постоянно находится в процессе роста и совершенствования услуг, в этом разделе вы узнаете о последних построенных нами проектоах, найдете видео с площадки текущих объектов.</p>
-      </div>
-      <div class="information__img"><img src="img/information-img.jpg" alt=""></div>
+      <?php wp_nav_menu( [
+        'theme_location' => 'menu_information',
+        'container' => '',
+        'items_wrap' => '<ul class="information__menu">%3$s</ul>',
+        'walker' => new Walker_information_menu()
+      ] ); ?>
+      <div class="information__text"><?php the_field( 'information_text' ); ?></div>
+      <?php $information_img = get_field( 'information_img' ); ?>
+      <?php if( $information_img ) : ?>
+        <div class="information__img">
+          <img src="<?= esc_url( $information_img[ 'sizes' ][ '345x210' ] ); ?>"
+               alt="<?= esc_attr( $information_img[ 'alt' ] ); ?>"/>
+        </div>
+      <?php endif; ?>
     </div>
   </div>
 </section>

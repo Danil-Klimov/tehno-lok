@@ -20,7 +20,6 @@
     <?php elseif ( get_row_layout() == 'block_numbers' ) : get_template_part( 'blocks/numbers' ); ?>
 <!--TODO не сделанные блоки-->
     <?php elseif ( get_row_layout() == 'block_news' ) : get_template_part( 'blocks/news' ); ?>
-    <?php elseif ( get_row_layout() == 'block_information' ) : get_template_part( 'blocks/information' ); ?>
     <?php elseif ( get_row_layout() == 'block_faq' ) : get_template_part( 'blocks/faq' ); ?>
     <?php endif; ?>
   <?php endwhile; ?>

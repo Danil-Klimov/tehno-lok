@@ -9,6 +9,7 @@ if( !function_exists( 'theme_setup' ) ) {
     register_nav_menus( [
       'menu_header' => 'Меню в шапке',
       'menu_modal' => 'Меню в бургере',
+      'menu_information' => 'Меню "Информация"',
     ] );
 
     add_theme_support( 'html5', [
@@ -149,5 +150,6 @@ require 'includes/col-thumb.php';
 require 'includes/excerpt.php';
 require 'includes/send-mail.php';
 require 'includes/filter.php';
+require 'includes/information-menu.php';
 //require 'includes/load-more.php';
 //require 'includes/tmce-buttons.php';
