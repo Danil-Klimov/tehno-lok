@@ -68,10 +68,12 @@ function tehnolok_register_images_thumbnails() {
   add_image_size( '345x540', 345, 540, true );
   add_image_size( '360x220', 360, 220, true );
   add_image_size( '360x250', 360, 250, true );
+  add_image_size( '360x360', 360, 360, true );
   add_image_size( '360x500', 360, 500, true );
   add_image_size( '390x250', 390, 250, true );
   add_image_size( '450x450', 450, 450, true );
   add_image_size( '480x400', 480, 400, true );
+  add_image_size( '490x470', 490, 470, true );
   add_image_size( '515x160', 515, 160, true );
   add_image_size( '515x290', 515, 290, true );
   add_image_size( '545x200', 545, 200, true );
