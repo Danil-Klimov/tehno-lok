@@ -56,6 +56,7 @@ function tehnolok_register_images_thumbnails() {
   add_image_size( '105x110', 105, 110, true );
   add_image_size( '165x170', 165, 170, true );
   add_image_size( '195x275', 195, 275, true );
+  add_image_size( '200x130', 200, 130, true );
   add_image_size( '210x270', 210, 270, true );
   add_image_size( '260x160', 260, 160, true );
   add_image_size( '273x185', 273, 185, true );

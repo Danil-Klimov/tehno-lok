@@ -17,7 +17,7 @@ global.$ = {
 		cache: true,
 		htmlCompress: false,
 		cssCompress: true,
-		sourceMaps: true,
+		sourceMaps: false,
 		libs: [
 			'node_modules/svg4everybody/dist/svg4everybody.min.js',
 			'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.js',

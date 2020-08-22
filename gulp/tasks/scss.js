@@ -4,7 +4,7 @@ module.exports = function () {
       .pipe($.plugins.if($.options.debug, $.plugins.debug()))
       .pipe($.plugins.if($.options.sourceMaps, $.plugins.sourcemaps.init()))
       .pipe($.plugins.sass())
-      .pipe($.plugins.if(!$.options.sourceMaps, $.plugins.media()))
+      // .pipe($.plugins.if(!$.options.sourceMaps, $.plugins.media()))
       .pipe(
         $.options.cssCompress ?
           $.plugins.cssnano({

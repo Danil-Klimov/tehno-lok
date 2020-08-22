@@ -1,0 +1,31 @@
+extends ../layouts/_default
+block variables
+	-
+		const config = {
+			title: "Услуги - ТехноЛОК",
+				description: "",
+				og_title: "",
+				og_type: "",
+				og_url: "",
+				og_img: "",
+				order_bt: true
+			}
+block body_start
+block content
+	include ../includes/_header
+	main.main.main_page
+		include ../includes/_breadcrumbs
+		section.page-header
+			.container
+				.row
+					.page-header__content
+						h1.page-header__title СПОРТИВНЫЕ АНГАРЫ
+						p
+							img.alignright(src='img/text-img.jpg')
+							| Стоимость каждого проекта расчитывается индивидуально, так как цена зависит от ряда факторов, фундамента, места строительства, условий, транспортной развязки, температуры и региона, цена может меняться.
+						p Примерную стоимость вашего проекта вы можете прикинуть на примере наших уже готовых проектов, чтобы получить коммерческое предложение, звоните.
+		include ../includes/_serv-menu
+		include ../includes/_request
+	include ../includes/_footer
+	include ../includes/_modal
+block body_end
