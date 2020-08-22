@@ -110,24 +110,30 @@ $(document).ready(function () {
   our_projects_img_slider_w_nav();
 
 // news slider
-  const newsSlider = new Swiper('.news__slider', {
-    loop: false,
-    spaceBetween: 30,
-    centerInsufficientSlides: true,
-    watchOverflow: true,
-    navigation: {
-      nextEl: '.news__next',
-      prevEl: '.news__prev',
-    },
-    breakpoints: {
-      575: {
-        slidesPerView: 2,
-      },
-      992: {
-        slidesPerView: 3,
-      }
-    }
-  });
+  function news_slider() {
+    $('.news__slider').each(function () {
+      let newsSlider = new Swiper(this, {
+        loop: false,
+        spaceBetween: 30,
+        centerInsufficientSlides: true,
+        watchOverflow: true,
+        navigation: {
+          nextEl: this.parentElement.querySelector('.news__next'),
+          prevEl: this.parentElement.querySelector('.news__prev'),
+        },
+        breakpoints: {
+          575: {
+            slidesPerView: 2,
+          },
+          992: {
+            slidesPerView: 3,
+          }
+        }
+      });
+    })
+  }
+
+  news_slider();
 
 // reviews slider
   const reviewsSlider = new Swiper('.reviews__slider', {

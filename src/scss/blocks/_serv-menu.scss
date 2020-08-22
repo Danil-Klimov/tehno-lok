@@ -1,5 +1,12 @@
 .serv-menu {
-  .container {
+   &__container {
+    @include col();
+    @include size(12);
+     display: grid;
+     grid-template-columns: 26% repeat(auto-fit, minmax(400px, 1fr));
+    color: #fff;
+    height: 400px;
+
     position: relative;
     z-index: 1;
 
@@ -10,7 +17,7 @@
       height: 130px;
       position: absolute;
       top: -10px;
-      right: 5px;
+      right: -10px;
       z-index: -1;
       background: linear-gradient(
           to right,
@@ -18,14 +25,6 @@
           #1755a4 100%
       );
     }
-  }
-
-  &__container {
-    @include col();
-    @include size(12);
-    display: flex;
-    color: #fff;
-    height: 400px;
   }
 
   &__title {
@@ -38,7 +37,6 @@
 
   &__carcas {
     box-sizing: border-box;
-    flex-basis: 26%;
     padding: 55px 45px;
     background-size: cover;
 
@@ -76,8 +74,8 @@
   }
 
   &__coating {
-    flex-basis: 37%;
     position: relative;
+    background-size: cover;
 
     .serv-menu__link {
       &:hover {

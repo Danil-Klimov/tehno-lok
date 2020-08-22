@@ -11,6 +11,8 @@ Template Post Type: page
 
 <?php get_template_part( 'blocks/page-header' ); ?>
 
+<?php get_template_part( 'blocks/serv-menu' ); ?>
+
 <?php get_template_part( 'blocks/_blocks' ); ?>
 
 <?php get_footer(); ?>
