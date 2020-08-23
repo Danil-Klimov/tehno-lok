@@ -1,28 +1,34 @@
 .serv-menu {
-   &__container {
+  &__container {
     @include col();
     @include size(12);
-     display: grid;
-     grid-template-columns: 26% repeat(auto-fit, minmax(400px, 1fr));
+    display: grid;
+    grid-template-columns: 26% repeat(auto-fit, minmax(400px, 1fr));
     color: #fff;
     height: 400px;
-
     position: relative;
     z-index: 1;
+    @include lg-block() {
+      grid-template-columns: 30% repeat(auto-fit, minmax(300px, 1fr));
+    }
+    @include md-block() {
+      display: block;
+      height: auto;
+    }
 
     &::after {
-      content: '';
-      display: block;
-      width: 140px;
-      height: 130px;
-      position: absolute;
-      top: -10px;
-      right: -10px;
-      z-index: -1;
-      background: linear-gradient(
-          to right,
-          #2696c8 0%,
-          #1755a4 100%
+    content: '';
+    display: block;
+    width: 140px;
+    height: 130px;
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    z-index: -1;
+    background: linear-gradient(
+      to right,
+      #2696c8 0%,
+      #1755a4 100%
       );
     }
   }
@@ -39,6 +45,9 @@
     box-sizing: border-box;
     padding: 55px 45px;
     background-size: cover;
+    @include md-block() {
+      padding: 30px;
+    }
 
     .serv-menu__link {
       margin-bottom: 10px;
@@ -63,6 +72,9 @@
   &__carcas-title {
     font-size: 32px;
     margin-bottom: 55px;
+    @include md-block() {
+      margin-bottom: 25px;
+    }
   }
 
   &__link {
@@ -76,6 +88,9 @@
   &__coating {
     position: relative;
     background-size: cover;
+    @include md-block() {
+      min-height: 200px;
+    }
 
     .serv-menu__link {
       &:hover {
@@ -93,12 +108,18 @@
     bottom: 0;
     left: 0;
     right: 0;
+    @include xs-block() {
+      display: block;
+    }
   }
 
   &__coating-title {
     font-size: 25px;
     flex-basis: 10%;
     margin-right: 35px;
+    @include xs-block() {
+      margin: 0 0 15px;
+    }
   }
 
   &__coating-list {
