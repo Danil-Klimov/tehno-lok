@@ -1,8 +1,13 @@
 .features {
-  padding: 280px 0 80px;
-  background: url("../img/features-bg.jpg") no-repeat center top;
-  @include xs-block() {
-    padding-bottom: 80px;
+  padding-bottom: 80px;
+  &_main {
+    padding-top: 280px;
+    background: url("../img/features-bg.jpg") no-repeat center top;
+  }
+
+  &_sub {
+    padding-top: 40px;
+    background: url("../img/features-sm-bg.jpg") no-repeat center top;
   }
 
   &__header {

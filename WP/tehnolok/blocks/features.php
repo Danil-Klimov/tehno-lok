@@ -1,4 +1,4 @@
-<section class="features">
+<section class="features<?= get_sub_field( 'features_view' ) === 'big' ? ' features_main' : ' features_sub' ?>">
   <div class="container">
     <div class="row">
       <div class="features__header">
