@@ -177,4 +177,4 @@ require 'includes/send-mail.php';
 require 'includes/filter.php';
 require 'includes/information-menu.php';
 //require 'includes/load-more.php';
-//require 'includes/tmce-buttons.php';
+require 'includes/tmce-buttons.php';
