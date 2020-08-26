@@ -45,7 +45,7 @@
                         <?php $anchor = get_sub_field( 'anchor' ); ?>
                         <?php if ( get_sub_field( 'anchor-type' ) === 'text' ) : ?>
                           <li>
-                            <div class="serv-menu__link"><?php the_sub_field( 'title-text' ); ?></div>
+                            <div class="serv-menu__link"><?php the_sub_field( 'text' ); ?></div>
                           </li>
                         <?php else : ?>
                           <li>

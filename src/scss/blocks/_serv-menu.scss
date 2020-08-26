@@ -54,12 +54,6 @@
       display: flex;
       align-self: center;
 
-      &:hover {
-        span {
-          text-decoration: underline;
-        }
-      }
-
       &::before {
         content: '►';
         font-size: 7px;
@@ -83,6 +77,12 @@
     font-size: 13px;
     line-height: 1.2;
     font-weight: 700;
+
+    &:hover {
+      span {
+        text-decoration: underline;
+      }
+    }
   }
 
   &__coating {
@@ -90,12 +90,6 @@
     background-size: cover;
     @include md-block() {
       min-height: 200px;
-    }
-
-    .serv-menu__link {
-      &:hover {
-        text-decoration: underline;
-      }
     }
   }
 
