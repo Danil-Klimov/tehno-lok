@@ -1,12 +1,16 @@
-<?php $tel = preg_replace( '~[^0-9,+]~', '', get_field( 'phone_moscow', 'option' ) );
-$email = get_field( 'email', 'option' ); ?>
+<?php $email = get_field( 'email', 'option' ); ?>
 </main>
 <footer class="footer">
   <div class="container">
     <div class="row footer__container">
       <div class="footer__copyright">Копирайт © <?= date( 'Y' ) ?> ТехноЛОК. <br> Все права защищены.</div>
       <div class="footer__contacts">
-        <a class="footer__tel" href="tel:<?= $tel ?>"><?= get_field( 'phone_moscow', 'option' ) ?></a>
+        <?php if ( have_rows( 'phone_main', 'option' ) ) : ?>
+          <?php while ( have_rows( 'phone_main', 'option' ) ) : the_row();
+            $tel_main = preg_replace( '~[^0-9,+]~', '', get_sub_field( 'phone_main-tel' ) );?>
+            <a class="footer__tel" href="tel:<?= $tel_main ?>"><?php the_sub_field( 'phone_main-tel' ) ?></a>
+          <?php endwhile; ?>
+        <?php endif; ?>
         <a class="footer__mail" href="mailto:<?= $email ?>"><?= $email ?></a>
       </div>
       <div class="footer__button">

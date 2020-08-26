@@ -10,19 +10,27 @@
               адресу: <?php the_field( 'address', 'option' ); ?></div>
           </div>
           <div class="request__contacts">
-            <?php $tel = preg_replace( '~[^0-9,+]~', '', get_field( 'phone_moscow', 'option' ) );
-            $tel_sub = preg_replace( '~[^0-9,+]~', '', get_field( 'phone_voronej', 'option' ) );
-            $email = get_field( 'email', 'option' ); ?>
             <div class="request__phones">
-              <div class="request__phones-item">
-                <a href="tel:<?= $tel ?>"><?= get_field( 'phone_moscow', 'option' ) ?></a>
-                <span>Офис в Москве</span>
-              </div>
-              <div class="request__phones-item">
-                <a href="tel:<?= $tel_sub ?>"><?= get_field( 'phone_voronej', 'option' ) ?></a>
-                <span>Офис в Воронеже</span>
-              </div>
+              <?php if ( have_rows( 'phone_main', 'option' ) ) : ?>
+                <?php while ( have_rows( 'phone_main', 'option' ) ) : the_row();
+                  $tel_main = preg_replace( '~[^0-9,+]~', '', get_sub_field( 'phone_main-tel' ) );?>
+                  <div class="request__phones-item">
+                    <a href="tel:<?= $tel_main ?>"><?php the_sub_field( 'phone_main-tel' ) ?></a>
+                    <span><?php the_sub_field( 'phone_main-caption' ); ?></span>
+                  </div>
+                <?php endwhile; ?>
+              <?php endif; ?>
+              <?php if ( have_rows( 'phone_sub', 'option' ) ) : ?>
+                <?php while ( have_rows( 'phone_sub', 'option' ) ) : the_row();
+                  $tel_sub = preg_replace( '~[^0-9,+]~', '', get_sub_field( 'phone_sub-tel' ) );?>
+                  <div class="request__phones-item">
+                    <a href="tel:<?= $tel_sub ?>"><?php the_sub_field( 'phone_sub-tel' ) ?></a>
+                    <span><?php the_sub_field( 'phone_sub-caption' ); ?></span>
+                  </div>
+                <?php endwhile; ?>
+              <?php endif; ?>
             </div>
+            <?php $email = get_field( 'email', 'option' ); ?>
             <a class="request__mail" href="mailto:<?= $email ?>"><?= $email ?></a>
             <?php if( get_field( 'request_text', 'option' ) ) : ?>
               <div class="request__text"><?php the_field( 'request_text', 'option' ); ?></div>
