@@ -29,7 +29,9 @@ Template Post Type: page
             <div class="service__img" style="background-image: url(<?php the_post_thumbnail_url( 'full' ); ?>)"></div>
             <div class="service__text<?= $query->current_post % 2 ? ' service__text_left' : ''; ?>">
               <?php the_field( 'services-description' ); ?>
-              <a class="button button_fill" href="<?php the_permalink(); ?>">УЗНАТЬ БОЛЬШЕ</a>
+              <?php if ( get_field( 'services-link-view' ) == 1 ) : ?>
+                <a class="button button_fill" href="<?php the_permalink(); ?>">УЗНАТЬ БОЛЬШЕ</a>
+              <?php endif; ?>
             </div>
           </div>
         </div>
