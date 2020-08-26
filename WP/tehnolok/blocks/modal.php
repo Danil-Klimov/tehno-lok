@@ -43,7 +43,7 @@
 </div>
 
 <div class="modal modal_request big-square" id="modal-question">
-  <div class="modal__title">ОСТАВИТЬ ЗАЯВКУ</div>
+  <div class="modal__title">ЗАДАТЬ ВОПРОС</div>
   <div class="modal__subtitle">Заполните небольшую форму и мы ответим вам</div>
   <form class="modal__form modal-call__form" data-name="Вопрос">
     <input type="hidden" name="page_request" value="<?php the_title(); ?>">
