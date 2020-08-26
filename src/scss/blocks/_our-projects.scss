@@ -153,12 +153,10 @@
 
   &__img {
     box-sizing: border-box;
-    flex-basis: 440px;
     width: 440px;
     position: relative;
     @include md-block() {
       width: 100%;
-      flex-basis: 100%;
     }
     
     img {
