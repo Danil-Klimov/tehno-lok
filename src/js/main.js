@@ -274,6 +274,9 @@ $(document).ready(function () {
 
   function setupVideo(video) {
     const link = video.querySelector('.video__link');
+    if(!link) {
+      return
+    }
     const button = video.querySelector('.video__button');
     const id = parseLinkURL(link);
 

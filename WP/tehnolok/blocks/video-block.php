@@ -11,7 +11,24 @@
       <div class="video-block__container video-border">
         <?php if( get_sub_field( 'video-block_source' ) === 'youtube') : ?>
           <div class="video">
-            <a class="video__link" href="<?php the_sub_field( 'video-block_online' ); ?>">
+            <?php if( get_sub_field( 'video-block_online' ) ) : ?>
+              <a class="video__link" href="<?php the_sub_field( 'video-block_online' ); ?>">
+                <?php $video_block_cover = get_sub_field( 'video-block_cover' ); ?>
+                <?php if ( $video_block_cover ) : ?>
+                  <picture>
+                    <source srcset="<?= esc_url( $video_block_cover['sizes']['515x290'] ); ?>"
+                            media="(max-width: 768px)">
+                    <source srcset="<?= esc_url( $video_block_cover['sizes']['695x390'] ); ?>"
+                            media="(max-width: 992px)">
+                    <source srcset="<?= esc_url( $video_block_cover['sizes']['935x525'] ); ?>"
+                            media="(max-width: 1200px)">
+                    <img class="video__media"
+                         src="<?= esc_url( $video_block_cover['sizes']['630x355'] ); ?>"
+                         alt="<?= esc_attr( $video_block_cover['alt'] ); ?>">
+                  </picture>
+                <?php endif; ?>
+              </a>
+            <?php else : ?>
               <?php $video_block_cover = get_sub_field( 'video-block_cover' ); ?>
               <?php if ( $video_block_cover ) : ?>
                 <picture>
@@ -26,7 +43,7 @@
                        alt="<?= esc_attr( $video_block_cover['alt'] ); ?>">
                 </picture>
               <?php endif; ?>
-            </a>
+            <?php endif; ?>
             <button class="video__button" type="button">
               <svg width="68" height="48" viewbox="0 0 68 48">
                 <path class="video__button-shape"
