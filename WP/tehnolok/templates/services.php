@@ -48,7 +48,9 @@ Template Post Type: page
                     <div class="service__footer-img">
                       <?php $img = get_sub_field( 'carcas-img' ); ?>
                       <?php if ( $img ) : ?>
-                        <img src="<?= esc_url( $img['sizes']['200x130'] ); ?>" alt="<?= esc_attr( $img['alt'] ); ?>" />
+                        <a href="<?= esc_url( $img['url'] ); ?>" data-fancybox>
+                          <img src="<?= esc_url( $img['sizes']['200x130'] ); ?>" alt="<?= esc_attr( $img['alt'] ); ?>" />
+                        </a>
                       <?php endif; ?>
                     </div>
                   </div>
@@ -64,7 +66,9 @@ Template Post Type: page
                     <div class="service__footer-img">
                       <?php $img = get_sub_field( 'img' ); ?>
                       <?php if ( $img ) : ?>
-                        <img src="<?= esc_url( $img['sizes']['200x130'] ); ?>" alt="<?= esc_attr( $img['alt'] ); ?>" />
+                        <a href="<?= esc_url( $img['url'] ); ?>" data-fancybox>
+                          <img src="<?= esc_url( $img['sizes']['200x130'] ); ?>" alt="<?= esc_attr( $img['alt'] ); ?>" />
+                        </a>
                       <?php endif; ?>
                     </div>
                   </div>
