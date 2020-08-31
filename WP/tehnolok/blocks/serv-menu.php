@@ -51,7 +51,9 @@
                           <li>
                             <a class="serv-menu__link"
                                href="<?= esc_url( $anchor['url'] ); ?>"
-                              <?= get_sub_field( 'anchor-type' ) === 'popup' ? 'data-fancybox' : '' ?>><?= esc_html( $anchor['title'] ); ?></a>
+                              <?= get_sub_field( 'anchor-type' ) === 'popup' ? 'data-fancybox' : '' ?>>
+                              <span><?= esc_html( $anchor['title'] ); ?></span>
+                            </a>
                           </li>
                         <?php endif; ?>
                       <?php endwhile; ?>
