@@ -1,15 +1,16 @@
 .header {
+  background-color: #14469C;
   position: fixed;
   left: 0;
   right: 0;
   top: 0;
   z-index: 5;
-  border-bottom: 3px solid transparent;
+  //border-bottom: 3px solid transparent;
   transition: all 0.3s;
   
   &.scroll {
-    background-color: #fff;
-    border-color: #14469C;
+    //background-color: #fff;
+    //border-color: #14469C;
 
     .header__logo {
       padding: 23px;
@@ -18,15 +19,15 @@
       }
     }
 
-    .header__menu {
-      color: #1864b0;
-    }
+    //.header__menu {
+    //  color: #1864b0;
+    //}
 
-    .burger__button {
-      span {
-        background-color: #1864b0;
-      }
-    }
+    //.burger__button {
+    //  span {
+    //    background-color: #1864b0;
+    //  }
+    //}
 
     .header__order {
       top: 80px;
@@ -97,8 +98,10 @@
       transition: background-color 0.3s;
 
       &:hover {
-        background-color: #14469C;
-        color: #fff;
+        //background-color: #14469C;
+        //color: #fff;
+        background-color: #fff;
+        color: #14469C;
 
         .sub-menu {
           opacity: 1;
@@ -108,8 +111,10 @@
 
       &.current-menu-item,
       &.current-menu-parent {
-        background-color: #14469C;
-        color: #fff;
+        //background-color: #14469C;
+        //color: #fff;
+        background-color: #fff;
+        color: #14469C;
       }
 
       &::before {
@@ -144,9 +149,11 @@
       li {
         &:hover {
           background-color: #289DCC;
+          color: #fff;
         }
         
         &.current-menu-item {
+          color: #fff;
           background-color: #289DCC;
         }
       }
