@@ -35,54 +35,56 @@ Template Post Type: page
             </div>
           </div>
         </div>
-        <div class="service__footer">
-          <div class="container">
-            <div class="row">
-              <?php if ( have_rows( 'services-carcas' ) ) : ?>
-                <?php while ( have_rows( 'services-carcas' ) ) : the_row(); ?>
-                  <div class="service__footer-item">
-                    <div class="service__footer-text">
-                      <h3>ТИП <br> КАРКАСА</h3>
-                      <p><?php the_sub_field( 'carcas' ); ?></p>
+        <?php if ( get_field( 'services-params' ) == 1 ) : ?>
+          <div class="service__footer">
+            <div class="container">
+              <div class="row">
+                <?php if ( have_rows( 'services-carcas' ) ) : ?>
+                  <?php while ( have_rows( 'services-carcas' ) ) : the_row(); ?>
+                    <div class="service__footer-item">
+                      <div class="service__footer-text">
+                        <h3>ТИП <br> КАРКАСА</h3>
+                        <p><?php the_sub_field( 'carcas' ); ?></p>
+                      </div>
+                      <div class="service__footer-img">
+                        <?php $img = get_sub_field( 'carcas-img' ); ?>
+                        <?php if ( $img ) : ?>
+                          <a href="<?= esc_url( $img['url'] ); ?>" data-fancybox>
+                            <img src="<?= esc_url( $img['sizes']['200x130'] ); ?>" alt="<?= esc_attr( $img['alt'] ); ?>" />
+                          </a>
+                        <?php endif; ?>
+                      </div>
                     </div>
-                    <div class="service__footer-img">
-                      <?php $img = get_sub_field( 'carcas-img' ); ?>
-                      <?php if ( $img ) : ?>
-                        <a href="<?= esc_url( $img['url'] ); ?>" data-fancybox>
-                          <img src="<?= esc_url( $img['sizes']['200x130'] ); ?>" alt="<?= esc_attr( $img['alt'] ); ?>" />
-                        </a>
-                      <?php endif; ?>
+                  <?php endwhile; ?>
+                <?php endif; ?>
+                <?php if ( have_rows( 'services-coating' ) ) : ?>
+                  <?php while ( have_rows( 'services-coating' ) ) : the_row(); ?>
+                    <div class="service__footer-item">
+                      <div class="service__footer-text">
+                        <h3>ТИП <br> ПОКРЫТИЯ</h3>
+                        <p><?php the_sub_field( 'coating' ); ?></p>
+                      </div>
+                      <div class="service__footer-img">
+                        <?php $img = get_sub_field( 'img' ); ?>
+                        <?php if ( $img ) : ?>
+                          <a href="<?= esc_url( $img['url'] ); ?>" data-fancybox>
+                            <img src="<?= esc_url( $img['sizes']['200x130'] ); ?>" alt="<?= esc_attr( $img['alt'] ); ?>" />
+                          </a>
+                        <?php endif; ?>
+                      </div>
                     </div>
+                  <?php endwhile; ?>
+                <?php endif; ?>
+                <div class="service__footer-item">
+                  <div class="service__footer-text">
+                    <h3>ВЫПОЛНЕНО <br> ПРОЕКТОВ</h3>
                   </div>
-                <?php endwhile; ?>
-              <?php endif; ?>
-              <?php if ( have_rows( 'services-coating' ) ) : ?>
-                <?php while ( have_rows( 'services-coating' ) ) : the_row(); ?>
-                  <div class="service__footer-item">
-                    <div class="service__footer-text">
-                      <h3>ТИП <br> ПОКРЫТИЯ</h3>
-                      <p><?php the_sub_field( 'coating' ); ?></p>
-                    </div>
-                    <div class="service__footer-img">
-                      <?php $img = get_sub_field( 'img' ); ?>
-                      <?php if ( $img ) : ?>
-                        <a href="<?= esc_url( $img['url'] ); ?>" data-fancybox>
-                          <img src="<?= esc_url( $img['sizes']['200x130'] ); ?>" alt="<?= esc_attr( $img['alt'] ); ?>" />
-                        </a>
-                      <?php endif; ?>
-                    </div>
-                  </div>
-                <?php endwhile; ?>
-              <?php endif; ?>
-              <div class="service__footer-item">
-                <div class="service__footer-text">
-                  <h3>ВЫПОЛНЕНО <br> ПРОЕКТОВ</h3>
+                  <div class="service__footer-number"><?php the_field( 'services-numbers' ); ?></div>
                 </div>
-                <div class="service__footer-number"><?php the_field( 'services-numbers' ); ?></div>
               </div>
             </div>
           </div>
-        </div>
+        <?php endif; ?>
       </section>
     <?php endwhile; ?>
   <?php endif;
