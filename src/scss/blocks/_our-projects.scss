@@ -170,7 +170,7 @@
     }
   }
 
-  &__img-slider-w-nav {
+  &__img-slider-w-nav, &__img-slider {
     .swiper-slide {
       &:not(.swiper-slide-active) {
         visibility: hidden;
