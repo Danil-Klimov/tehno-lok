@@ -29,7 +29,7 @@
                   </picture>
                   <div class="news__text">
                     <div class="news__item-title"><?php the_title(); ?></div>
-                    <div class="news__excerpt"><?= excerpt( 30 ); ?></div>
+                    <div class="news__excerpt"><?= excerpt( 60 ); ?></div>
                   </div>
                   <div class="news__date">
                     <div class="news__date-number"><?php the_time( 'd' ); ?></div>

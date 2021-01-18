@@ -33,7 +33,7 @@
                   </picture>
                   <div class="news__text">
                     <div class="news__item-title types-title"><?php the_title(); ?></div>
-                    <div class="news__excerpt"><?= excerpt(30); ?></div>
+                    <div class="news__excerpt"><?= excerpt(60); ?></div>
                   </div>
                 </div>
                 <div class="news__item-footer">
