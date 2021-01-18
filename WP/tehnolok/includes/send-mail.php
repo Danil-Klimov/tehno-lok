@@ -74,6 +74,13 @@ function register_fields() {
             'name' => 'emails_item',
             'type' => 'email',
           ],
+          [
+            'key'   => 'field_dfg45hhdg34rasdgf',
+            'label' => 'Нужен ли трафик в письме?',
+            'name'  => 'emails_traffic',
+            'type'  => 'true_false',
+            'ui'    => 1,
+          ],
         ],
       ],
       [
@@ -145,8 +152,6 @@ function send_mail() {
   $mail .= isset( $_POST[ 'order' ] ) ? "Заказ: " . $_POST[ 'order' ] . "<br/>" : '';
   $mail .= isset( $_POST[ 'quiz' ] ) ? $_POST[ 'quiz' ] : '';
   $mail .= "Страница заявки: $_POST[page_request] <br/>";
-  $mail .= "Трафик : $_COOKIE[traffic_source] <br/>";
-  $mail .= "Страница входа : $_COOKIE[landing_page] <br/>";
 
   if( !isset( $form_name ) ) exit;
 
@@ -167,6 +172,11 @@ function send_mail() {
   if( have_rows( 'emails', 'forms' ) ) {
     while( have_rows( 'emails', 'forms' ) ) {
       the_row();
+      if( get_sub_field( 'emails_traffic' ) ) {
+        $mail .= isset( $_COOKIE['traffic_source'] ) ? "Трафик: $_COOKIE[traffic_source] <br/>" : '';
+        $mail .= isset( $_COOKIE['landing_page'] ) ? "Страница входа: $_COOKIE[landing_page] <br/>" : '';
+        $mail .= isset( $_COOKIE['category_urls'] ) ? "Посещенные разделы: $_COOKIE[category_urls]" : '';
+      }
       array_push( $emails, get_sub_field( 'emails_item' ) );
     }
   }
@@ -180,12 +190,13 @@ function send_mail() {
   $fields = [ 'client_name', 'client_tel', 'client_message', 'client_email', 'page_request', 'order', 'quiz' ];
   foreach( $fields as $field ) {
     if( isset( $_POST[ $field ] ) ) {
-      update_post_meta( $post_ID, $field, $_POST[ $field ] );
+      update_post_meta( $post_ID, $field, isset( $_POST[$field] ) ? $_POST[$field] : '' );
     }
   }
 
-  update_post_meta( $post_ID, 'traffic_source', $_COOKIE[ 'traffic_source' ] );
-  update_post_meta( $post_ID, 'landing_page', $_COOKIE[ 'landing_page' ] );
+  update_post_meta( $post_ID, 'traffic_source', isset( $_COOKIE['traffic_source'] ) ? $_COOKIE['traffic_source'] : '' );
+  update_post_meta( $post_ID, 'landing_page', isset( $_COOKIE['landing_page'] ) ? $_COOKIE['landing_page'] : '' );
+  update_post_meta( $post_ID, 'category_urls', isset( $_COOKIE['category_urls'] ) ? $_COOKIE['category_urls'] : '' );
 
   die();
 }
