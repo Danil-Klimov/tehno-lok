@@ -16,15 +16,15 @@
     <div class="container">
       <div class="row">
         <div class="content__inner">
-          <?php $thumbnail_id = get_post_thumbnail_id();
-          $alt = get_post_meta( $thumbnail_id, '_wp_attachment_image_alt', true ); ?>
-          <picture>
-            <source srcset="<?php the_post_thumbnail_url( '545x200' ); ?>"
-                    media="(max-width: 575px)">
-            <source srcset="<?php the_post_thumbnail_url( '720x260' ); ?>"
-                    media="(max-width: 992px)">
-            <img class="content__img" src="<?php the_post_thumbnail_url( '1140x260' ); ?>" alt="<?= $alt; ?>">
-          </picture>
+<!--          --><?php //$thumbnail_id = get_post_thumbnail_id();
+//          $alt = get_post_meta( $thumbnail_id, '_wp_attachment_image_alt', true ); ?>
+<!--          <picture>-->
+<!--            <source srcset="--><?php //the_post_thumbnail_url( '545x200' ); ?><!--"-->
+<!--                    media="(max-width: 575px)">-->
+<!--            <source srcset="--><?php //the_post_thumbnail_url( '720x260' ); ?><!--"-->
+<!--                    media="(max-width: 992px)">-->
+<!--            <img class="content__img" src="--><?php //the_post_thumbnail_url( '1140x260' ); ?><!--" alt="--><?//= $alt; ?><!--">-->
+<!--          </picture>-->
           <?php the_content(); ?>
         </div>
       </div>
