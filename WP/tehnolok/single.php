@@ -31,6 +31,8 @@
     </div>
   </div>
 
+<?php get_template_part( 'blocks/_blocks' ); ?>
+
   <section class="request">
     <div class="container">
       <div class="row">
