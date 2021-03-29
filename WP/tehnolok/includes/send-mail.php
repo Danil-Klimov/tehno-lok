@@ -170,23 +170,24 @@ function send_mail() {
   }
 
   if( have_rows( 'emails', 'forms' ) ) {
+		$subject = get_bloginfo( 'name' ) . ' - ' . $form_name;
+		$headers = "Content-type: text/html; charset=\"utf-8\"";
+
     while( have_rows( 'emails', 'forms' ) ) {
       the_row();
+			$emailTo = get_sub_field( 'emails_item' );
+			$mailBody = $mail;
+
       if( get_sub_field( 'emails_traffic' ) ) {
-        $mail .= isset( $_COOKIE['traffic_source'] ) ? "Трафик: $_COOKIE[traffic_source] <br/>" : '';
-        $mail .= isset( $_COOKIE['landing_page'] ) ? "Страница входа: $_COOKIE[landing_page] <br/>" : '';
-        $mail .= isset( $_COOKIE['category_urls'] ) ? "Посещенные разделы: $_COOKIE[category_urls]" : '';
+				$mailBody .= isset( $_COOKIE['traffic_source'] ) ? "Трафик: $_COOKIE[traffic_source] <br/>" : '';
+				$mailBody .= isset( $_COOKIE['landing_page'] ) ? "Страница входа: $_COOKIE[landing_page] <br/>" : '';
+				$mailBody .= isset( $_COOKIE['category_urls'] ) ? "Посещенные разделы: $_COOKIE[category_urls]" : '';
       }
-      array_push( $emails, get_sub_field( 'emails_item' ) );
+
+			wp_mail( $emailTo, $subject, $mailBody, $headers );
     }
   }
 
-  $emailTo = implode( ', ', $emails );
-  $subject = get_bloginfo( 'name' ) . ' - ' . $form_name;
-  $headers = "Content-type: text/html; charset=\"utf-8\"";
-  $mailBody = $mail;
-
-  wp_mail( $emailTo, $subject, $mailBody, $headers );
   $fields = [ 'client_name', 'client_tel', 'client_message', 'client_email', 'page_request', 'order', 'quiz' ];
   foreach( $fields as $field ) {
     if( isset( $_POST[ $field ] ) ) {
