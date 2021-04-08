@@ -139,10 +139,13 @@ function mail_meta_box_function( $post ) {
 add_action( "wp_ajax_send_mail", "send_mail" );
 add_action( "wp_ajax_nopriv_send_mail", "send_mail" );
 function send_mail() {
+	if( empty( $_POST[ 'form_name' ] ) || empty( $_POST[ 'client_name' ] ) || empty( $_POST[ 'client_tel' ] ) ) {
+		exit;
+	}
+
   $post_id = (int)$_POST[ 'post_id' ];
   $client_tel = "<a href='tel:" . preg_replace( '~[^0-9]+~', '', $_POST[ 'client_tel' ] ) . "'>" . $_POST[ 'client_tel' ] . "</a>";
   $form_name = $_POST[ 'form_name' ];
-  $emails = [];
   $mail = '';
 
   $mail .= "Имя: " . strip_tags( $_POST[ 'client_name' ] ) . "<br/>";
@@ -152,8 +155,6 @@ function send_mail() {
   $mail .= isset( $_POST[ 'order' ] ) ? "Заказ: " . $_POST[ 'order' ] . "<br/>" : '';
   $mail .= isset( $_POST[ 'quiz' ] ) ? $_POST[ 'quiz' ] : '';
   $mail .= "Страница заявки: $_POST[page_request] <br/>";
-
-  if( !isset( $form_name ) ) exit;
 
   $post_data = [
     'post_title' => $form_name,
