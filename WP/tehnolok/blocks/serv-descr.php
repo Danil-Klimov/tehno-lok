@@ -11,7 +11,10 @@
             <div class="serv-descr__img">
               <?php $img = get_sub_field( 'img' ); ?>
               <?php if( $img ) : ?>
-                <img src="<?= esc_url( $img[ 'url' ] ); ?>" alt="<?= esc_attr( $img[ 'alt' ] ); ?>"/>
+                <img src="<?= esc_url( $img[ 'url' ] ); ?>"
+										 alt="<?= esc_attr( $img[ 'alt' ] ); ?>"
+										 width="<?= $img[ 'width' ]; ?>"
+										 height="<?= $img[ 'height' ]; ?>"/>
               <?php endif; ?>
             </div>
             <div class="serv-descr__bg" style="background-image: url(<?php the_sub_field( 'bg-img' ); ?>)"></div>

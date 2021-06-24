@@ -90,5 +90,11 @@
     @include xs-block() {
       order: 4;
     }
+
+		svg {
+			display: block;
+			max-width: 100%;
+			margin: 0 auto;
+		}
   }
 }

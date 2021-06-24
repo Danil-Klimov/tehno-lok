@@ -22,7 +22,10 @@
                                   media="(max-width: 992px)">
                           <source srcset="<?= esc_url( $slide_image['sizes']['630x355'] ); ?>"
                                   media="(max-width: 1200px)">
-                          <img src="<?= esc_url( $slide_image['sizes']['750x500'] ); ?>" alt="<?= esc_attr( $slide_image['alt'] ); ?>" />
+                          <img src="<?= esc_url( $slide_image['sizes']['750x500'] ); ?>"
+															 alt="<?= esc_attr( $slide_image['alt'] ); ?>"
+															 width="<?= $slide_image['sizes']['750x500-width']; ?>"
+															 height="<?= $slide_image['sizes']['750x500-height']; ?>" />
                         </picture>
                       </a>
                     <?php endforeach; ?>

@@ -36,6 +36,7 @@
               <div class="request__text"><?php the_field( 'request_text', 'option' ); ?></div>
             <?php endif; ?>
             <div class="request__map" id="map">
+							<script src="//api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
               <script type="text/javascript">
                 ymaps.ready(init);
 

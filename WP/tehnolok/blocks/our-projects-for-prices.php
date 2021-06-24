@@ -27,7 +27,9 @@ $our_projects_f_p_link = get_sub_field( 'our-projects-f-p_link' ); ?>
                         <div class="swiper-slide">
                           <a href="<?= esc_url( $project_gallery_image[ 'url' ] ); ?>" data-fancybox>
                             <img src="<?= esc_url( $project_gallery_image[ 'sizes' ][ '450x450' ] ); ?>"
-                                 alt="<?= esc_attr( $project_gallery_image[ 'alt' ] ); ?>"/>
+                                 alt="<?= esc_attr( $project_gallery_image[ 'alt' ] ); ?>"
+																 width="<?= $project_gallery_image[ 'sizes' ][ '450x450-width' ]; ?>"
+																 height="<?= $project_gallery_image[ 'sizes' ][ '450x450-height' ]; ?>"/>
                           </a>
                           <div class="our-projects__img-footer">
                             <div class="our-projects__img-caption"><?= esc_html( $project_gallery_image[ 'caption' ] ); ?></div>
@@ -38,12 +40,12 @@ $our_projects_f_p_link = get_sub_field( 'our-projects-f-p_link' ); ?>
                   </div>
                   <div class="our-projects__controls">
                     <button class="arrow arrow_sm arrow_light arrow_prev" type="button">
-                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 11" fill="currentColor">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 11" fill="currentColor" width="8" height="10">
                         <polygon points="0 5.5 9 0 9 11 0 5.5"></polygon>
                       </svg>
                     </button>
                     <button class="arrow arrow_sm arrow_light arrow_next" type="button">
-                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 11" fill="currentColor">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 11" fill="currentColor" width="8" height="10">
                         <polygon points="9 5.5 0 0 0 11 9 5.5"></polygon>
                       </svg>
                     </button>

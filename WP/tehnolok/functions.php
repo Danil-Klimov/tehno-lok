@@ -38,7 +38,7 @@ function tehnolok_scripts() {
   wp_enqueue_style( 'main-style', get_template_directory_uri() . '/css/style.css' );
   wp_enqueue_script( 'libs', get_template_directory_uri() . '/js/libs.min.js', [ 'jquery' ], null, true );
   wp_enqueue_script( 'main-scripts', get_template_directory_uri() . '/js/main.js', [ 'jquery', 'libs' ], null, true );
-  wp_enqueue_script( 'yandex-map', '//api-maps.yandex.ru/2.1/?lang=ru_RU', [], null, false );
+//  wp_enqueue_script( 'yandex-map', '//api-maps.yandex.ru/2.1/?lang=ru_RU', [], null, false );
 }
 
 // js переменные

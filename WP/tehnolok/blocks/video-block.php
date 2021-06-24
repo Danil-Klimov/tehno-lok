@@ -24,7 +24,9 @@
                             media="(max-width: 1200px)">
                     <img class="video__media"
                          src="<?= esc_url( $video_block_cover['sizes']['630x355'] ); ?>"
-                         alt="<?= esc_attr( $video_block_cover['alt'] ); ?>">
+                         alt="<?= esc_attr( $video_block_cover['alt'] ); ?>"
+												 width="<?= $video_block_cover['sizes']['935x525-width']; ?>"
+												 height="<?= $video_block_cover['sizes']['935x525-height']; ?>">
                   </picture>
                 <?php endif; ?>
               </a>
@@ -40,7 +42,9 @@
                           media="(max-width: 1200px)">
                   <img class="video__media"
                        src="<?= esc_url( $video_block_cover['sizes']['630x355'] ); ?>"
-                       alt="<?= esc_attr( $video_block_cover['alt'] ); ?>">
+                       alt="<?= esc_attr( $video_block_cover['alt'] ); ?>"
+											 width="<?= $video_block_cover['sizes']['935x525-width']; ?>"
+											 height="<?= $video_block_cover['sizes']['935x525-height']; ?>">
                 </picture>
               <?php endif; ?>
             <?php endif; ?>

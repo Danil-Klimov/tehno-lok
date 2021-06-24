@@ -240,25 +240,28 @@ $(document).ready(function () {
 
 // projects menu slider
   const dataInit = $('.projects-menu__slider').data('init');
-  const projectMenuSlider = new Swiper('.projects-menu__slider', {
-    direction: 'horizontal',
-    loop: false,
-    slidesPerView: 3,
-    navigation: {
-      nextEl: '.projects-menu__next',
-      prevEl: '.projects-menu__prev',
-    },
-    breakpoints: {
-      768: {
-        slidesPerView: 4,
-      },
-      992: {
-        slidesPerView: 6,
-      }
-    }
-  });
+  let projectMenuSlider;
+  $('.projects-menu__slider').each(function () {
+		projectMenuSlider = new Swiper(this, {
+			direction: 'horizontal',
+			loop: false,
+			slidesPerView: 3,
+			navigation: {
+				nextEl: this.nextElementSibling,
+				prevEl: this.previousElementSibling,
+			},
+			breakpoints: {
+				768: {
+					slidesPerView: 4,
+				},
+				992: {
+					slidesPerView: 6,
+				}
+			}
+		});
+	});
 
-  if(projectMenuSlider.initialized) {
+  if(projectMenuSlider && projectMenuSlider.initialized) {
     projectMenuSlider.slideTo(dataInit);
     projectMenuSlider.slides[dataInit].classList.add('active');
   }

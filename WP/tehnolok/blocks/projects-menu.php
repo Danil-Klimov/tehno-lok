@@ -17,9 +17,13 @@
             $count = $key;
           }
         } ?>
+				<button class="arrow arrow_md arrow_dark arrow_prev projects-menu__prev" type="button">
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 11" fill="currentColor">
+						<polygon points="0 5.5 9 0 9 11 0 5.5"></polygon>
+					</svg>
+				</button>
         <div class="projects-menu__slider swiper-container" data-init="<?= $count; ?>">
           <div class="swiper-wrapper">
-
             <?php if( $query->have_posts() ) : ?>
               <?php while( $query->have_posts() ): $query->the_post(); ?>
                 <a class="swiper-slide" href="<?php the_permalink(); ?>">
@@ -30,17 +34,12 @@
             <?php endif;
             wp_reset_query(); ?>
           </div>
-          <button class="arrow arrow_md arrow_dark arrow_next projects-menu__next" type="button">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 11" fill="currentColor">
-              <polygon points="9 5.5 0 0 0 11 9 5.5"></polygon>
-            </svg>
-          </button>
-          <button class="arrow arrow_md arrow_dark arrow_prev projects-menu__prev" type="button">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 11" fill="currentColor">
-              <polygon points="0 5.5 9 0 9 11 0 5.5"></polygon>
-            </svg>
-          </button>
         </div>
+				<button class="arrow arrow_md arrow_dark arrow_next projects-menu__next" type="button">
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 11" fill="currentColor">
+						<polygon points="9 5.5 0 0 0 11 9 5.5"></polygon>
+					</svg>
+				</button>
       </div>
     </div>
 </section>

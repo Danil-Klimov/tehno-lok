@@ -23,7 +23,9 @@
                         <?php $img = get_sub_field( 'img' ); ?>
                         <?php if ( $img ) : ?>
                           <img src="<?= esc_url( $img['sizes']['210x270'] ); ?>"
-                               alt="<?= esc_attr( $img['alt'] ); ?>" />
+                               alt="<?= esc_attr( $img['alt'] ); ?>"
+															 width="<?= $img['sizes']['210x270-width']; ?>"
+															 height="<?= $img['sizes']['210x270-height']; ?>" />
                         <?php endif; ?>
                         <div class="team__item-footer">
                           <div class="team__name"><?php the_sub_field( 'name' ); ?></div>
@@ -36,12 +38,12 @@
               </div>
             </div>
             <button class="arrow arrow_sm arrow_dark arrow_prev" type="button">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 11" fill="currentColor">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 11" fill="currentColor" width="5" height="6">
                 <polygon points="0 5.5 9 0 9 11 0 5.5"></polygon>
               </svg>
             </button>
             <button class="arrow arrow_sm arrow_dark arrow_next" type="button">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 11" fill="currentColor">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 11" fill="currentColor" width="5" height="6">
                 <polygon points="9 5.5 0 0 0 11 9 5.5"></polygon>
               </svg>
             </button>

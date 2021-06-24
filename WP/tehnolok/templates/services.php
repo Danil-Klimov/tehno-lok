@@ -50,7 +50,10 @@ Template Post Type: page
                         <?php $img = get_sub_field( 'carcas-img' ); ?>
                         <?php if ( $img ) : ?>
                           <a href="<?= esc_url( $img['url'] ); ?>" data-fancybox>
-                            <img src="<?= esc_url( $img['sizes']['200x130'] ); ?>" alt="<?= esc_attr( $img['alt'] ); ?>" />
+                            <img src="<?= esc_url( $img['sizes']['200x130'] ); ?>"
+																 alt="<?= esc_attr( $img['alt'] ); ?>"
+																 width="<?= $img['sizes']['200x130-width']; ?>"
+																 height="<?= $img['sizes']['200x130-height']; ?>" />
                           </a>
                         <?php endif; ?>
                       </div>
@@ -68,7 +71,10 @@ Template Post Type: page
                         <?php $img = get_sub_field( 'img' ); ?>
                         <?php if ( $img ) : ?>
                           <a href="<?= esc_url( $img['url'] ); ?>" data-fancybox>
-                            <img src="<?= esc_url( $img['sizes']['200x130'] ); ?>" alt="<?= esc_attr( $img['alt'] ); ?>" />
+                            <img src="<?= esc_url( $img['sizes']['200x130'] ); ?>"
+																 alt="<?= esc_attr( $img['alt'] ); ?>"
+																 width="<?= $img['sizes']['200x130-width']; ?>"
+																 height="<?= $img['sizes']['200x130-height']; ?>" />
                           </a>
                         <?php endif; ?>
                       </div>

@@ -12,7 +12,9 @@
       <?php if( $information_img ) : ?>
         <div class="information__img">
           <img src="<?= esc_url( $information_img[ 'sizes' ][ '345x210' ] ); ?>"
-               alt="<?= esc_attr( $information_img[ 'alt' ] ); ?>"/>
+               alt="<?= esc_attr( $information_img[ 'alt' ] ); ?>"
+							 width="<?= $information_img[ 'sizes' ][ '345x210-width' ]; ?>"
+							 height="<?= $information_img[ 'sizes' ][ '345x210-height' ]; ?>"/>
         </div>
       <?php endif; ?>
     </div>

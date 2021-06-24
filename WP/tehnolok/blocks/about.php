@@ -7,7 +7,9 @@
         <?php $about_img = get_sub_field( 'about_img' ); ?>
         <?php if( $about_img ) : ?>
           <img src="<?= esc_url( $about_img[ 'url' ] ); ?>"
-               alt="<?= esc_attr( $about_img[ 'alt' ] ); ?>"/>
+               alt="<?= esc_attr( $about_img[ 'alt' ] ); ?>"
+							 width="<?= $about_img[ 'width' ]; ?>"
+							 height="<?= $about_img[ 'height' ]; ?>" />
         <?php endif; ?>
       </div>
       <div class="about__content"><?php the_sub_field( 'about_content' ); ?></div>

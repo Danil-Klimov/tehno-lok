@@ -26,7 +26,10 @@
                               media="(max-width: 768px)">
                       <source srcset="<?php the_post_thumbnail_url( '325x160' ); ?>"
                               media="(max-width: 992px)">
-                      <img src="<?php the_post_thumbnail_url( '260x160' ); ?>" alt="<?= $alt; ?>">
+                      <img src="<?php the_post_thumbnail_url( '260x160' ); ?>"
+													 alt="<?= $alt; ?>"
+													 width="515"
+													 height="160">
                     </picture>
                     <div class="posts__text">
                       <div class="posts__item-title"><?php the_title(); ?></div>
@@ -40,12 +43,12 @@
           </div>
         </div>
         <button class="arrow arrow_sm arrow_light arrow_prev posts__prev" type="button">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 11" fill="currentColor">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 11" fill="currentColor" width="5" height="6">
             <polygon points="0 5.5 9 0 9 11 0 5.5"></polygon>
           </svg>
         </button>
         <button class="arrow arrow_sm arrow_light arrow_next posts__next" type="button">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 11" fill="currentColor">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 11" fill="currentColor" width="5" height="6">
             <polygon points="9 5.5 0 0 0 11 9 5.5"></polygon>
           </svg>
         </button>

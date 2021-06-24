@@ -27,7 +27,9 @@
                                       media="(max-width: 1200px)">
                               <img class="video__media"
                                    src="<?= esc_url( $video_cover['sizes']['630x355'] ); ?>"
-                                   alt="<?= esc_attr( $video_cover['alt'] ); ?>">
+                                   alt="<?= esc_attr( $video_cover['alt'] ); ?>"
+																	 width="<?= $video_cover['sizes']['820x460-width']; ?>"
+																	 height="<?= $video_cover['sizes']['820x460-height']; ?>">
                             </picture>
                           <?php endif; ?>
                         </a>
@@ -43,7 +45,9 @@
                                     media="(max-width: 1200px)">
                             <img class="video__media"
                                  src="<?= esc_url( $video_cover['sizes']['630x355'] ); ?>"
-                                 alt="<?= esc_attr( $video_cover['alt'] ); ?>">
+                                 alt="<?= esc_attr( $video_cover['alt'] ); ?>"
+																 width="<?= $video_cover['sizes']['820x460-width']; ?>"
+																 height="<?= $video_cover['sizes']['820x460-height']; ?>">
                           </picture>
                         <?php endif; ?>
                       <?php endif; ?>
@@ -76,12 +80,12 @@
         </div>
       </div>
       <button class="arrow arrow_sm arrow_dark arrow_prev interview__prev" type="button">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 11" fill="currentColor">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 11" fill="currentColor" width="5" height="6">
           <polygon points="0 5.5 9 0 9 11 0 5.5"></polygon>
         </svg>
       </button>
       <button class="arrow arrow_sm arrow_dark arrow_next interview__next" type="button">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 11" fill="currentColor">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 11" fill="currentColor" width="5" height="6">
           <polygon points="9 5.5 0 0 0 11 9 5.5"></polygon>
         </svg>
       </button>

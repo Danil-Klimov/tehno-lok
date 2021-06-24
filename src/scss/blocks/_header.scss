@@ -7,7 +7,7 @@
   z-index: 5;
   //border-bottom: 3px solid transparent;
   transition: all 0.3s;
-  
+
   &.scroll {
     //background-color: #fff;
     //border-color: #14469C;
@@ -57,6 +57,10 @@
     @include xs-block() {
       padding: 17px 5px;
     }
+
+		svg {
+			max-width: 100%;
+		}
   }
 
   &__menu {
@@ -151,7 +155,7 @@
           background-color: #289DCC;
           color: #fff;
         }
-        
+
         &.current-menu-item {
           color: #fff;
           background-color: #289DCC;

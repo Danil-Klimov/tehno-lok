@@ -24,7 +24,10 @@
                       <picture>
                         <source srcset="<?php the_post_thumbnail_url( '620x450' ); ?>"
                                 media="(max-width: 992px)">
-                        <img src="<?php the_post_thumbnail_url( '450x450' ); ?>" alt="<?= $alt; ?>">
+                        <img src="<?php the_post_thumbnail_url( '450x450' ); ?>"
+														 alt="<?= $alt; ?>"
+														 width="620"
+														 height="450">
                       </picture>
                     </div>
                     <div class="our-projects__content">
@@ -39,12 +42,12 @@
               </div>
             </div>
             <button class="arrow arrow_md arrow_dark arrow_next our-projects__next" type="button">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 11" fill="currentColor">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 11" fill="currentColor" width="8" height="10">
                 <polygon points="9 5.5 0 0 0 11 9 5.5"></polygon>
               </svg>
             </button>
             <button class="arrow arrow_md arrow_dark arrow_prev our-projects__prev" type="button">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 11" fill="currentColor">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 11" fill="currentColor" width="8" height="10">
                 <polygon points="0 5.5 9 0 9 11 0 5.5"></polygon>
               </svg>
             </button>
@@ -55,7 +58,7 @@
         <div class="our-projects__buttons">
           <button class="button button_fill button_w-icon our-projects__request-btn" type="button"
                   data-src="#modal-request" data-fancybox>
-            <img src="<?= get_template_directory_uri() ?>/img/request-icon.png" alt="">
+            <img src="<?= get_template_directory_uri() ?>/img/request-icon.png" alt="" width="24" height="23">
             <span>ЗАКАЗАТЬ РАСЧЕТ</span>
           </button>
           <?php $our_projects_link = get_sub_field( 'our-projects_link' ); ?>

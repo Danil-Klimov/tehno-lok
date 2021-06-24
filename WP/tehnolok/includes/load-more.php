@@ -33,7 +33,7 @@ function true_load_posts(){
         foreach( $project_gallery_images as $project_gallery_image ) {
           $return_html .= '<div class="swiper-slide">';
           $return_html .= '<a href="' . esc_url( $project_gallery_image[ 'url' ] ) . '" data-fancybox>';
-          $return_html .= '<img src="' . esc_url( $project_gallery_image[ 'sizes' ][ '450x450' ] ) . '" alt="' . esc_attr( $project_gallery_image[ 'alt' ] ) . '"/>';
+          $return_html .= '<img src="' . esc_url( $project_gallery_image[ 'sizes' ][ '450x450' ] ) . '" alt="' . esc_attr( $project_gallery_image[ 'alt' ] ) . '" width="' . $project_gallery_image[ 'sizes' ][ '450x450-width' ] . '" height="' . $project_gallery_image[ 'sizes' ][ '450x450-height' ] . '"/>';
           $return_html .= '</a>';
           $return_html .= '<div class="our-projects__img-footer">';
           $return_html .= '<div class="our-projects__img-caption">' . esc_html( $project_gallery_image[ 'caption' ] ) . '</div>';
@@ -59,7 +59,7 @@ function true_load_posts(){
       $return_html .= '<div class="swiper-wrapper">';
       if( $project_gallery_images ) {
         foreach( $project_gallery_images as $project_gallery_image ) {
-          $return_html .= '<img class="swiper-slide" src="' . esc_url( $project_gallery_image[ 'sizes' ][ '105x110' ] ) . '" alt="' . esc_attr( $project_gallery_image[ 'alt' ] ) . '">';
+          $return_html .= '<img class="swiper-slide" src="' . esc_url( $project_gallery_image[ 'sizes' ][ '105x110' ] ) . '" alt="' . esc_attr( $project_gallery_image[ 'alt' ] ) . '" width="' . $project_gallery_image[ 'sizes' ][ '450x450-width' ] . '" height="' . $project_gallery_image[ 'sizes' ][ '450x450-height' ] . '">';
         }
       }
       $return_html .= '</div>';

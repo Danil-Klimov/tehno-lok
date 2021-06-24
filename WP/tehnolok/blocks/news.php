@@ -25,7 +25,10 @@
                             media="(max-width: 992px)">
                     <source srcset="<?php the_post_thumbnail_url( '300x180' ); ?>"
                             media="(max-width: 1200px)">
-                    <img src="<?php the_post_thumbnail_url( '360x220' ); ?>" alt="<?= $alt; ?>">
+                    <img src="<?php the_post_thumbnail_url( '360x220' ); ?>"
+												 alt="<?= $alt; ?>"
+												 width="545"
+												 height="200">
                   </picture>
                   <div class="news__text">
                     <div class="news__item-title"><?php the_title(); ?></div>
@@ -52,12 +55,12 @@
         </div>
       </div>
       <button class="arrow arrow_sm arrow_dark arrow_prev news__prev" type="button">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 11" fill="currentColor">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 11" fill="currentColor" width="5" height="6">
           <polygon points="0 5.5 9 0 9 11 0 5.5"></polygon>
         </svg>
       </button>
       <button class="arrow arrow_sm arrow_dark arrow_next news__next" type="button">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 11" fill="currentColor">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 11" fill="currentColor" width="5" height="6">
           <polygon points="9 5.5 0 0 0 11 9 5.5"></polygon>
         </svg>
       </button>

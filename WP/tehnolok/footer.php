@@ -15,12 +15,12 @@
       </div>
       <div class="footer__button">
         <button class="button button_fill button_w-icon" type="button" data-src="#modal-call" data-fancybox>
-          <img src="<?= get_template_directory_uri() ?>/img/call-icon.png" alt="">
+          <img src="<?= get_template_directory_uri() ?>/img/call-icon.png" alt="" width="23" height="22">
           <span>ЗАКАЗАТЬ ЗВОНОК</span>
         </button>
       </div>
       <a class="footer__logo" href="<?php bloginfo( 'url' ); ?>">
-        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 324.33 53.37">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 324.33 53.37" width="148" height="24">
           <path fill="none" stroke="#fff" stroke-width="1.5px"
                 d="M4.89,52.87V18L52.89.53l47.44,17.89V52.87L90.44,23.64l-37.55-13L15.44,22.87Zm4.29-12.2L5.27,37.06l6.33-4.25L5.35,26.72l10.09-3.85L4.89,18m95.44.56-10.09,5,9.51,4-5.66,6,5.83,4.31-3.41,3.56M52.89,10.63l-9.1-6.26-3.57,9.69-8.9-5.24-4.1,9.7-8.59-5.11-3.19,9.46m75,.34-3.75-9.63L78,19,74,8.77,65,14.33,61.65,4.27l-8.76,6.36m0-10.1V10.71"></path>
           <path fill="#fff"

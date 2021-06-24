@@ -38,7 +38,7 @@ function ajax_filter() {
         foreach( $project_gallery_images as $project_gallery_image ) {
           $return_html .= '<div class="swiper-slide">';
           $return_html .= '<a href="' . esc_url( $project_gallery_image[ 'url' ] ) . '" data-fancybox>';
-          $return_html .= '<img src="' . esc_url( $project_gallery_image[ 'sizes' ][ '450x450' ] ) . '" alt="' . esc_attr( $project_gallery_image[ 'alt' ] ) . '"/>';
+          $return_html .= '<img src="' . esc_url( $project_gallery_image[ 'sizes' ][ '450x450' ] ) . '" alt="' . esc_attr( $project_gallery_image[ 'alt' ] ) . '" width="' . $project_gallery_image[ 'sizes' ][ '450x450-width' ] . '" height="' . $project_gallery_image[ 'sizes' ][ '450x450-height' ] . '"/>';
           $return_html .= '</a>';
           $return_html .= '<div class="our-projects__img-footer">';
           $return_html .= '<div class="our-projects__img-caption">' . esc_html( $project_gallery_image[ 'caption' ] ) . '</div>';
@@ -49,12 +49,12 @@ function ajax_filter() {
       $return_html .= '</div>';
       $return_html .= '<div class="our-projects__controls">';
       $return_html .= '<button class="arrow arrow_sm arrow_light arrow_prev" type="button">';
-      $return_html .= '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 11" fill="currentColor">';
+      $return_html .= '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 11" fill="currentColor" width="5" height="6">';
       $return_html .= '<polygon points="0 5.5 9 0 9 11 0 5.5"></polygon>';
       $return_html .= '</svg>';
       $return_html .= '</button>';
       $return_html .= '<button class="arrow arrow_sm arrow_light arrow_next" type="button">';
-      $return_html .= '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 11" fill="currentColor">';
+      $return_html .= '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 11" fill="currentColor" width="5" height="6">';
       $return_html .= '<polygon points="9 5.5 0 0 0 11 9 5.5"></polygon>';
       $return_html .= '</svg>';
       $return_html .= '</button>';

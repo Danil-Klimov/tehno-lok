@@ -5,7 +5,10 @@
       <div class="promo__img">
         <?php $promo_img = get_sub_field( 'promo_img' ); ?>
         <?php if ( $promo_img ) : ?>
-          <img src="<?= esc_url( $promo_img['sizes']['290x145'] ); ?>" alt="<?= esc_attr( $promo_img['alt'] ); ?>" />
+          <img src="<?= esc_url( $promo_img['sizes']['290x145'] ); ?>"
+							 alt="<?= esc_attr( $promo_img['alt'] ); ?>"
+							 width="<?= $promo_img['sizes']['290x145-width']; ?>"
+							 height="<?= $promo_img['sizes']['290x145-height']; ?>" />
         <?php endif; ?>
         <?php if( get_sub_field( 'promo_link' ) ) : ?>
           <button class="arrow arrow_md arrow_dark promo__button" type="button" data-src="<?php the_sub_field( 'promo_link' ); ?>" data-fancybox>

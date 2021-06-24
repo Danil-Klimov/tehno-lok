@@ -91,7 +91,7 @@ class Walker_information_menu extends Walker {
     $item_output  = $args->before;
 
     if( get_field( 'menu-icon', $item ) ) {
-      $item_output .= '<img src="' . get_field( 'menu-icon', $item ) . '" alt="">';
+      $item_output .= '<img src="' . get_field( 'menu-icon', $item ) . '" alt="" width="27" height="28">';
     }
 
     $item_output .= '<a' . $attributes . '>';
