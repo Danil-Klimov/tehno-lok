@@ -24,11 +24,11 @@
   <div class="modal__subtitle">Заполните небольшую форму и мы ответим вам</div>
   <form class="modal__form modal-call__form" data-name="Заказ расчета">
     <input type="hidden" name="page_request" value="<?php the_title(); ?>">
-    <input class="input" type="text" name="client_name" placeholder="Ваше имя" required>
-    <input class="input" type="tel" name="client_tel" placeholder="Ваш телефон" pattern="[+]7\([0-9]{3}\)[0-9]{3}-[0-9]{2}-[0-9]{2}" required>
-		<input class="input" type="text" name="region" placeholder="Регион строительства" required>
-		<input class="input" type="text" name="purpose" placeholder="Назначение" required>
-		<input class="input" type="text" name="size" placeholder="Размеры" required>
+    <input class="input" type="text" name="client_name" placeholder="Ваше имя*" required>
+    <input class="input" type="tel" name="client_tel" placeholder="Ваш телефон*" pattern="[+]7\([0-9]{3}\)[0-9]{3}-[0-9]{2}-[0-9]{2}" required>
+		<input class="input" type="text" name="region" placeholder="Регион строительства*" required>
+		<input class="input" type="text" name="purpose" placeholder="Назначение*" required>
+		<input class="input" type="text" name="size" placeholder="Размеры*" required>
     <div class="textarea">
       <textarea class="input" placeholder="Сообщение" name="client_message" rows="4"></textarea>
     </div>

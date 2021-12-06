@@ -58,7 +58,7 @@
       </button>
     </nav>
   </div>
-  <?php if( !is_front_page() && get_field( 'order_request', 'option' ) == 1 ) : ?>
+  <?php if( get_field( 'order_request', 'option' ) == 1 ) : ?>
     <button class="order__request header__order"
             type="button"
             data-src="#modal-request" data-fancybox>
