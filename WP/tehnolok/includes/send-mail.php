@@ -110,29 +110,9 @@ function mail_meta_box() {
 
 // код мета блока
 function mail_meta_box_function( $post ) {
-  $client_name = strip_tags( get_post_meta( $post->ID, 'client_name', true ) );
-  $client_tel = get_post_meta( $post->ID, 'client_tel', true );
-  $client_email = get_post_meta( $post->ID, 'client_email', true );
-  $client_message = strip_tags( get_post_meta( $post->ID, 'client_message', true ) );
-  $page_request = get_post_meta( $post->ID, 'page_request', true );
-  $file = get_post_meta( $post->ID, 'file', true );
-  $order = get_post_meta( $post->ID, 'order', true );
-  $quiz = get_post_meta( $post->ID, 'quiz', true );
-  $traffic_source = get_post_meta( $post->ID, 'traffic_source', true );
-  $landing_page = get_post_meta( $post->ID, 'landing_page', true );
+	$metaBody = get_post_meta($post->ID, 'metaBody', true);
 
-  $meta_body = '';
-  $meta_body .= "Имя: " . $client_name . "</br>
-                 Телефон: <a href='tel:" . preg_replace( '~[^0-9]+~', '', $client_tel ) . "'>" . $client_tel . "</a></br>";
-  $meta_body .= $client_email ? "Email: <a href='mailto:" . $client_email . "'>" . $client_email . "</a></br>" : "";
-  $meta_body .= $client_message ? "Сообщение: " . $client_message . "</br>" : "";
-  $meta_body .= $file ? "Файл: <a href='" . admin_url() . "post.php?post=" . $file . "&action=edit'>Файл</a></br>" : "";
-  $meta_body .= $order ? "Заказ: " . $order . "</br>" : "";
-  $meta_body .= $quiz ? $quiz : "";
-  $meta_body .= "Страница заявки: $page_request </br>";
-  $meta_body .= "Трафик : $traffic_source </br>";
-  $meta_body .= "Страница входа : $landing_page </br>";
-  echo $meta_body;
+  echo $metaBody;
 }
 
 // Отправка писем
@@ -146,11 +126,13 @@ function send_mail() {
   $post_id = (int)$_POST[ 'post_id' ];
   $client_tel = "<a href='tel:" . preg_replace( '~[^0-9]+~', '', $_POST[ 'client_tel' ] ) . "'>" . $_POST[ 'client_tel' ] . "</a>";
   $form_name = $_POST[ 'form_name' ];
-  $mail = '';
 
-  $mail .= "Имя: " . strip_tags( $_POST[ 'client_name' ] ) . "<br/>";
+  $mail = "Имя: " . strip_tags( $_POST[ 'client_name' ] ) . "<br/>";
   $mail .= "Телефон: $client_tel <br/>";
   $mail .= isset( $_POST[ 'client_email' ] ) ? "Email: " . $_POST[ 'client_email' ] . "<br/>" : '';
+  $mail .= isset( $_POST[ 'region' ] ) ? "Регион строительства: " . $_POST[ 'region' ] . "<br/>" : '';
+  $mail .= isset( $_POST[ 'purpose' ] ) ? "Назначение: " . $_POST[ 'purpose' ] . "<br/>" : '';
+  $mail .= isset( $_POST[ 'size' ] ) ? "Размеры: " . $_POST[ 'size' ] . "<br/>" : '';
   $mail .= isset( $_POST[ 'client_message' ] ) ? "Сообщение: " . strip_tags( $_POST[ 'client_message' ] ) . "<br/>" : '';
   $mail .= isset( $_POST[ 'order' ] ) ? "Заказ: " . $_POST[ 'order' ] . "<br/>" : '';
   $mail .= isset( $_POST[ 'quiz' ] ) ? $_POST[ 'quiz' ] : '';
@@ -189,16 +171,12 @@ function send_mail() {
     }
   }
 
-  $fields = [ 'client_name', 'client_tel', 'client_message', 'client_email', 'page_request', 'order', 'quiz' ];
-  foreach( $fields as $field ) {
-    if( isset( $_POST[ $field ] ) ) {
-      update_post_meta( $post_ID, $field, isset( $_POST[$field] ) ? $_POST[$field] : '' );
-    }
-  }
+	$metaBody = $mail;
+	$metaBody .= isset($_COOKIE['traffic_source']) ? "Трафик: $_COOKIE[traffic_source] <br/>" : '';
+	$metaBody .= isset($_COOKIE['landing_page']) ? "Страница входа: $_COOKIE[landing_page] <br/>" : '';
+	$metaBody .= isset($_COOKIE['category_urls']) ? "Посещенные разделы: $_COOKIE[category_urls]" : '';
 
-  update_post_meta( $post_ID, 'traffic_source', isset( $_COOKIE['traffic_source'] ) ? $_COOKIE['traffic_source'] : '' );
-  update_post_meta( $post_ID, 'landing_page', isset( $_COOKIE['landing_page'] ) ? $_COOKIE['landing_page'] : '' );
-  update_post_meta( $post_ID, 'category_urls', isset( $_COOKIE['category_urls'] ) ? $_COOKIE['category_urls'] : '' );
+	update_post_meta($post_ID, 'metaBody', $metaBody);
 
   die();
 }
