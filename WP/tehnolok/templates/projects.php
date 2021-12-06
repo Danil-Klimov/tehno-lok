@@ -21,6 +21,7 @@ Template Post Type: page
     'posts_per_page' => -1,
     'paged' => $paged,
     'publish' => true,
+		'category_name' => 'dlya-sporta'
   ] ); ?>
 
   <?php if( $query->have_posts() ) : ?>

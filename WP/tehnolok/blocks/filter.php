@@ -1,7 +1,7 @@
 <form class="filter" id="filter"><span>Назначение</span>
   <select class="input select" name="category">
     <option value="">Все</option>
-    <option value="dlya-sporta">Для спорта</option>
+    <option value="dlya-sporta" selected>Для спорта</option>
     <option value="dlya-biznesa">Для бизнеса</option>
     <option value="promyshlennye">Промышленные</option>
   </select>
