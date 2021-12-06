@@ -19,7 +19,7 @@
                 <img src="<?= esc_url( $img['url'] ); ?>"
 										 alt="<?= esc_attr( $img['alt'] ); ?>"
 										 width="<?= $img['width']; ?>"
-										 height=<?= $img['height']; ?>"" />
+										 height="<?= $img['height']; ?>" />
               <?php endif; ?>
               <div><?= esc_html( $link['title'] ); ?></div>
             </a>
