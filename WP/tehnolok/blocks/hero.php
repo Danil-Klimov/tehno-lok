@@ -36,7 +36,7 @@
               </a>
             </div>
           <?php endif; ?>
-          <button class="order__request" type="button" data-src="#modal-request" data-fancybox>
+          <button class="order__request hero__order" type="button" data-src="#modal-request" data-fancybox>
             <img src="<?= get_template_directory_uri() ?>/img/calculation-icon.png" alt="" width="45" height="44">
             <span>ЗАКАЗАТЬ РАСЧЕТ</span>
           </button>

@@ -189,6 +189,9 @@
     right: 0;
     padding: 25px 22px 18px;
     line-height: 1.4;
+		@include xs-block() {
+			display: none;
+		}
 
     img {
       margin-bottom: 7px;

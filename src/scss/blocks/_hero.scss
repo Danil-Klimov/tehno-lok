@@ -59,29 +59,31 @@
 
   &__cats {
     @include col();
-    @include size(7.5);
-    @include size-lg(9);
-    @include size-md(11);
-    @include size-xs(12);
-    display: grid;
-    grid-template-columns: repeat(auto-fill, 155px) 70px 146px;
-    grid-gap: 5px;
-    background-color: #fff;
+    @include size(12);
+    //@include size-lg(9);
+    //@include size-md(11);
+    //@include size-xs(12);
+    //display: grid;
+    //grid-template-columns: repeat(auto-fill, 155px) 70px 146px;
+    //grid-gap: 5px;
+		display: flex;
+    //background-color: #fff;
     margin-top: 200px;
     position: relative;
     @include lg-block() {
-      grid-template-columns: repeat(auto-fill, 155px) 70px 157px;
+      //grid-template-columns: repeat(auto-fill, 155px) 70px 157px;
     }
     @include md-block() {
-      grid-template-columns: repeat(auto-fill, 150px) 70px 117px;
+      //grid-template-columns: repeat(auto-fill, 150px) 70px 117px;
     }
     @include sm-block() {
       margin-top: 60px;
-      grid-template-columns: repeat(auto-fill, 116px) 50px 74px;
+      //grid-template-columns: repeat(auto-fill, 116px) 50px 74px;
     }
     @include xs-block() {
-      grid-template-columns: repeat(auto-fill, 50%);
-      grid-gap: 0;
+			flex-wrap: wrap;
+      //grid-template-columns: repeat(auto-fill, 50%);
+      //grid-gap: 0;
     }
 
     &::before {
@@ -96,16 +98,27 @@
   }
 
   &__cats-item {
+		flex-shrink: 0;
     font-family: $font-second;
-    font-size: 15px;
+    font-size: 18px;
     line-height: 1.2;
     font-weight: 700;
     color: #054c7a;
+		background-color: #fff;
     text-align: center;
-    padding: 15px 0;
+    padding: 30px 15px 5px;
     text-decoration: none;
     transition: all 0.3s;
     position: relative;
+		@include md-block() {
+			flex-basis: 70px;
+			padding-right: 10px;
+			padding-left: 10px;
+			font-size: 15px;
+		}
+		@include xs-block() {
+			flex-basis: calc(33% - 20px);
+		}
 
     &:hover {
       color: #fff;
@@ -129,7 +142,7 @@
     }
 
     img {
-      height: 86px;
+			margin-bottom: 12px;
     }
 
     div {
@@ -141,9 +154,21 @@
   &__cats-button {
     display: flex;
     align-items: center;
-    margin-left: 10px;
-    @include xs-block() {
+    //margin-left: 10px;
+		padding: 0 35px 0 70px;
+		background-color: #fff;
+		@include md-block() {
+			padding: 0 20px 0 25px;
+		}
+    @include sm-block() {
       display: none;
     }
   }
+
+	&__order {
+		padding: 0 22px;
+		@include sm-block() {
+			display: none;
+		}
+	}
 }
