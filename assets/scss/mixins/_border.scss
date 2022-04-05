@@ -1,0 +1,26 @@
+@mixin border($side) {
+  background-color: #fff;
+  background-clip: padding-box;
+  position: relative;
+  border-image-width: 30px 0;
+  border-image-repeat: repeat;
+  @if $side == 'top' {
+    border-top: 30px solid transparent;
+    border-image-source: url("../img/border.png");
+    border-image-slice: 30 0 0;
+    margin: -30px 0 0;
+  }
+  @else if $side == 'bottom' {
+    border-bottom: 30px solid transparent;
+    border-image-source: url("../img/border.png");
+    border-image-slice: 0 0 30;
+    margin: 0 0 -30px;
+  }
+  @else if $side == 'all' {
+    border-top: 30px solid transparent;
+    border-bottom: 30px solid transparent;
+    border-image-source: url("../img/border.png");
+    border-image-slice: 30 0;
+    margin: -30px 0;
+  }
+}

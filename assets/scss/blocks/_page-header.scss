@@ -1,0 +1,15 @@
+.page-header {
+
+	&__content {
+		@include col();
+		@include size(12);
+	}
+
+	&__title {
+		color: #054c7a;
+		font-size: 38px;
+		@include xs-block() {
+			font-size: 30px;
+		}
+	}
+}

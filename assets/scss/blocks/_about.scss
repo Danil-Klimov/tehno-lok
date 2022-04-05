@@ -1,0 +1,153 @@
+.about {
+	padding: 5px 0 20px;
+	background: radial-gradient(800px 600px at calc(50% - 500px) 600px, rgba(#009bd2, 0.3) 0%, transparent);
+
+	&_w-projects {
+		margin-bottom: -255px;
+		padding-top: 80px;
+		@include sm-block() {
+			padding-top: 50px;
+		}
+	}
+
+	&__header {
+		@include col();
+		@include size(6.9);
+		@include size-lg(5);
+		@include size-md(12);
+		display: grid;
+		grid-template-columns: 11px 1fr;
+		color: #054c7a;
+		@include xs-block() {
+			grid-template-columns: 1fr;
+		}
+
+		img {
+			position: relative;
+			top: 20px;
+			left: -230px;
+			grid-column: 1/3;
+			max-width: none;
+			@include lg-block() {
+				left: -460px;
+			}
+			@include md-block() {
+				position: static;
+				max-width: 100%;
+			}
+		}
+	}
+
+	.vertical-text {
+		margin-top: 15px;
+		@include xs-block() {
+			display: none;
+		}
+	}
+
+	&__title {
+		grid-column: 2/2;
+		margin: 0 0 0 180px;
+		font-size: 38px;
+		@include lg-block() {
+			margin-left: 35px;
+		}
+		@include xs-block() {
+			grid-column: 1;
+			margin: 0;
+			font-size: 30px;
+		}
+	}
+
+	&__content {
+		@include col();
+		@include size(5.1);
+		@include size-lg(7);
+		@include size-md(12);
+	}
+
+	&__projects {
+		max-width: 1380px;
+		margin: 0 auto;
+		padding-right: 15px;
+		padding-left: 15px;
+	}
+
+	&__projects-wrap {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	&__project {
+		display: flex;
+		box-sizing: border-box;
+		width: 25%;
+		height: 540px;
+		padding: 30px 40px;
+		overflow: hidden;
+		color: #fff;
+		font-weight: 700;
+		font-size: 15px;
+		line-height: 1.4;
+		text-decoration: none;
+		background-position: center;
+		background-size: 100%;
+		border-top: 3px solid #054c7a;
+		transition: all 0.3s;
+		@include lg-block() {
+			height: 400px;
+			padding: 25px;
+		}
+		@include md-block() {
+			width: 50%;
+		}
+		@include xs-block() {
+			align-items: flex-start !important;
+			width: 100%;
+			height: 200px;
+		}
+
+		&:hover {
+			background-size: 105%;
+
+			.arrow {
+				box-shadow: 0 0 0 400px rgba(#054c7a, 0.4);
+
+				&::after {
+					width: 820px;
+					height: 820px;
+					border-width: 2px;
+				}
+			}
+		}
+
+		&:nth-child(odd) {
+			align-items: flex-start;
+			margin-top: 55px;
+			@include md-block() {
+				margin: 0;
+			}
+		}
+
+		&:nth-child(even) {
+			align-items: flex-end;
+		}
+	}
+
+	&__project-name {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		width: 100%;
+	}
+
+	&__project-title {
+		position: relative;
+		z-index: 1;
+		max-width: 230px;
+	}
+
+	&__project-arrow {
+		flex-shrink: 0;
+	}
+}

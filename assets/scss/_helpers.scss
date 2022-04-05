@@ -1,0 +1,142 @@
+.is-hidden {
+	display: none !important;
+}
+
+.clearfix {
+	overflow: auto;
+
+	&::after {
+		display: table;
+		clear: both;
+		content: "";
+	}
+}
+
+.vertical-text {
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	color: inherit;
+	font-weight: 700;
+	font-size: 15px;
+	font-family: $font-second;
+	line-height: 1.2;
+	transform: rotate(180deg);
+	writing-mode: tb-rl;
+}
+
+.title {
+	font-weight: 700;
+	font-size: 32px;
+	font-family: $font-second;
+	line-height: 1.2;
+	@include xs-block() {
+		font-size: 30px;
+	}
+}
+
+.big-square {
+
+	&::after {
+		position: absolute;
+		z-index: -1;
+		display: block;
+		width: 140px;
+		height: 130px;
+		background: linear-gradient(to right, #2696c8 0%, #1755a4 100%);
+		content: "";
+	}
+}
+
+.zoom {
+	position: relative;
+	overflow: hidden;
+
+	&:hover {
+
+		&::before {
+			width: 500px;
+			height: 500px;
+		}
+
+		&::after {
+			visibility: visible;
+			opacity: 1;
+		}
+	}
+
+	&::before {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		display: block;
+		width: 0;
+		height: 0;
+		background-color: rgba(#054c7a, 0.5);
+		border-radius: 100%;
+		transform: translate3d(-50%, -50%, 0);
+		transition: all 0.5s;
+		content: "";
+	}
+
+	&::after {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate3d(-50%, -50%, 0);
+		visibility: hidden;
+		opacity: 0;
+		transition: all 0.3s;
+		content: url("data:image/svg+xml;charset=UTF-8,<svg width='40' height='40' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'><path fill='white' d='M319.8 204v8c0 6.6-5.4 12-12 12h-84v84c0 6.6-5.4 12-12 12h-8c-6.6 0-12-5.4-12-12v-84h-84c-6.6 0-12-5.4-12-12v-8c0-6.6 5.4-12 12-12h84v-84c0-6.6 5.4-12 12-12h8c6.6 0 12 5.4 12 12v84h84c6.6 0 12 5.4 12 12zm188.5 293L497 508.3c-4.7 4.7-12.3 4.7-17 0l-129-129c-2.3-2.3-3.5-5.3-3.5-8.5v-8.5C310.6 395.7 261.7 416 208 416 93.8 416 1.5 324.9 0 210.7-1.5 93.7 93.7-1.5 210.7 0 324.9 1.5 416 93.8 416 208c0 53.7-20.3 102.6-53.7 139.5h8.5c3.2 0 6.2 1.3 8.5 3.5l129 129c4.7 4.7 4.7 12.3 0 17zM384 208c0-97.3-78.7-176-176-176S32 110.7 32 208s78.7 176 176 176 176-78.7 176-176z'></path></svg>");
+	}
+}
+
+.order__request {
+	padding: 0;
+	color: #fff;
+	font-weight: 700;
+	font-size: 14px;
+	font-family: $font-second;
+	line-height: 1.2;
+	background: linear-gradient(to right, #2695c8 0%, #2695c8 10%, #1855a4 100%);
+	background-size: 100%;
+	border-width: 3px 0 0 0;
+	border-top-color: #36a4dd;
+	box-shadow: 0 5px 15px 2px rgba(#009bcf, 0.4);
+	transition: all 0.3s;
+
+	&:hover {
+		background-size: 270%;
+		box-shadow: 0 5px 10px 0 rgba(#000, 0.3);
+	}
+
+	img {
+		display: block;
+		margin: 0 auto 20px;
+	}
+}
+
+.video-border {
+	position: relative;
+	z-index: 1;
+	align-self: flex-start;
+	border: 12px solid #fff;
+	box-shadow: 0 0 15px 0 rgba(#00437a, 0.2);
+
+	&::before {
+		position: absolute;
+		top: -27px;
+		left: -27px;
+		z-index: -1;
+		display: block;
+		width: 110px;
+		height: 105px;
+		background-color: #00285b;
+		content: "";
+	}
+
+	video {
+		display: block;
+		width: 100%;
+	}
+}

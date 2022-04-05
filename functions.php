@@ -1,4 +1,10 @@
 <?php
+
+if (!defined('_S_VERSION')) {
+	// Replace the version number of the theme on each release.
+	define('_S_VERSION', '1.0.0');
+}
+
 // инициализация темы
 if( !function_exists( 'theme_setup' ) ) {
   function theme_setup() {
@@ -33,11 +39,14 @@ function tehnolok_remove_wp_block_library_css() {
 // подключение стилей и скриптов
 add_action( 'wp_enqueue_scripts', 'tehnolok_scripts' );
 function tehnolok_scripts() {
-  wp_enqueue_style( 'fancybox', get_template_directory_uri() . '/css/jquery.fancybox.min.css' );
-  wp_enqueue_style( 'customScrollbar', get_template_directory_uri() . '/css/jquery.mCustomScrollbar.css' );
-  wp_enqueue_style( 'main-style', get_template_directory_uri() . '/css/style.css' );
-  wp_enqueue_script( 'libs', get_template_directory_uri() . '/js/libs.min.js', [ 'jquery' ], null, true );
-  wp_enqueue_script( 'main-scripts', get_template_directory_uri() . '/js/main.js', [ 'jquery', 'libs' ], null, true );
+  wp_enqueue_style( 'fancybox', get_template_directory_uri() . '/assets/vendor/css/jquery.fancybox.min.css', array(), '3.5.7' );
+	wp_enqueue_script('fancybox', get_template_directory_uri() . '/assets/vendor/js/jquery.fancybox.min.js', [ 'jquery' ], '3.5.7', true );
+	wp_enqueue_style( 'swiper', get_template_directory_uri() . '/assets/vendor/css/swiper-bundle.min.css', array(), '6.8.4' );
+	wp_enqueue_script('swiper', get_template_directory_uri() . '/assets/vendor/js/swiper-bundle.min.js', array(), '6.8.4', true );
+  wp_enqueue_style( 'mCustomScrollbar', get_template_directory_uri() . '/assets/vendor/css/jquery.mCustomScrollbar.css', array(), '3.1.13' );
+	wp_enqueue_script('mCustomScrollbar', get_template_directory_uri() . '/assets/vendor/js/jquery.mCustomScrollbar.concat.min.js', array('jquery'), '3.1.13', true );
+	wp_enqueue_style('adem', get_stylesheet_uri(), array(), _S_VERSION);
+  wp_enqueue_script( 'adem', get_template_directory_uri() . '/assets/js/main.js', [ 'jquery' ], _S_VERSION, true );
 //  wp_enqueue_script( 'yandex-map', '//api-maps.yandex.ru/2.1/?lang=ru_RU', [], null, false );
 }
 
@@ -170,11 +179,12 @@ function custom_breadcrumbs( $links ) {
   return $links;
 }
 
-require 'includes/acf.php';
-require 'includes/col-thumb.php';
-require 'includes/excerpt.php';
-require 'includes/send-mail.php';
-require 'includes/filter.php';
-require 'includes/information-menu.php';
+require 'inc/acf.php';
+require 'inc/col-thumb.php';
+require 'inc/excerpt.php';
+require 'inc/send-mail.php';
+require 'inc/filter.php';
+require 'inc/information-menu.php';
 //require 'includes/load-more.php';
-require 'includes/tmce-buttons.php';
+require 'inc/tmce-buttons.php';
+require 'inc/traffic.php';

@@ -1,0 +1,34 @@
+.filter {
+	@include col();
+	@include size(6);
+	@include size-xs(12);
+	position: absolute;
+	left: 50%;
+	z-index: 2;
+	display: flex;
+	align-items: center;
+	color: #4c4c4c;
+	font-size: 13px;
+	@include sm-block() {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+	@include xs-block() {
+		position: static;
+	}
+
+	.input {
+		width: 360px;
+		margin: 0 0 0 20px;
+		@include md-block() {
+			width: 250px;
+		}
+		@include sm-block() {
+			width: 233px;
+			margin: 10px 0 0 0;
+		}
+		@include xs-block() {
+			width: 100%;
+		}
+	}
+}

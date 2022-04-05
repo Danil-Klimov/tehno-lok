@@ -1,0 +1,162 @@
+.hero {
+	padding-top: 270px;
+	background-repeat: no-repeat;
+	background-position: center top;
+	@include sm-block() {
+		padding-top: 165px;
+	}
+
+	&__offer {
+		@include col();
+		@include size(7.5);
+		@include size-lg(9);
+		@include size-md(11);
+		@include size-xs(12);
+		position: relative;
+		display: grid;
+		grid-template-columns: 75px auto;
+		color: #fff;
+		background-color: rgba(#14459c, 0.7);
+		@include sm-block() {
+			display: block;
+			grid-template-columns: 40px auto;
+		}
+
+		&::before {
+			position: absolute;
+			right: 100%;
+			display: block;
+			width: 170px;
+			height: 100%;
+			background-color: rgba(#052e69, 0.9);
+			content: "";
+		}
+	}
+
+	.vertical-text {
+		justify-content: center;
+		@include xs-block() {
+			display: none;
+		}
+	}
+
+	&__content {
+		grid-column: 2/2;
+		padding: 40px 35px 30px;
+		@include sm-block() {
+			padding: 30px;
+		}
+
+		h1,
+		h2,
+		h3,
+		h4,
+		h5,
+		h6 {
+			margin-bottom: 8px;
+			line-height: 1.4;
+		}
+
+		p {
+			line-height: 1.2;
+		}
+	}
+
+	&__cats {
+		@include col();
+		@include size(12);
+		position: relative;
+		display: flex;
+		margin-top: 200px;
+		@include sm-block() {
+			margin-top: 60px;
+		}
+		@include xs-block() {
+			flex-wrap: wrap;
+		}
+
+		&::before {
+			position: absolute;
+			right: 100%;
+			display: block;
+			width: 120px;
+			height: 100%;
+			background-color: #dce4f0;
+			content: "";
+		}
+	}
+
+	&__cats-item {
+		position: relative;
+		flex-shrink: 0;
+		padding: 30px 15px 5px;
+		color: #054c7a;
+		font-weight: 700;
+		font-size: 18px;
+		font-family: $font-second;
+		line-height: 1.2;
+		text-align: center;
+		text-decoration: none;
+		background-color: #fff;
+		transition: all 0.3s;
+		@include md-block() {
+			flex-basis: 70px;
+			padding-right: 10px;
+			padding-left: 10px;
+			font-size: 15px;
+		}
+		@include xs-block() {
+			flex-basis: calc(33% - 20px);
+		}
+
+		&:hover {
+			color: #fff;
+
+			&::after {
+				height: 100%;
+			}
+
+		}
+
+		&::after {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			display: block;
+			width: 100%;
+			height: 0;
+			background-color: rgba(#14459c, 0.5);
+			transition: all 0.3s;
+			content: "";
+		}
+
+		img {
+			margin-bottom: 12px;
+		}
+
+		div {
+			position: relative;
+			z-index: 1;
+		}
+	}
+
+	&__cats-button {
+		display: flex;
+		align-items: center;
+		padding: 0 35px 0 70px;
+		background-color: #fff;
+		@include md-block() {
+			padding: 0 20px 0 25px;
+		}
+		@include sm-block() {
+			display: none;
+		}
+	}
+
+	&__order {
+		padding: 0 22px;
+		@include sm-block() {
+			display: none;
+		}
+	}
+}

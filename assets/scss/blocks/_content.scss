@@ -1,0 +1,11 @@
+.content {
+
+	&__inner {
+		@include col();
+		@include size(12);
+	}
+
+	&__img {
+		margin-bottom: 15px;
+	}
+}

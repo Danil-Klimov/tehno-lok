@@ -1,0 +1,88 @@
+.modal {
+	display: none;
+	width: 850px;
+	max-width: 850px;
+	overflow: visible;
+	text-align: center;
+	background-size: cover;
+	@include md-block() {
+		width: auto;
+	}
+
+	&::before {
+		position: absolute;
+		top: 0;
+		left: 50%;
+		display: block;
+		width: 83%;
+		height: 4px;
+		background-color: #195aba;
+		transform: translate3d(-50%, 0, 0);
+		content: "";
+	}
+
+	&::after {
+		right: -10px;
+		bottom: -10px;
+	}
+
+	&_call {
+		padding: 120px 30px 90px 30px;
+		color: #054c7a;
+		background-image: url(assets/images/modal-call-bg.jpg);
+	}
+
+	&_request {
+		padding: 25px 30px;
+		color: #fff;
+		background-image: url(assets/images/modal-request-bg.jpg);
+	}
+
+	&__title {
+		margin-bottom: 10px;
+		font-weight: 300;
+		font-size: 32px;
+		font-family: $font-second;
+	}
+
+	&__call-title {
+		margin-bottom: 0;
+		font-size: 64px;
+		@include sm-block() {
+			font-size: 62px;
+		}
+		@include xs-block() {
+			font-size: 50px;
+		}
+	}
+
+	&__subtitle {
+		font-size: 13px;
+	}
+
+	&__form {
+		max-width: 360px;
+		margin: 30px auto 0;
+
+		textarea {
+			width: 100%;
+		}
+	}
+
+	&__policy {
+		max-width: 320px;
+		margin: 0 auto 20px;
+		text-align: left;
+	}
+
+	.fancybox-button {
+		top: 25px;
+		right: 22px;
+		width: 17px;
+		height: 17px;
+		padding: 2px;
+		color: #fff;
+		background-color: #195aba;
+		border-radius: 100%;
+	}
+}

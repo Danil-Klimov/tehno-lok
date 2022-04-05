@@ -1,0 +1,183 @@
+.request {
+	padding: 60px 0;
+	background: url(assets/images/request-bg.jpg) no-repeat center top;
+	@include md-block() {
+		background-size: cover;
+	}
+
+	&__container {
+		@include col();
+		@include size(12);
+
+		&_right {
+			@include size(4.7);
+			@include size-lg(5);
+			@include size-md(12);
+			margin-left: auto;
+			@include md-block() {
+				margin-top: 30px;
+			}
+			@include xs-block() {
+				margin-top: 15px;
+			}
+
+			.request__form {
+				grid-template-columns: 1fr;
+				width: 85%;
+				margin: 40px 0 0 auto;
+				@include md-block() {
+					margin: 20px auto 0;
+				}
+				@include xs-block() {
+					width: 100%;
+				}
+
+				textarea {
+					height: 115px;
+				}
+
+				.button {
+					margin: 0 auto;
+				}
+
+				.checkbox {
+					margin-bottom: 10px;
+					padding: 0 20px;
+				}
+			}
+
+			.request__header {
+				padding-left: 65px;
+				@include md-block() {
+					padding-left: 52px;
+					text-align: left;
+				}
+				@include xs-block() {
+					padding-left: 0;
+				}
+			}
+		}
+
+		&_left {
+			@include size(7);
+			@include size-md(12);
+
+			.request__header {
+				padding-left: 65px;
+				text-align: left;
+				@include md-block() {
+					padding-left: 52px;
+				}
+				@include xs-block() {
+					padding: 0;
+				}
+			}
+		}
+	}
+
+	&__header {
+		position: relative;
+		padding-left: 20px;
+		color: #054c7a;
+		text-align: center;
+		@include xs-block() {
+			padding: 0;
+		}
+
+		.vertical-text {
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: max-content;
+			@include xs-block() {
+				display: none;
+			}
+		}
+	}
+
+	&__title {
+		margin-bottom: 10px;
+	}
+
+	&__subtitle {
+		font-size: 13px;
+	}
+
+	&__form {
+		display: grid;
+		grid-column-gap: 30px;
+		grid-template-columns: 1fr 1fr;
+		width: 65%;
+		margin: 35px auto 0;
+		@include md-block() {
+			width: 85%;
+		}
+		@include sm-block() {
+			width: 100%;
+		}
+		@include xs-block() {
+			grid-template-columns: 1fr;
+		}
+
+		textarea {
+			height: calc(100% - 15px);
+		}
+
+		.button {
+			width: fit-content;
+			margin-left: auto;
+			@include xs-block() {
+				margin: 20px auto 0;
+			}
+		}
+	}
+
+	&__contacts {
+		margin: 15px 0 0 65px;
+		@include md-block() {
+			margin-left: 52px;
+		}
+		@include xs-block() {
+			margin-left: 0;
+		}
+	}
+
+	&__phones {
+		display: flex;
+		@include xs-block() {
+			display: block;
+		}
+	}
+
+	&__phones-item {
+		flex-grow: 1;
+		font-size: 13px;
+
+		a {
+			margin-right: 10px;
+			color: #1864b0;
+			font-weight: 700;
+			font-size: 20px;
+			font-family: $font-second;
+			text-decoration: none;
+		}
+	}
+
+	&__mail {
+		display: inline-block;
+		margin-top: 10px;
+		font-size: 13px;
+		text-decoration: none;
+		border-bottom: 2px solid #009bd1;
+	}
+
+	&__text {
+		margin-top: 20px;
+		font-size: 13px;
+	}
+
+	&__map {
+		height: 245px;
+		margin-top: 20px;
+	}
+}

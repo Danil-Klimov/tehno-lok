@@ -1,0 +1,23 @@
+.breadcrumbs {
+	padding: 25px 0;
+	color: #054c7a;
+	font-size: 13px;
+
+	&__container {
+		@include col();
+		@include size(12);
+	}
+
+	a {
+		margin-right: 5px;
+		text-decoration: none;
+
+		+ span {
+			margin-left: 5px;
+		}
+	}
+}
+
+.breadcrumb_last {
+	color: #4c4c4c;
+}

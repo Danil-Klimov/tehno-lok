@@ -1,0 +1,66 @@
+.numbers {
+	padding: 50px 0 70px;
+	background: url(assets/images/numbers-bg.jpg) no-repeat center top;
+
+	&__header {
+		@include col();
+		@include size(12);
+		color: #fff;
+		text-align: center;
+
+		.title {
+			margin-bottom: 5px;
+		}
+	}
+
+	&__subtitle {
+		font-size: 15px;
+	}
+
+	&__slider {
+		position: relative;
+		margin-top: 15px;
+		padding: 0 15px;
+		counter-reset: numbers;
+		@include lg-block() {
+			padding: 0 15px;
+		}
+
+		.arrow {
+			position: absolute;
+			top: 50%;
+			z-index: 1;
+			transform: translate3d(0, -50%, 0);
+
+			&_next {
+				right: 7px;
+			}
+
+			&_prev {
+				left: 7px;
+			}
+		}
+	}
+
+	&__item {
+		color: #054c7a;
+		font-weight: 700;
+		font-size: 17px;
+		font-family: $font-second;
+		line-height: 1.4;
+		text-align: center;
+		counter-increment: numbers;
+
+		&::before {
+			display: block;
+			margin-bottom: 9px;
+			color: #2483b8;
+			font-size: 95px;
+			line-height: 1.1;
+			background: linear-gradient(45deg, #054c7a 0%, #054c7a 30%, #2ca0d9 70%, #2ca0d9 100%);
+			background-clip: text;
+			content: counter(numbers);
+			-webkit-text-fill-color: transparent;
+		}
+	}
+}

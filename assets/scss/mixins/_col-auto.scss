@@ -1,0 +1,5 @@
+@mixin col-auto() {
+  @include col();
+  flex-grow: 1;
+  flex-basis: 0;
+}

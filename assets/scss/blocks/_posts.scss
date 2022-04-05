@@ -1,0 +1,131 @@
+.posts {
+	padding: 45px 0 60px;
+	background: url(assets/images/posts-bg.jpg) no-repeat center top;
+	background-size: cover;
+
+	&__header {
+		@include col();
+		@include size(12);
+		display: grid;
+		grid-template-columns: 11px 1fr;
+		color: #fff;
+		text-align: center;
+		@include xs-block() {
+			grid-template-columns: 1fr;
+		}
+
+		.vertical-text {
+			grid-row: 1/4;
+			margin-top: 33px;
+			@include xs-block() {
+				display: none;
+			}
+		}
+	}
+
+	&__title {
+		grid-column: 2/2;
+		margin-bottom: 10px;
+		@include xs-block() {
+			grid-column: 1;
+		}
+	}
+
+	&__subtitle {
+		font-size: 13px;
+	}
+
+	&__container {
+		@include col();
+		@include size(10);
+		@include size-lg(11);
+		@include size-sm(12);
+		@include shift-left(1);
+		@include shift-lg-left(0.5);
+		@include shift-sm-left(0);
+		position: relative;
+		margin-top: 20px;
+
+		.arrow {
+			position: absolute;
+			top: 50%;
+			z-index: 1;
+			transform: translate3d(0, -50%, 0);
+
+			&_next {
+				right: -55px;
+				@include lg-block() {
+					right: -10px;
+				}
+				@include sm-block() {
+					right: 0;
+				}
+			}
+
+			&_prev {
+				left: -55px;
+				@include lg-block() {
+					left: -10px;
+				}
+				@include sm-block() {
+					left: 0;
+				}
+			}
+		}
+	}
+
+	&__slider {
+		@include sm-block() {
+			box-sizing: border-box;
+			margin: 0 15px;
+		}
+	}
+
+	&__slide {
+		position: relative;
+		display: block;
+		max-width: 260px;
+		margin: 15px 0 0;
+		@include md-block() {
+			max-width: none;
+		}
+
+
+		&:hover {
+
+			&::after {
+				top: 160px;
+				right: 0;
+				left: 0;
+			}
+		}
+
+		&::after {
+			position: absolute;
+			top: -15px;
+			right: 18px;
+			bottom: 15px;
+			left: 18px;
+			display: block;
+			border: 2px solid #fff;
+			border-radius: 2px;
+			transition: all 0.3s;
+			content: "";
+			pointer-events: none;
+		}
+	}
+
+	&__text {
+		padding: 15px 40px 28px;
+		color: #fff;
+		font-size: 13px;
+		line-height: 1.4;
+	}
+
+	&__item-title {
+		display: block;
+		margin-bottom: 15px;
+		font-weight: 700;
+		text-decoration: none;
+	}
+}

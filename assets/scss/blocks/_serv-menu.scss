@@ -1,0 +1,130 @@
+.serv-menu {
+
+	&__container {
+		@include col();
+		@include size(12);
+		position: relative;
+		z-index: 1;
+		display: grid;
+		grid-template-columns: 26% repeat(auto-fit, minmax(400px, 1fr));
+		height: 400px;
+		color: #fff;
+		@include lg-block() {
+			grid-template-columns: 30% repeat(auto-fit, minmax(300px, 1fr));
+		}
+		@include md-block() {
+			display: block;
+			height: auto;
+		}
+
+		&::after {
+			position: absolute;
+			top: -10px;
+			right: -10px;
+			z-index: -1;
+			display: block;
+			width: 140px;
+			height: 130px;
+			background: linear-gradient(to right, #2696c8 0%, #1755a4 100%);
+			content: "";
+		}
+	}
+
+	&__title {
+		display: block;
+		font-weight: 700;
+		font-family: $font-second;
+		line-height: 1.2;
+		text-decoration: none;
+	}
+
+	&__carcas {
+		box-sizing: border-box;
+		padding: 55px 45px;
+		background-size: cover;
+		@include md-block() {
+			padding: 30px;
+		}
+
+		.serv-menu__link {
+			display: flex;
+			align-self: center;
+			margin-bottom: 10px;
+
+			&::before {
+				margin-right: 18px;
+				font-size: 7px;
+				line-height: 2.3;
+				content: "►";
+			}
+		}
+	}
+
+	&__carcas-title {
+		margin-bottom: 55px;
+		font-size: 32px;
+		@include md-block() {
+			margin-bottom: 25px;
+		}
+	}
+
+	&__link {
+		display: block;
+		font-weight: 700;
+		font-size: 13px;
+		line-height: 1.2;
+		text-decoration: none;
+
+		&:hover {
+
+			span {
+				text-decoration: underline;
+			}
+		}
+	}
+
+	&__coating {
+		position: relative;
+		background-size: cover;
+		@include md-block() {
+			min-height: 200px;
+		}
+	}
+
+	&__coating-footer {
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		display: flex;
+		align-items: center;
+		padding: 30px;
+		background-color: rgba(#14459c, 0.7);
+		@include xs-block() {
+			display: block;
+		}
+	}
+
+	&__coating-title {
+		flex-basis: 10%;
+		margin-right: 35px;
+		font-size: 25px;
+		@include xs-block() {
+			margin: 0 0 15px;
+		}
+	}
+
+	&__coating-list {
+		margin: 0;
+		padding: 0;
+		column-count: 2;
+
+		li {
+			margin-bottom: 10px;
+
+			&::before {
+				display: none;
+			}
+		}
+	}
+}

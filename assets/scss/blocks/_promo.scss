@@ -1,0 +1,45 @@
+.promo {
+	padding: 5px 0;
+
+	&__header {
+		@include col();
+		@include size(6.9);
+		@include size-md(7);
+		@include size-sm(12);
+		@include shift-left(0.57);
+		@include shift-md-left(0.5);
+		@include shift-sm-left(0);
+		align-self: flex-start;
+		margin-top: 30px;
+		padding-left: 10px;
+		color: #14469c;
+		font-weight: 700;
+		font-size: 20px;
+		font-family: $font-second;
+		line-height: 1.3;
+		border-left: 4px solid #80dffe;
+		@include sm-block() {
+			margin-top: 10px;
+		}
+	}
+
+	&__img {
+		@include col();
+		@include size(3.3);
+		@include size-md(4.5);
+		@include size-sm(12);
+		position: relative;
+	}
+
+	&__button {
+		position: absolute;
+		top: 40px;
+		right: 50%;
+		box-shadow: 0 5px 5px 0 rgba(#0098ce, 0.4), 0 0 0 7px rgba(#0097cf, 0.15) !important;
+		transform: translate3d(+50%, 0, 0);
+
+		&:hover {
+			box-shadow: 0 5px 5px 0 rgba(#0098ce, 0.4) !important;
+		}
+	}
+}

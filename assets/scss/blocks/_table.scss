@@ -1,0 +1,31 @@
+.table {
+	margin: 15px 0;
+	overflow-x: auto;
+	font-size: 15px;
+
+	table {
+		width: 100%;
+		border: 1px solid #efefef;
+		border-top: 3px solid #14469c;
+		border-collapse: collapse;
+	}
+
+	caption {
+		margin-bottom: 10px;
+		font-size: 22px;
+		font-family: $font-second;
+	}
+
+	tr {
+
+		&:first-child {
+			color: #fff;
+			background-color: #14469c;
+		}
+	}
+
+	td {
+		padding: 15px;
+		border: 1px solid #efefef;
+	}
+}
