@@ -1,6 +1,7 @@
 <?php if (have_rows('blocks')): ?>
 	<?php while (have_rows('blocks')) : the_row(); ?>
 		<?php if (get_row_layout() == 'block_about') : get_template_part('template-parts/blocks/about'); ?>
+		<?php elseif (get_row_layout() == 'block_cases') : get_template_part('template-parts/blocks/cases'); ?>
 		<?php elseif (get_row_layout() == 'block_faq') : get_template_part('template-parts/blocks/faq'); ?>
 		<?php elseif (get_row_layout() == 'block_features') : get_template_part('template-parts/blocks/features'); ?>
 		<?php elseif (get_row_layout() == 'block_gallery') : get_template_part('template-parts/blocks/gallery'); ?>

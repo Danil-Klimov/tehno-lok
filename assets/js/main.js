@@ -360,7 +360,6 @@ $(document).ready(function () {
 
     init: function() {
       this.bindUIfunctions();
-      this.pageLoadCorrectTab();
     },
 
     bindUIfunctions: function() {
@@ -394,11 +393,6 @@ $(document).ready(function () {
       // Close menu, in case mobile
       tab.closest(".team__tabs").removeClass("open");
 
-    },
-
-    // If the page has a hash on load, go to that tab
-    pageLoadCorrectTab: function() {
-      this.changeTab(document.location.hash);
     },
 
     toggleMobileMenu: function(event, el) {
@@ -544,4 +538,53 @@ $(document).ready(function () {
       }
     });
   });
+
+// cases sliders
+	$('.cases__case').each(function () {
+		const section = $(this);
+		const casesNav = new Swiper(this.querySelector('.cases__gallery'), {
+			loop: false,
+			slidesPerView: 6,
+			watchSlidesProgress: true,
+			spaceBetween: 30,
+			centerInsufficientSlides: true,
+			navigation: {
+				nextEl: this.querySelector('.cases__gallery-wrap .arrow_next'),
+				prevEl: this.querySelector('.cases__gallery-wrap .arrow_prev'),
+			},
+			breakpoints: {
+				576: {
+					slidesPerView: 4,
+				},
+				769: {
+					slidesPerView: 5,
+				},
+				993: {
+					slidesPerView: 6,
+				}
+			}
+		});
+
+		const casesMain = new Swiper(this.querySelector('.cases__img'), {
+			loop: false,
+			slidesPerView: 1,
+			effect: 'fade',
+			fadeEffect: {
+				crossFade: true
+			},
+			thumbs: {
+				swiper: casesNav
+			},
+			simulateTouch: false,
+			navigation: {
+				nextEl: this.querySelector('.cases__img-wrap .arrow_next'),
+				prevEl: this.querySelector('.cases__img-wrap .arrow_prev'),
+			},
+		});
+
+		casesMain.on('slideChange', function (swiper) {
+			section.find('.cases__description.active').removeClass('active');
+			section.find('.cases__description').eq(swiper.activeIndex).addClass('active');
+		});
+	});
 });

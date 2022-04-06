@@ -62,8 +62,10 @@ function js_variables() {
 // регистрация миниатюр
 add_action( 'after_setup_theme', 'tehnolok_register_images_thumbnails' );
 function tehnolok_register_images_thumbnails() {
+  add_image_size( '43x43', 43, 43, true );
   add_image_size( '105x110', 105, 110, true );
-  add_image_size( '165x170', 165, 170, true );
+	add_image_size( '165x125', 165, 125, true );
+	add_image_size( '165x170', 165, 170, true );
   add_image_size( '195x275', 195, 275, true );
   add_image_size( '200x130', 200, 130, true );
   add_image_size( '210x270', 210, 270, true );
@@ -90,6 +92,7 @@ function tehnolok_register_images_thumbnails() {
   add_image_size( '630x355', 630, 355, true );
   add_image_size( '695x390', 690, 390, true );
   add_image_size( '720x260', 720, 260, true );
+  add_image_size( '720x540', 720, 540, true );
   add_image_size( '750x500', 750, 500, true );
   add_image_size( '820x460', 820, 460, true );
   add_image_size( '935x525', 935, 525, true );
