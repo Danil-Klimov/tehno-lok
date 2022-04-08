@@ -31,7 +31,9 @@
 		@include size-xs(12);
 		@include shift-left(1.4);
 		@include shift-lg-left(1);
-		@include shift-md(0);
+		@include md-block() {
+			margin-left: 15px;
+		}
 		@include xs-block() {
 			order: 1;
 		}
@@ -61,7 +63,9 @@
 		@include size-sm(6);
 		@include size-xs(12);
 		@include shift-left(0.8);
-		@include shift-md(0);
+		@include md-block() {
+			margin-left: 15px;
+		}
 		@include xs-block() {
 			order: 2;
 			margin: 15px;

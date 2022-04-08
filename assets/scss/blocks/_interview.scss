@@ -39,7 +39,9 @@
 		@include size(11);
 		@include size-xs(12);
 		@include shift-left(0.55);
-		@include shift-xs-left(0);
+		@include xs-block() {
+			margin-left: 15px;
+		}
 	}
 
 	&__slide {

@@ -8,7 +8,6 @@
 		@include size-sm(12);
 		@include shift-left(0.57);
 		@include shift-md-left(0.5);
-		@include shift-sm-left(0);
 		align-self: flex-start;
 		margin-top: 30px;
 		padding-left: 10px;
@@ -20,6 +19,7 @@
 		border-left: 4px solid #80dffe;
 		@include sm-block() {
 			margin-top: 10px;
+			margin-left: 15px;
 		}
 	}
 

@@ -18,7 +18,7 @@
 
 		.our-projects__buttons {
 			@include size(12);
-			@include shift-left(0);
+			margin-left: 15px;
 			padding: 50px 0 60px;
 			text-align: center;
 		}
@@ -98,12 +98,14 @@
 		@include size-xs(12);
 		@include shift-left(1);
 		@include shift-lg-left(0.5);
-		@include shift-xs-left(0);
 		position: relative;
 		margin-top: 10px;
 		padding: 20px;
 		background-color: #fff;
 		box-shadow: 0 0 20px 0 rgba(#004073, 0.2);
+		@include xs-block() {
+			margin-left: 15px;
+		}
 
 		&::before {
 			position: absolute;
@@ -143,10 +145,16 @@
 
 			&_next {
 				right: -18px;
+				@include xs-block() {
+					right: -15px;
+				}
 			}
 
 			&_prev {
 				left: -18px;
+				@include xs-block() {
+					left: -15px;
+				}
 			}
 		}
 	}
@@ -279,11 +287,11 @@
 		@include size(6);
 		@include size-sm(12);
 		@include shift-left(6);
-		@include shift-sm-left(0);
 		padding: 40px 0 0 15px;
 		@include sm-block() {
 			display: flex;
 			justify-content: center;
+			margin-left: 15px;
 			padding-left: 30px;
 		}
 		@include xs-block() {

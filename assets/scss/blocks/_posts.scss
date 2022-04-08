@@ -42,9 +42,11 @@
 		@include size-sm(12);
 		@include shift-left(1);
 		@include shift-lg-left(0.5);
-		@include shift-sm-left(0);
 		position: relative;
 		margin-top: 20px;
+		@include sm-block() {
+			margin-left: 15px;
+		}
 
 		.arrow {
 			position: absolute;

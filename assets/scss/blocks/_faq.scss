@@ -18,11 +18,13 @@
 		@include size(10);
 		@include size-lg(12);
 		@include shift-left(0.65);
-		@include shift-lg-left(0);
 		position: relative;
 		z-index: 1;
 		min-height: 500px;
 		margin-top: 35px;
+		@include lg-block() {
+			margin-left: 15px;
+		}
 
 		&::before {
 			position: absolute;
