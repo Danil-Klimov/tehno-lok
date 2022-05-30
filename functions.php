@@ -2,7 +2,7 @@
 
 if (!defined('_S_VERSION')) {
 	// Replace the version number of the theme on each release.
-	define('_S_VERSION', '1.0.1');
+	define('_S_VERSION', '1.0.2');
 }
 
 // инициализация темы
@@ -45,6 +45,7 @@ function tehnolok_scripts() {
 	wp_enqueue_script('swiper', get_template_directory_uri() . '/assets/vendor/js/swiper-bundle.min.js', array(), '6.8.4', true );
   wp_enqueue_style( 'mCustomScrollbar', get_template_directory_uri() . '/assets/vendor/css/jquery.mCustomScrollbar.css', array(), '3.1.13' );
 	wp_enqueue_script('mCustomScrollbar', get_template_directory_uri() . '/assets/vendor/js/jquery.mCustomScrollbar.concat.min.js', array('jquery'), '3.1.13', true );
+	wp_enqueue_script('jqueryMask', get_template_directory_uri() . '/assets/vendor/js/jquery.mask.min.js', array('jquery'), '1.14.16', true );
 	wp_enqueue_style('adem', get_stylesheet_uri(), array(), _S_VERSION);
   wp_enqueue_script( 'adem', get_template_directory_uri() . '/assets/js/main.js', [ 'jquery' ], _S_VERSION, true );
 //  wp_enqueue_script( 'yandex-map', '//api-maps.yandex.ru/2.1/?lang=ru_RU', [], null, false );
