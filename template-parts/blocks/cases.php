@@ -18,7 +18,13 @@
 					<div class="cases__main">
 						<div class="cases__text">
 							<div class="cases__name">
-								<?php echo $case['name']; ?>
+								<?php if($case['type'] == 'link') : ?>
+									<a href="<?php echo $case['name-link']['url']; ?>" target="<?php echo $case['name-link']['target']; ?>">
+										<?php echo $case['name-link']['title']; ; ?>
+									</a>
+								<?php else : ?>
+									<?php echo $case['name']; ?>
+								<?php endif; ?>
 								<?php echo wp_get_attachment_image($case['icon'], '43x43'); ?>
 							</div>
 							<?php foreach ($gallery as $gallery_key => $item) : ?>
