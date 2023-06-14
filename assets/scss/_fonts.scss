@@ -1,1 +1,30 @@
-@import url(https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@700&family=Open+Sans:wght@400;700&display=swap);
+@font-face {
+	font-weight: 400;
+	font-family: "Open Sans";
+	font-style: normal;
+	src:
+		url(assets/fonts/OpenSans-Regular.woff2) format("woff2"),
+		url(assets/fonts/OpenSans-Regular.woff) format("woff");
+	font-display: swap;
+}
+
+@font-face {
+	font-weight: 700;
+	font-family: "Open Sans";
+	font-style: normal;
+	src:
+		url(assets/fonts/OpenSans-Bold.woff2) format("woff2"),
+		url(assets/fonts/OpenSans-Bold.woff) format("woff");
+	font-display: swap;
+}
+
+@font-face {
+	font-weight: 700;
+	font-family: "Open Sans Condensed";
+	font-style: normal;
+	src:
+		url(assets/fonts/OpenSansCondensed-Bold.woff2) format("woff2"),
+		url(assets/fonts/OpenSansCondensed-Bold.woff) format("woff");
+	font-display: swap;
+}
+
