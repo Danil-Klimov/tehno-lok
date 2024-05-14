@@ -65,6 +65,7 @@
 							</a>, нажимая кнопку
 						</p>
 					</label>
+					<?php wp_nonce_field('Заявка с футера', 'callback_input'); ?>
 					<button class="button button_fill" type="submit">ОТПРАВИТЬ</button>
 				</form>
 			</div>

@@ -111,7 +111,7 @@ function mail_meta_box() {
 // код мета блока
 function mail_meta_box_function( $post ) {
 	$metaBody = get_post_meta($post->ID, 'metaBody', true);
-	
+
   echo $metaBody;
 }
 
@@ -119,7 +119,7 @@ function mail_meta_box_function( $post ) {
 add_action( "wp_ajax_send_mail", "send_mail" );
 add_action( "wp_ajax_nopriv_send_mail", "send_mail" );
 function send_mail() {
-	if( empty( $_POST[ 'form_name' ] ) || empty( $_POST[ 'client_name' ] ) || empty( $_POST[ 'client_tel' ] ) ) {
+	if( empty( $_POST[ 'form_name' ] ) || empty( $_POST[ 'client_name' ] ) || empty( $_POST[ 'client_tel' ] ) || ! wp_verify_nonce( $_POST['callback_input'], $_POST['form_name'] ) ) {
 		exit;
 	}
 
