@@ -6,8 +6,7 @@
 					<div class="request__header">
 						<div class="vertical-text"><?php the_field('request_vertical-text', 'option'); ?></div>
 						<h2 class="title request__title">КОНТАКТЫ</h2>
-						<div class="request__subtitle">Завод компании «ТехноЛОК» находится по
-							адресу: <?php the_field('address', 'option'); ?></div>
+						<div class="request__subtitle"><?php the_field('address', 'option'); ?></div>
 					</div>
 					<div class="request__contacts">
 						<div class="request__phones">
