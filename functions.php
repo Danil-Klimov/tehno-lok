@@ -186,6 +186,7 @@ function custom_breadcrumbs( $links ) {
 require 'inc/acf.php';
 require 'inc/col-thumb.php';
 require 'inc/excerpt.php';
+require 'inc/rest.php';
 require 'inc/send-mail.php';
 require 'inc/filter.php';
 require 'inc/information-menu.php';
